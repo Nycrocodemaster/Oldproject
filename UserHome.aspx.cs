@@ -24,8 +24,7 @@ public partial class UserHome : System.Web.UI.Page
         da.Fill(dt);
         d1.DataSource = dt;
         d1.DataBind();
-        d2.DataSource = dt;
-        d2.DataBind();
+       
         conn.Close();
     }
     protected void btnLogout_Click(object sender, EventArgs e)

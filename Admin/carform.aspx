@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/MasterPage.master" AutoEventWireup="true" CodeFile="carform.aspx.cs" Inherits="Admin_carform" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <html>
     <head>
          <link rel="stylesheet" href="css/bootstrap.css"/>
         </head>
@@ -10,6 +11,7 @@
     <br >
     <br >
     <br >
+    <body>
     <table align="center" >
         <tr>
             <td style="height: 29px">
@@ -80,6 +82,7 @@
 
 
     </table>
-
+        </body>
+        </html>
 </asp:Content>
 
