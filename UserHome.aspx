@@ -55,12 +55,11 @@
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
                                     <ul id="top-menu" class="menu top-menu right-menu">
-                                        <form id="Form1" runat="server">
+                                     
                                         <li>
-                                        <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default navbar-btn" Text="Log out" OnClick="btnLogout_Click"   />
-                                        
+                                       
                                     </li>
-                                        </form>
+                                        
                                     
                              
                                     </ul>
@@ -95,7 +94,7 @@
                             <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                                 <div class="block-minicart">
-                                    <a href="cart.html" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items - <span class="cart-subtotal-price">$79.00</span></span>
+                                    <a href="cart.html" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal">  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <span class="cart-subtotal-price">$79.00</span></span>
                                     </a>
                                     <div class="on-minicart">
                                         <dl class="cart-products">
@@ -357,7 +356,7 @@
         <div class="main-wrap">
             
             <!--------------- Module / Featured / new product --------------->
-            
+            <form runat="server">
             <div class="shop-module feature-product-module new-module">
                 <div class="container">
                     <div class="row">
@@ -369,14 +368,14 @@
                             </div>
                         </div>
                     </div>
+                   
                     <div class="row">
-                        <div class="products-wrap">
-                    
+                        <div class="products-wrap">  
                             <div class="product col-md-6 col-sm-12 featured-product">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
                                         <img class="hover-img"" src="assets/img/product/1.jpg" alt="Product Hover">
-                                        <img class="front-img" src="#" alt="Product Front">
+                                        <img class="front-img" src="assets/img/product/1.jpg" alt="Product Front">
                                     </a>
                                     <div class="attr-group">
                                         <span class="new">New</span>
@@ -407,8 +406,8 @@
                                         <span class="regular-price">$80.99</span>
                                     </p>
                                 </div>
-                            </div>
-                             
+                            </div> 
+                      
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
@@ -426,7 +425,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="#">Funnky hight</a></h5>
+                                    <h5 class="product-name"><a href="#">EAVA;LKF</a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -445,120 +444,11 @@
                                     </p>
                                 </div>
                             </div>
-                            
-                            <div class="product col-md-3 col-sm-6">
-                                <div class="product-thumb">
-                                    <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="assets/img/product/3-hover.jpg" alt="Product Hover">
-                                        <img class="front-img" src="assets/img/product/3.jpg" alt="Product Front">
-                                    </a>
-                                    <div class="attr-group">
-                                        <span class="sale">Sale</span>
-                                    </div>
-                                    <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <div class="product-btn">
-                                        <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
-                                        <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
-                                        <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h5 class="product-name"><a href="#">Funnky hight</a></h5>
-                                    <div class="rating" itemtype="http://schema.org/Offer" itemscope>
-                                        <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_half"></span>
-                                            <meta itemprop="worstRating" content="0">
-                                            <meta itemprop="ratingValue" content="4.5">
-                                            <meta itemprop="bestRating" content="5">
-                                        </div>
-                                    </div>
-                                    <p class="price">
-                                        <span class="discount-price">$60.80</span>
-                                        <span class="regular-price">$80.99</span>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="product col-md-3 col-sm-6">
-                                <div class="product-thumb">
-                                    <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="assets/img/product/4-hover.jpg" alt="Product Hover">
-                                        <img class="front-img" src="assets/img/product/4.jpg" alt="Product Front">
-                                    </a>
-                                    <div class="attr-group">
-                                        <span class="sale">Sale</span>
-                                    </div>
-                                    <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <div class="product-btn">
-                                        <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
-                                        <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
-                                        <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h5 class="product-name"><a href="#">Funnky hight</a></h5>
-                                    <div class="rating" itemtype="http://schema.org/Offer" itemscope>
-                                        <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_half"></span>
-                                            <meta itemprop="worstRating" content="0">
-                                            <meta itemprop="ratingValue" content="4.5">
-                                            <meta itemprop="bestRating" content="5">
-                                        </div>
-                                    </div>
-                                    <p class="price">
-                                        <span class="discount-price">$60.80</span>
-                                        <span class="regular-price">$80.99</span>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="product col-md-3 col-sm-6">
-                                <div class="product-thumb">
-                                    <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="assets/img/product/5-hover.jpg" alt="Product Hover">
-                                        <img class="front-img" src="assets/img/product/5.jpg" alt="Product Front">
-                                    </a>
-                                    <div class="attr-group">
-                                        <span class="sale">Sale</span>
-                                    </div>
-                                    <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <div class="product-btn">
-                                        <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
-                                        <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
-                                        <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h5 class="product-name"><a href="#">Funnky hight</a></h5>
-                                    <div class="rating" itemtype="http://schema.org/Offer" itemscope>
-                                        <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_half"></span>
-                                            <meta itemprop="worstRating" content="0">
-                                            <meta itemprop="ratingValue" content="4.5">
-                                            <meta itemprop="bestRating" content="5">
-                                        </div>
-                                    </div>
-                                    <p class="price">
-                                        <span class="discount-price">$60.80</span>
-                                        <span class="regular-price">$80.99</span>
-                                    </p>
-                                </div>
-                            </div>
+  
                         </div>
                     </div>
-                 
+                           
+                           
                 </div>
             </div>
             
@@ -575,18 +465,16 @@
                             </div>
                         </div>
                     </div>
-                    <asp:Repeater ID="d1" runat="server">
-                <HeaderTemplate>
-                    <ul>
-                   </HeaderTemplate>  
-                <ItemTemplate>
+                 
                     <div class="row">
                         <div class="products-wrap">
+                               <asp:Repeater ID="d1" runat="server" >
+                             <ItemTemplate>
                             <div class="product col-lg-3 col-md-4 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="../<%#Eval("car images") %>" alt="Product Hover">
-                                        <img class="front-img" src="../<%#Eval("car images") %>" alt="Product Front">
+                                        <img class="hover-img" src="../<%#Eval("car_images") %>" alt="Product Hover">
+                                        <img class="front-img" src="../<%#Eval("car_images") %>" alt="Product Front">
                                     </a>
                                     <div class="attr-group">
                                         <span class="new">New</span>
@@ -599,7 +487,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="product_desc.aspx?id=<%#Eval("CID") %>"><%#Eval("Company name") %></a></h5>
+                                    <h5 class="product-name"><a href="product_desc.aspx?id=<%#Eval("CID") %>"><%#Eval("Company_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -612,18 +500,23 @@
                                             <meta itemprop="bestRating" content="5">
                                         </div>
                                     </div>
-                                    <p class="price">Rs<%#Eval("car price") %></p>
+                                    <p class="price">Rs<%#Eval("car_price") %></p>
+                                   
+                                    </div>
                                 </div>
-                            </div>
-                       
-                                </ItemTemplate>
-                    </asp:Repeater>
+                                   </ItemTemplate>
+                                 </asp:Repeater>
+                                </div>
+                            </div>          
    
                             </div>
                         </div>
-                    </div>
+                </form>    
                 </div>
-            </div>
+
+
+                    
+              
                     
             
             <!--------------- Call to action /for tyres --------------->
@@ -635,7 +528,7 @@
                         </div>
                         <div class="col-md-5 col-sm-6">
                             <h1>Tyres</h1>
-                            <p class="display-inline">from<br/> only</p>
+                           <p class="display-inline">from<br/> only</p>
                             <h2 class="display-inline">$20.00</h2><br/>
                             <a class="btn">View Details</a>
                         </div>

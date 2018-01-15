@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="agile_inner_breadcrumb">
 
 						   <ul class="w3_short">
-								<li><a href="home.aspx">Home</a><i>|</i></li>
+								<li><a href="UserHome.aspx">Home</a><i>|</i></li>
 								<li>ProductS</li>
 							</ul>
 						 </div>
@@ -46,8 +46,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 
+
+
+    <form runat="server">
   <!-- banner-bootom-w3-agileits -->
-    <asp:Repeater ID="d1" runat="server">
+    <asp:Repeater ID="d1" runat="server" >
         <HeaderTemplate>
             </HeaderTemplate>
             <ItemTemplate>
@@ -59,13 +62,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<ul class="slides">
 						<li data-thumb="assets\img\product/6.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("car images") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("car_images") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						<li data-thumb="assets\img\product/3.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("car images") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("car_images") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>	
 						<li data-thumb="assets\img\product/4.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("car images") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("car_images") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
@@ -73,8 +76,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="col-md-8 single-right-left simpleCart_shelfItem">
-					<h3><%#Eval("Company name") %></h3>
-					<p><span class="item_price">Rs<%#Eval("car price") %></span> <del>- $900</del></p>
+					<h3><%#Eval("Company_name") %></h3>
+					<p><span class="item_price">Rs<%#Eval("car_price") %></span><del>- $900</del></p>
 					<div class="rating1">
 						<span class="starRating">
 							<input id="rating5" type="radio" name="rating" value="5">
@@ -88,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input id="rating1" type="radio" name="rating" value="1">
 							<label for="rating1">1</label>
 						</span>
-					</div>
+					&nbsp;</div>
 					<div class="description">
 						<h5>Check delivery, payment options and charges at your location</h5>
 						 <form action="#" method="post">
@@ -99,42 +102,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="color-quality">
 						<div class="color-quality-right">
 							<h5>Quality :</h5>
-							<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-								<option value="null">5 Qty</option>
-								<option value="null">6 Qty</option> 
-								<option value="null">7 Qty</option>					
-								<option value="null">10 Qty</option>								
-							</select>
+							  <asp:DropDownList ID="DropDownList1" runat="server" CssClass=>
+                                        <asp:ListItem Text="1" Value="1">1</asp:ListItem>
+                                        <asp:ListItem Text="2" Value="2">2</asp:ListItem>
+                                        <asp:ListItem Text="3" Value="3">3</asp:ListItem>
+                                        <asp:ListItem Text="4" Value="4">4</asp:ListItem>
+                                        <asp:ListItem Text="5" Value="5">5</asp:ListItem>
+                                        <asp:ListItem Text="6" Value="6">6</asp:ListItem>
+                                        <asp:ListItem Text="7" Value="7">7</asp:ListItem>
+            <asp:ListItem Text="8" Value="8">8</asp:ListItem>
+            <asp:ListItem Text="9" Value="9">9</asp:ListItem>
+            <asp:ListItem Text="10" Value="10">10</asp:ListItem>
+        </asp:DropDownList>
 						</div>
 					</div>
-					<div class="occasional">
-						<h5>Types :</h5>
-						<div class="colr ert">
-							<label class="radio"><input type="radio" name="radio" checked=""><i></i>Casual Shoes</label>
-						</div>
-						<div class="colr">
-							<label class="radio"><input type="radio" name="radio"><i></i>Sneakers </label>
-						</div>
-						<div class="colr">
-							<label class="radio"><input type="radio" name="radio"><i></i>Formal Shoes</label>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
+					
 					<div class="occasion-cart">
 						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
 																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart">
-																	<input type="hidden" name="add" value="1">
-																	<input type="hidden" name="business" value=" ">
-																	<input type="hidden" name="item_name" value="Wing Sneakers">
-																	<input type="hidden" name="amount" value="650.00">
-																	<input type="hidden" name="discount_amount" value="1.00">
-																	<input type="hidden" name="currency_code" value="USD">
-																	<input type="hidden" name="return" value=" ">
-																	<input type="hidden" name="cancel_return" value=" ">
-																	<input type="submit" name="submit" value="Add to cart" class="button">
-																</fieldset>
+                                                                    
+                                                                    <asp:Button ID="Button1" runat="server" Text="Add to cart" CssClass="button"/>
+																   
+                                                                 </fieldset>
 															</form>
 														</div>
 																			
@@ -389,7 +379,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </ItemTemplate>
         </asp:Repeater>
 
-
+        </form>
 <!--//single_page-->
 <!--/grids-->
 <div class="coupons">
@@ -400,7 +390,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-truck" aria-hidden="true"></i>
 					</div>
 					<div class="w3layouts_mail_grid_left2">
-						<h3>FREE SHIPPING</h3>
+						<h3>FREE SHIPPING
 						<p>Lorem ipsum dolor sit amet, consectetur</p>
 					</div>
 				</div>

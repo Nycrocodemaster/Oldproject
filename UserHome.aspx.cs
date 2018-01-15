@@ -14,6 +14,17 @@ public partial class UserHome : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+        DataTable dt1 = new DataTable();
+        dt1 = (DataTable)Session["buyitem"];
+            if(dt1 != null)
+            {
+                Label1.Text=dt1.Rows.Count.ToString();
+            }
+            else
+            {
+                Label1.Text="0";
+            }
+
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
@@ -24,12 +35,8 @@ public partial class UserHome : System.Web.UI.Page
         da.Fill(dt);
         d1.DataSource = dt;
         d1.DataBind();
-       
+      
         conn.Close();
     }
-    protected void btnLogout_Click(object sender, EventArgs e)
-    {
-        Session["USERNAME"] = null;
-        Response.Redirect("home.aspx");
-    }
+   
 }

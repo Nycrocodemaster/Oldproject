@@ -11,6 +11,7 @@ public partial class product_desc : System.Web.UI.Page
 {
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
     int id;
+    string Company_name, Modal_name, Description, car_price, car_type, car_images;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["id"] == null)
@@ -23,15 +24,22 @@ public partial class product_desc : System.Web.UI.Page
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from car_details";
+            cmd.CommandText = "select * from car_details where CID="+id+"";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             d1.DataSource = dt;
             d1.DataBind();
-
             conn.Close();
         }
+    }
+
+
+
+
+    protected void d1_ItemCommand(object source, RepeaterCommandEventArgs e)
+    {
+
     }
 }
