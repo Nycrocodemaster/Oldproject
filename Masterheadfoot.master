@@ -52,7 +52,7 @@
                                         <li>
                                         <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default navbar-btn" Text="Log out"    />
                                         
-                                    </li>
+                                         </li>
                                         </form>
                                     
                              

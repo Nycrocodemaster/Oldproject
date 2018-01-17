@@ -48,21 +48,13 @@
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             </td>
         </tr>
-         <tr>
-            <td>
-                Adaptive cruise control:
-            </td>
-             <td>
-             <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
-            
-        </tr>
-        
+    
             <tr>
             <td>
                 Car Type:
             </td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
             </td>
         </tr>
          <tr>
@@ -73,6 +65,15 @@
                 <asp:FileUpload ID="f1" runat="server" />
             </td>
         </tr>
+            <tr>
+            <td>
+                Car Image2:
+            </td>
+            <td>
+                <asp:FileUpload ID="f2" runat="server" />
+            </td>
+        </tr>
+
          <tr>
            
             <td>

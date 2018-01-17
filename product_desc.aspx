@@ -62,13 +62,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<ul class="slides">
 						<li data-thumb="assets\img\product/6.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("car_images") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("spimg") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						<li data-thumb="assets\img\product/3.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("car_images") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("spimg2") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>	
 						<li data-thumb="assets\img\product/4.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("car_images") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("spimg3") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
@@ -76,8 +76,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="col-md-8 single-right-left simpleCart_shelfItem">
-					<h3><%#Eval("Company_name") %></h3>
-					<p><span class="item_price">Rs<%#Eval("car_price") %></span><del>- $900</del></p>
+					<h3><%#Eval("spname") %></h3>
+					<p><span class="item_price">Rs<%#Eval("spprice") %></span><del>- $900</del></p>
 					<div class="rating1">
 						<span class="starRating">
 							<input id="rating5" type="radio" name="rating" value="5">

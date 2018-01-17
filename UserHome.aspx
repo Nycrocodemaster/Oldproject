@@ -407,12 +407,13 @@
                                     </p>
                                 </div>
                             </div> 
-                      
+                      <asp:Repeater ID="d1" runat="server">
+                          <ItemTemplate>
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="assets/img/product/2-hover.jpg" alt="Product Hover">
-                                        <img class="front-img" src="assets/img/product/2.jpg" alt="Product Front">
+                                        <img class="hover-img" src="<%#Eval("car_images") %>" alt="Product Hover">
+                                        <img class="front-img" src="<%#Eval("car_img2") %>" alt="Product Front">
                                     </a>
                                     <div class="attr-group">
                                         <span class="sale">Sale</span>
@@ -425,7 +426,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="#">EAVA;LKF</a></h5>
+                                    <h5 class="product-name"><a href="#"><%#Eval("Company_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -439,12 +440,14 @@
                                         </div>
                                     </div>
                                     <p class="price">
-                                        <span class="discount-price">$60.80</span>
+                                        <span class="discount-price"><%#Eval("price") %></span>
                                         <span class="regular-price">$80.99</span>
                                     </p>
                                 </div>
                             </div>
-  
+                              </ItemTemplate>
+                              </asp:Repeater>
+
                         </div>
                     </div>
                            
@@ -468,13 +471,13 @@
                  
                     <div class="row">
                         <div class="products-wrap">
-                               <asp:Repeater ID="d1" runat="server" >
+                               <asp:Repeater ID="d2" runat="server" >
                              <ItemTemplate>
                             <div class="product col-lg-3 col-md-4 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="../<%#Eval("car_images") %>" alt="Product Hover">
-                                        <img class="front-img" src="../<%#Eval("car_images") %>" alt="Product Front">
+                                        <img class="hover-img" src="../<%#Eval("spimg2") %>" alt="Product Hover">
+                                        <img class="front-img" src="../<%#Eval("spimg") %>" alt="Product Front">
                                     </a>
                                     <div class="attr-group">
                                         <span class="new">New</span>
@@ -487,7 +490,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="product_desc.aspx?id=<%#Eval("CID") %>"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="product_desc.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -500,7 +503,7 @@
                                             <meta itemprop="bestRating" content="5">
                                         </div>
                                     </div>
-                                    <p class="price">Rs<%#Eval("car_price") %></p>
+                                    <p class="price">Rs<%#Eval("spprice") %></p>
                                    
                                     </div>
                                 </div>

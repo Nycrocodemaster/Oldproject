@@ -28,15 +28,29 @@ public partial class UserHome : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText ="select * from car_details";
+        cmd.CommandText ="select * from car_detail";
         cmd.ExecuteNonQuery();
         DataTable dt = new DataTable ();
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         da.Fill(dt);
         d1.DataSource = dt;
         d1.DataBind();
-      
         conn.Close();
+
+
+        conn.Open();
+        SqlCommand cmdd = conn.CreateCommand();
+        cmdd.CommandType = CommandType.Text;
+        cmdd.CommandText = "select * from sp_details";
+        cmdd.ExecuteNonQuery();
+        DataTable dtt = new DataTable();
+        SqlDataAdapter da1 = new SqlDataAdapter(cmdd);
+        da1.Fill(dtt);
+        d2.DataSource = dtt;
+        d2.DataBind();
+        conn.Close();
+
+
     }
    
 }
