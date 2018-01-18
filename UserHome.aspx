@@ -371,42 +371,7 @@
                    
                     <div class="row">
                         <div class="products-wrap">  
-                            <div class="product col-md-6 col-sm-12 featured-product">
-                                <div class="product-thumb">
-                                    <a href="#" class="thumb-link">
-                                        <img class="hover-img"" src="assets/img/product/1.jpg" alt="Product Hover">
-                                        <img class="front-img" src="assets/img/product/1.jpg" alt="Product Front">
-                                    </a>
-                                    <div class="attr-group">
-                                        <span class="new">New</span>
-                                    </div>
-                                    <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <div class="product-btn">
-                                        <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
-                                        <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
-                                        <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
-                                    </div>
-                                </div>
-                                <div class="product-info">
-                                    <h5 class="product-name"><a href="#"></a></h5>
-                                    <div class="rating" itemtype="http://schema.org/Offer" itemscope>
-                                        <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_full"></span>
-                                            <span class="star star_half"></span>
-                                            <meta itemprop="worstRating" content="0">
-                                            <meta itemprop="ratingValue" content="4.5">
-                                            <meta itemprop="bestRating" content="5">
-                                        </div>
-                                    </div>
-                                    <p class="price">
-                                        <span class="discount-price"></span>
-                                        <span class="regular-price">$80.99</span>
-                                    </p>
-                                </div>
-                            </div> 
+                            
                       <asp:Repeater ID="d1" runat="server">
                           <ItemTemplate>
                             <div class="product col-md-3 col-sm-6">
@@ -476,8 +441,8 @@
                             <div class="product col-lg-3 col-md-4 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="../<%#Eval("spimg2") %>" alt="Product Hover">
-                                        <img class="front-img" src="../<%#Eval("spimg") %>" alt="Product Front">
+                                        <img class="hover-img" src="<%#Eval("spimg2") %>" alt="Product Hover">
+                                        <img class="front-img" src="<%#Eval("spimg") %>" alt="Product Front">
                                     </a>
                                     <div class="attr-group">
                                         <span class="new">New</span>

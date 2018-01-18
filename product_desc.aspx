@@ -62,13 +62,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<ul class="slides">
 						<li data-thumb="assets\img\product/6.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("spimg") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="<%#Eval("spimg") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						<li data-thumb="assets\img\product/3.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("spimg2") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="<%#Eval("spimg2") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>	
 						<li data-thumb="assets\img\product/4.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("spimg3") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="<%#Eval("spimg3") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 					</ul>
 					<div class="clearfix"></div>
@@ -122,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															<form action="#" method="post">
 																<fieldset>
                                                                     
-                                                                    <asp:Button ID="Button1" runat="server" Text="Add to cart" CssClass="button"/>
+                                                                    <asp:Button ID="Button1" runat="server" Text="Add to cart" CssClass="button" OnClick="Button1_Click"/>
 																   
                                                                  </fieldset>
 															</form>
