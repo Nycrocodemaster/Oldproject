@@ -34,20 +34,18 @@ public partial class product_desc : System.Web.UI.Page
             conn.Close();
         }
     }
-
-
-
     protected void Button1_Click(object sender, EventArgs e)
     {
+    
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
         cmd.CommandText = "Select * from sp_details where id="+id+"";
         cmd.ExecuteNonQuery();
-        DataTable dt = new DataTable();
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        da.Fill(dt);
-        foreach (DataRow dr in dt.Rows)
+        DataTable dtt = new DataTable();
+        SqlDataAdapter daa = new SqlDataAdapter(cmd);
+        daa.Fill(dtt);
+        foreach (DataRow dr in dtt.Rows)
         {
             spname = dr["spname"].ToString();
             spprice = dr["spprice"].ToString();
@@ -65,4 +63,5 @@ public partial class product_desc : System.Web.UI.Page
             Response.Cookies["a"].Expires = DateTime.Now.AddDays(9999);
         }
     }
+    
 }

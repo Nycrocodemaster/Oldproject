@@ -25,13 +25,12 @@
         <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png"/>
         <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png" />
     <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
+    
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
              <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
             <header id="top-header-area" class="top-header-area">
@@ -48,12 +47,12 @@
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
                                     <ul id="top-menu" class="menu top-menu right-menu">
-                                        <form id="Form2" runat="server">
+                                        
                                         <li>
                                         <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default navbar-btn" Text="Log out"    />
                                         
                                          </li>
-                                        </form>
+
                                     
                              
                                     </ul>
@@ -312,7 +311,12 @@
             </header>
         </div>
 		
-		
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <form runat="server">
+
+                    </form>
+
+            </asp:ContentPlaceHolder>
 		
 		
 	 <footer>
@@ -479,7 +483,7 @@
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/custom.js"></script>
-        </asp:ContentPlaceHolder>
+        
     </div>
 
     </form>

@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#"   AutoEventWireup="true" CodeFile="product_desc.aspx.cs" Inherits="product_desc" %>
 
 
-<!DOCTYPE html>
 <html>
 <head>
 <title>Elite Shoppy an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
@@ -26,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-
+    <form runat="server">
 <!--/single_page-->
        <!-- /banner_bottom_agile_info -->
 <div class="page-head_agile_info_w3l">
@@ -48,7 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-    <form runat="server">
+    
   <!-- banner-bootom-w3-agileits -->
     <asp:Repeater ID="d1" runat="server" >
         <HeaderTemplate>
@@ -94,10 +93,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					&nbsp;</div>
 					<div class="description">
 						<h5>Check delivery, payment options and charges at your location</h5>
-						 <form action="#" method="post">
+						 
 						<input type="text" value="Enter pincode" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter pincode';}" required="">
 						<input type="submit" value="Check">
-						</form>
+						
 					</div>
 					<div class="color-quality">
 						<div class="color-quality-right">
@@ -119,13 +118,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<div class="occasion-cart">
 						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
+															
 																<fieldset>
                                                                     
                                                                     <asp:Button ID="Button1" runat="server" Text="Add to cart" CssClass="button" OnClick="Button1_Click"/>
 																   
                                                                  </fieldset>
-															</form>
+															
 														</div>
 																			
 					</div>
@@ -187,12 +186,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						             </div>
 									 <div class="add-review">
 										<h4>add a review</h4>
-										<form action="#" method="post">
+										
 												<input type="text" name="Name" required="Name">
 												<input type="email" name="Email" required="Email"> 
 												<textarea name="Message" required=""></textarea>
 											<input type="submit" value="SEND">
-										</form>
+								
 									</div>
 								 </div>
 								 
@@ -234,8 +233,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<del>$189.71</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
-																<fieldset>
+																															<fieldset>
 																	<input type="hidden" name="cmd" value="_cart">
 																	<input type="hidden" name="add" value="1">
 																	<input type="hidden" name="business" value=" ">
@@ -247,7 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																	<input type="hidden" name="cancel_return" value=" ">
 																	<input type="submit" name="submit" value="Add to cart" class="button">
 																</fieldset>
-															</form>
+															
 														</div>
 																			
 									</div>
@@ -273,7 +271,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<del>$189.71</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
+													
 																<fieldset>
 																	<input type="hidden" name="cmd" value="_cart">
 																	<input type="hidden" name="add" value="1">
@@ -286,8 +284,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																	<input type="hidden" name="cancel_return" value=" ">
 																	<input type="submit" name="submit" value="Add to cart" class="button">
 																</fieldset>
-															</form>
-														</div>
+												</div>
 																			
 									</div>
 								</div>
@@ -312,8 +309,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<del>$199.71</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
-																<fieldset>
+																													<fieldset>
 																	<input type="hidden" name="cmd" value="_cart">
 																	<input type="hidden" name="add" value="1">
 																	<input type="hidden" name="business" value=" ">
@@ -325,7 +321,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																	<input type="hidden" name="cancel_return" value=" ">
 																	<input type="submit" name="submit" value="Add to cart" class="button">
 																</fieldset>
-															</form>
+													
 														</div>
 																			
 									</div>
@@ -351,7 +347,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<del>$159.71</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
+															
 																<fieldset>
 																	<input type="hidden" name="cmd" value="_cart">
 																	<input type="hidden" name="add" value="1">
@@ -364,7 +360,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																	<input type="hidden" name="cancel_return" value=" ">
 																	<input type="submit" name="submit" value="Add to cart" class="button">
 																</fieldset>
-															</form>
+															
 														</div>
 																			
 									</div>
@@ -379,7 +375,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </ItemTemplate>
         </asp:Repeater>
 
-        </form>
+        
 <!--//single_page-->
 <!--/grids-->
 <div class="coupons">
@@ -428,71 +424,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--grids-->
 <!-- footer -->
-
+        </form>
 <!-- //footer -->
 
 <!-- login -->
-			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						</div>
-						<div class="modal-body modal-spa">
-							<div class="login-grids">
-								<div class="login">
-									<div class="login-bottom">
-										<h3>Sign up for free</h3>
-										<form>
-											<div class="sign-up">
-												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-up">
-												<h4>Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<h4>Re-type Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
-											</div>
-											<div class="sign-up">
-												<input type="submit" value="REGISTER NOW" >
-											</div>
-											
-										</form>
-									</div>
-									<div class="login-right">
-										<h3>Sign in with your account</h3>
-										<form>
-											<div class="sign-in">
-												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
-											</div>
-											<div class="sign-in">
-												<h4>Password :</h4>
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												<a href="#">Forgot password?</a>
-											</div>
-											<div class="single-bottom">
-												<input type="checkbox"  id="brand" value="">
-												<label for="brand"><span></span>Remember Me.</label>
-											</div>
-											<div class="sign-in">
-												<input type="submit" value="SIGNIN" >
-											</div>
-										</form>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 <!-- //login -->
 <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- js -->
@@ -587,3 +523,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
 </html>
+   
