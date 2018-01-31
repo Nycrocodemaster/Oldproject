@@ -1,36 +1,36 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Masterheadfoot.master" AutoEventWireup="true" CodeFile="UserHome.aspx.cs" Inherits="UserHome" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<html lang="en">
+<html lang="en"/>
     
 <!-- Mirrored from codechant.com/envato/html/carparts/home-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Aug 2017 06:59:10 GMT -->
 <head>
         <!-- Metas -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CarParts - Responsive Ecommerce Template</title>
-        <meta name="description" content="CarParts - A Responsive eCommerce Template specially for car and electronic parts eCommerce site">
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Drive On</title>
+        
 
         <!-- External CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
         
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css"/>
         
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"/>
         
         <!-- Favicon -->
-        <link rel="icon" href="assets/img/color-1/template/favicon.png">
-        <link rel="apple-touch-icon" href="assets/img/color-1/template/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png">
+        <link rel="icon" href="assets/img/color-1/template/favicon.png"/>
+        <link rel="apple-touch-icon" href="assets/img/color-1/template/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png"/>
 
         <!--[if lt IE 9]>
             <script src="assets/js/html5shiv.min.js"></script>
@@ -42,39 +42,43 @@
 
         
         <!--------------- Header slider --------------->
-        <div id="main-slider-area" class="main-slider-area">
-            <div id="header-slider" class="owl-carousel header-slider">
-                <div class="slider-item item-1">
-                    <div class="slider-caption">
-                        <div class="container">
-                            <h1 class="display-inline">20%</h1>
-                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
-                            <a class="btn btn-big" href="#">Shop Now !</a>
+        
+        <div class="container">
+        <div  id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+           <%-- Indicators--%>
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <asp:Repeater ID="rptrImages" runat="server">
+                    <ItemTemplate>
+                        <div class="item <%#GetActiveClass(Container.ItemIndex) %>">
+                            <img src="Images/<%#Eval("Banimg") %>" alt="Banner img" />
                         </div>
-                    </div>
-                </div>
-                <div class="slider-item item-2">
-                    <div class="slider-caption">
-                        <div class="container">
-                            <h1 class="display-inline">20%</h1>
-                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
-                            <a class="btn btn-big" href="#">Shop Now !</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-item item-3">
-                    <div class="slider-caption">
-                        <div class="container">
-                            <h1 class="display-inline">20%</h1>
-                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
-                            <a class="btn btn-big" href="#">Shop Now !</a>
-                        </div>
-                    </div>
-                </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
         </div>
+    </div>
+
         
       
+
+
         
         <div class="main-wrap">
             

@@ -86,74 +86,10 @@
                             </div>
 
                             <!--------------- Mini Cart --------------->
-                            <div class="col-sm-4">
-                                <div class="block-minicart">
-                                    <a href="cart.html" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items - <span class="cart-subtotal-price">$79.00</span></span>
-                                    </a>
-                                    <div class="on-minicart">
-                                        <dl class="cart-products">
-                                            <dt class="cart-product">
-                                                <a class="cart-thumb" href="#">
-                                                    <img src="assets/img/product/cart-thumb-1.jpg" alt="Cart Thumb">
-                                                </a>
-                                                <div class="cart-info">
-                                                    <div class="product-name">
-                                                        <span class="quantity-formated">
-                                                            <span class="quantity">1</span>x
-                                                            </span>
-                                                        <a href="#">Funnky hight</a>
-                                                    </div>
-                                                    <div class="product-attributes">
-                                                        <a href="#">S, Beige</a>
-                                                    </div>
-                                                    <span class="price">$50.99</span>
-                                                </div>
-                                                <span class="remove-link">
-                                                    <a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                </span>
-                                            </dt>
-                                            <dd></dd>
-                                            <dt class="cart-product">
-                                                <a class="cart-thumb" href="#">
-                                                    <img src="assets/img/product/cart-thumb-2.jpg" alt="Cart Thumb">
-                                                </a>
-                                                <div class="cart-info">
-                                                    <div class="product-name">
-                                                        <span class="quantity-formated">
-                                                            <span class="quantity">1</span>x
-                                                        </span>
-                                                        <a href="#">Funnky hight</a>
-                                                    </div>
-                                                    <div class="product-attributes">
-                                                        <a href="#">S, Beige</a>
-                                                    </div>
-                                                    <span class="price">$35</span>
-                                                </div>
-                                                <span class="remove-link">
-                                                    <a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                </span>
-                                            </dt>
-                                            <dd></dd>
-                                        </dl>
-                                        <p class="cart-no-product">No products</p>
-                                        <div class="cart-prices">
-                                            <div class="cart-fee-wrap cart-shipping-fee">
-                                                <span class="cart-text">Shipping</span>
-                                                <span class="cart-fee price">$2.00</span>
-                                            </div>
-                                            <div class="cart-fee-wrap cart-total-fee">
-                                                <span class="cart-text">Total</span>
-                                                <span class="cart-fee price">$120.49</span>
-                                            </div>
-                                        </div>
-                                        <div class="cart-checkout">
-                                            <a href="#" class="btn checkout-btn">Check out<i class="fa fa-angle-right right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                         
                         </div>
                     </div>
+                    
 
                     <!--------------- Main navigation --------------->
                      <div class="main-navigation-wrap">
@@ -309,6 +245,7 @@
                         </nav>
                     
                 </div>
+                    </div>
             </header>
         </div>
         

@@ -14,14 +14,13 @@ public partial class UserHome : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-
+ 
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText ="select * from car_detail";
+        cmd.CommandText = "select * from car_detail";
         cmd.ExecuteNonQuery();
-        DataTable dt = new DataTable ();
+        DataTable dt = new DataTable();
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         da.Fill(dt);
         d1.DataSource = dt;
@@ -41,7 +40,31 @@ public partial class UserHome : System.Web.UI.Page
         d2.DataBind();
         conn.Close();
 
+        conn.Open();
+        SqlCommand cmd1 = conn.CreateCommand();
+        cmd1.CommandType = CommandType.Text;
+        cmd1.CommandText = "select * from banimg";
+        cmd1.ExecuteNonQuery();
+        DataTable dt1 = new DataTable();
+        SqlDataAdapter sda = new SqlDataAdapter(cmd1);
+        sda.Fill(dt1);
+        rptrImages.DataSource = dt1;
+        rptrImages.DataBind();
+        conn.Close();
 
     }
-   
+
+    protected string GetActiveClass(int ItemIndex)
+    {
+        if (ItemIndex == 0)
+        {
+            return "active";
+        }
+        else
+        {
+            return "";
+        }
+
+
+    }
 }
