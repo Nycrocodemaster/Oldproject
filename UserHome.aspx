@@ -58,7 +58,7 @@
                 <asp:Repeater ID="rptrImages" runat="server">
                     <ItemTemplate>
                         <div class="item <%#GetActiveClass(Container.ItemIndex) %>">
-                            <img src="Images/<%#Eval("Banimg") %>" alt="Banner img" />
+                            <img src="<%#Eval("banimg") %>" alt="Banner img" />
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>

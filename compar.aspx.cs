@@ -25,13 +25,13 @@ public partial class compar : System.Web.UI.Page
            Companyname.Items.Insert(0, liCars);
 
            ListItem liCars2 = new ListItem("Select Company", "-1");
-           Companyname2.Items.Insert(0, liCars);
+           Companyname2.Items.Insert(0, liCars2);
 
            ListItem liModel = new ListItem("Select Model", "-1");
            Modelname.Items.Insert(0, liModel);
 
            ListItem liModel2 = new ListItem("Select Model", "-1");
-           Modelname2.Items.Insert(0, liModel);
+           Modelname2.Items.Insert(0, liModel2);
 
            Modelname.Enabled = false;
            Modelname2.Enabled = false;
@@ -74,18 +74,11 @@ public partial class compar : System.Web.UI.Page
 
         }
     }
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        if (Companyname.SelectedIndex == 0 || Modelname.SelectedIndex == 0)
-        {
-            Response.Write("You need to select both Dropdownlist");
-        }
-        else
-        {
-            Response.Redirect("testcardiff.aspx?id=");
-        }
-       
-    }
+
+  
+    
+
+
     protected void Companyname2_SelectedIndexChanged(object sender, EventArgs e)
     {
         if (Companyname2.SelectedIndex == 0)
@@ -107,4 +100,5 @@ public partial class compar : System.Web.UI.Page
 
         }
     }
+   
 }

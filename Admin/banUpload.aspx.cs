@@ -24,7 +24,7 @@ public partial class Admin_banUpload : System.Web.UI.Page
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into banimg values('" + b.ToString() + "')";
+            cmd.CommandText = "insert into banner values('" + b.ToString() + "')";
             cmd.ExecuteNonQuery();
 
             conn.Close();

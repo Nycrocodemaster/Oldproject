@@ -50,7 +50,7 @@
 			</div>
 			<div class="main-grid2">
 				<h2>My Shopping Bag (3)</h2>
-				<asp:Repeater ID="d1" runat="server">
+			<asp:DataList ID="d1" runat="server">
                 <ItemTemplate>
 				<div class="cart_box1">
 				  <div class="message">
@@ -63,7 +63,7 @@
 				</div>
                     
                     </ItemTemplate>
-                    </asp:Repeater>
+                    </asp:DataList>
 				<div class="total">
 					<div class="total-left">
 						<p>Total :<span><asp:Label ID="price" runat="server" /></span></p>

@@ -43,7 +43,7 @@ public partial class UserHome : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd1 = conn.CreateCommand();
         cmd1.CommandType = CommandType.Text;
-        cmd1.CommandText = "select * from banimg";
+        cmd1.CommandText = "select * from banner";
         cmd1.ExecuteNonQuery();
         DataTable dt1 = new DataTable();
         SqlDataAdapter sda = new SqlDataAdapter(cmd1);
@@ -53,7 +53,6 @@ public partial class UserHome : System.Web.UI.Page
         conn.Close();
 
     }
-
     protected string GetActiveClass(int ItemIndex)
     {
         if (ItemIndex == 0)
@@ -64,7 +63,7 @@ public partial class UserHome : System.Web.UI.Page
         {
             return "";
         }
-
-
     }
+
+   
 }
