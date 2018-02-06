@@ -11,7 +11,7 @@ public partial class product_desc : System.Web.UI.Page
 {
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
     int id;
-    String spname,spprice,spimg;
+    String spname, spprice, spimg;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["id"] == null)
@@ -24,7 +24,7 @@ public partial class product_desc : System.Web.UI.Page
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from sp_details where id="+id+"";
+            cmd.CommandText = "select * from sp_details where id=" + id + "";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -36,11 +36,10 @@ public partial class product_desc : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-    
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "Select * from sp_details where id="+id+"";
+        cmd.CommandText = "Select * from sp_details where id=" + id + "";
         cmd.ExecuteNonQuery();
         DataTable dtt = new DataTable();
         SqlDataAdapter daa = new SqlDataAdapter(cmd);
@@ -59,9 +58,8 @@ public partial class product_desc : System.Web.UI.Page
         }
         else
         {
-            Response.Cookies["a"].Value =Request.Cookies["a"].Value +"|"+ spname.ToString() + "," + spprice.ToString() + "," + spimg.ToString();
+            Response.Cookies["a"].Value = Request.Cookies["a"].Value + "|" + spname.ToString() + "," + spprice.ToString() + "," + spimg.ToString();
             Response.Cookies["a"].Expires = DateTime.Now.AddDays(9999);
         }
     }
-    
 }

@@ -107,14 +107,11 @@
                                         <img class="hover-img" src="<%#Eval("car_images") %>" alt="Product Hover">
                                         <img class="front-img" src="<%#Eval("car_img2") %>" alt="Product Front">
                                     </a>
-                                    <div class="attr-group">
-                                        <span class="sale">Sale</span>
-                                    </div>
-                                    <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+
+                                   
                                     <div class="product-btn">
-                                        <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
                                         <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
-                                        <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
+          
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -132,18 +129,14 @@
                                         </div>
                                     </div>
                                     <p class="price">
-                                        <span class="discount-price"><%#Eval("price") %></span>
-                                        <span class="regular-price">$80.99</span>
+                                        <span class="discount-price"><%#Eval("price") %></span>     
                                     </p>
                                 </div>
                             </div>
                               </ItemTemplate>
                               </asp:Repeater>
-
                         </div>
-                    </div>
-                           
-                           
+                    </div>                         
                 </div>
             </div>
             
@@ -171,14 +164,9 @@
                                         <img class="hover-img" src="<%#Eval("spimg2") %>" alt="Product Hover">
                                         <img class="front-img" src="<%#Eval("spimg") %>" alt="Product Front">
                                     </a>
-                                    <div class="attr-group">
-                                        <span class="new">New</span>
-                                    </div>
-                                    <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <div class="product-btn">
-                                        <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
-                                        <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
-                                        <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
+
+                                    <div class="product-btn">  
+                                        <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>  
                                     </div>
                                 </div>
                                 <div class="product-info">
@@ -195,25 +183,16 @@
                                             <meta itemprop="bestRating" content="5">
                                         </div>
                                     </div>
-                                    <p class="price">Rs<%#Eval("spprice") %></p>
-                                   
+                                    <p class="price">Rs<%#Eval("spprice") %></p>   
                                     </div>
                                 </div>
                                    </ItemTemplate>
                                  </asp:Repeater>
                                 </div>
                             </div>          
-   
                             </div>
-                        </div>
-                    
-                </div>
-
-
-                    
-              
-                    
-            
+                        </div>       
+                </div>  
             <!--------------- Call to action /for tyres --------------->
             <div class="call-to-action call-to-action-1">
                 <div class="container">
@@ -224,8 +203,8 @@
                         <div class="col-md-5 col-sm-6">
                             <h1>Tyres</h1>
                            <p class="display-inline">from<br/> only</p>
-                            <h2 class="display-inline">$20.00</h2><br/>
-                            <a class="btn">View Details</a>
+                            <h2 class="display-inline">Rs30000</h2><br/>
+                           
                         </div>
                     </div>
                 </div>
@@ -396,97 +375,7 @@
                 </div>
             </div>
             
-            <!--------------- Testimonial --------------->
-            <div class="shop-module testimonial-module bg-module">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center">
-                            <div class="module-header">
-                                <h3 class="module-title">What clients say?</h3>
-                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="testimonial-wrap">
-                            <div id="testimonial-carousel" class="owl-carousel testimonial-carousel">
-                                <div class="testimonial-item">
-                                    <div class="quote-wrap">
-                                        <blockquote>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</blockquote>
-                                    </div>
-                                    <div class="client-details">
-                                        <div class="client-mock">
-                                            <img src="assets/img/team-client/1.jpg" alt="...">
-                                        </div>
-                                        <h5 class="client-name">Robert Carlo</h5>
-                                        <p class="client-profession">CEO of Fieldthemes</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item">
-                                    <div class="quote-wrap">
-                                        <blockquote>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</blockquote>
-                                    </div>
-                                    <div class="client-details">
-                                        <div class="client-mock">
-                                            <img src="assets/img/team-client/1.jpg" alt="...">
-                                        </div>
-                                        <h5 class="client-name">Robert Carlo</h5>
-                                        <p class="client-profession">CEO of Fieldthemes</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item">
-                                    <div class="quote-wrap">
-                                        <blockquote>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</blockquote>
-                                    </div>
-                                    <div class="client-details">
-                                        <div class="client-mock">
-                                            <img src="assets/img/team-client/1.jpg" alt="...">
-                                        </div>
-                                        <h5 class="client-name">Robert Carlo</h5>
-                                        <p class="client-profession">CEO of Fieldthemes</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item">
-                                    <div class="quote-wrap">
-                                        <blockquote>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</blockquote>
-                                    </div>
-                                    <div class="client-details">
-                                        <div class="client-mock">
-                                            <img src="assets/img/team-client/1.jpg" alt="...">
-                                        </div>
-                                        <h5 class="client-name">Robert Carlo</h5>
-                                        <p class="client-profession">CEO of Fieldthemes</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item">
-                                    <div class="quote-wrap">
-                                        <blockquote>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</blockquote>
-                                    </div>
-                                    <div class="client-details">
-                                        <div class="client-mock">
-                                            <img src="assets/img/team-client/1.jpg" alt="...">
-                                        </div>
-                                        <h5 class="client-name">Robert Carlo</h5>
-                                        <p class="client-profession">CEO of Fieldthemes</p>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item">
-                                    <div class="quote-wrap">
-                                        <blockquote>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</blockquote>
-                                    </div>
-                                    <div class="client-details">
-                                        <div class="client-mock">
-                                            <img src="assets/img/team-client/1.jpg" alt="...">
-                                        </div>
-                                        <h5 class="client-name">Robert Carlo</h5>
-                                        <p class="client-profession">CEO of Fieldthemes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
                         
         </div>
         

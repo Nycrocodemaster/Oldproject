@@ -1,42 +1,44 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Masterheadfoot.master.cs" Inherits="Masterheadfoot" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-
-
+<html lang="en">
+    
+<!-- Mirrored from codechant.com/envato/html/carparts/home-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Aug 2017 06:59:10 GMT -->
+<head>
         <!-- Metas -->
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Drive On</title>
+     
 
-       <!-- External CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
-        <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
         
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="assets/css/style.css"/>
-        <link rel="stylesheet" href="assets/css/responsive.css"/>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
         
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
         
         <!-- Favicon -->
-        <link rel="icon" href="assets/img/color-1/template/favicon.png"/>
-        <link rel="apple-touch-icon" href="assets/img/color-1/template/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png" />
-    
-    
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+        <link rel="icon" href="assets/img/color-1/template/favicon.png">
+        <link rel="apple-touch-icon" href="assets/img/color-1/template/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png">
+
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.min.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+       
         <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
             <header id="top-header-area" class="top-header-area">
@@ -53,9 +55,9 @@
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
                                     <ul id="top-menu" class="menu top-menu right-menu">
-                                        <li><asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default navbar-btn" Text="Log out"   /></li>
-                                   
-                             
+                                        <form runat="server">
+                                        <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-group" />
+                                        </form>
                                     </ul>
                                 </div>
                             </div>
@@ -86,74 +88,10 @@
                             </div>
 
                             <!--------------- Mini Cart --------------->
-                            <div class="col-sm-4">
-                                <div class="block-minicart">
-                                    <a href="cart.html" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items - <span class="cart-subtotal-price">$79.00</span></span>
-                                    </a>
-                                    <div class="on-minicart">
-                                        <dl class="cart-products">
-                                            <dt class="cart-product">
-                                                <a class="cart-thumb" href="#">
-                                                    <img src="assets/img/product/cart-thumb-1.jpg" alt="Cart Thumb">
-                                                </a>
-                                                <div class="cart-info">
-                                                    <div class="product-name">
-                                                        <span class="quantity-formated">
-                                                            <span class="quantity">1</span>x
-                                                            </span>
-                                                        <a href="#">Funnky hight</a>
-                                                    </div>
-                                                    <div class="product-attributes">
-                                                        <a href="#">S, Beige</a>
-                                                    </div>
-                                                    <span class="price">$50.99</span>
-                                                </div>
-                                                <span class="remove-link">
-                                                    <a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                </span>
-                                            </dt>
-                                            <dd></dd>
-                                            <dt class="cart-product">
-                                                <a class="cart-thumb" href="#">
-                                                    <img src="assets/img/product/cart-thumb-2.jpg" alt="Cart Thumb">
-                                                </a>
-                                                <div class="cart-info">
-                                                    <div class="product-name">
-                                                        <span class="quantity-formated">
-                                                            <span class="quantity">1</span>x
-                                                        </span>
-                                                        <a href="#">Funnky hight</a>
-                                                    </div>
-                                                    <div class="product-attributes">
-                                                        <a href="#">S, Beige</a>
-                                                    </div>
-                                                    <span class="price">$35</span>
-                                                </div>
-                                                <span class="remove-link">
-                                                    <a href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                </span>
-                                            </dt>
-                                            <dd></dd>
-                                        </dl>
-                                        <p class="cart-no-product">No products</p>
-                                        <div class="cart-prices">
-                                            <div class="cart-fee-wrap cart-shipping-fee">
-                                                <span class="cart-text">Shipping</span>
-                                                <span class="cart-fee price">$2.00</span>
-                                            </div>
-                                            <div class="cart-fee-wrap cart-total-fee">
-                                                <span class="cart-text">Total</span>
-                                                <span class="cart-fee price">$120.49</span>
-                                            </div>
-                                        </div>
-                                        <div class="cart-checkout">
-                                            <a href="#" class="btn checkout-btn">Check out<i class="fa fa-angle-right right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                         
                         </div>
                     </div>
+                    
 
                     <!--------------- Main navigation --------------->
                      <div class="main-navigation-wrap">
@@ -169,7 +107,7 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="menu nav navbar-nav main-menu">
                                     <li class="dropdown">
-                                        <a href="home.html" class="dropdown-toggle"  >Home</a>
+                                        <a href="UserHome.aspx" class="dropdown-toggle"  >Home</a>
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
@@ -219,7 +157,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Comapre Car</a>
+                                        <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>
                                         
                                     </li>
                                    
@@ -309,6 +247,7 @@
                         </nav>
                     
                 </div>
+                    </div>
             </header>
         </div>
         
@@ -493,8 +432,7 @@
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/custom.js"></script>
         
-    </div>
+    
 
-    </form>
 </body>
 </html>

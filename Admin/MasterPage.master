@@ -54,6 +54,7 @@
                                     <ul class="gn-submenu">
 										<li class="mini_list_agile"><a href="carform.aspx"><i class="fa fa-caret-right" aria-hidden="true"></i>Car Details</a></li>
                                         <li class="mini_list_agile"><a href="Spform.aspx"><i class="fa fa-caret-right" aria-hidden="true"></i>Spare part Details</a></li>
+                                          <li class="mini_list_agile"><a href="banUpload.aspx"><i class="fa fa-caret-right" aria-hidden="true"></i>Banner Upload</a></li>
 									</ul>
 							     </li>
 								

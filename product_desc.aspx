@@ -1,526 +1,810 @@
-﻿<%@ Page Language="C#"   AutoEventWireup="true" CodeFile="product_desc.aspx.cs" Inherits="product_desc" %>
+﻿<%@ Page Title="" Language="C#"  AutoEventWireup="true" CodeFile="product_desc.aspx.cs" Inherits="product_desc" %>
 
-
-<html>
-<head>
-<title>Elite Shoppy an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
-<!--/tags -->
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript">
- addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } 
-		</script>
-<!-- //tags -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
-<link href="assets/css/font-awesome.min.css" rel="stylesheet"/> 
-<link href="assets/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
-<link href="assets/css/style1.css" rel="stylesheet" type="text/css" media="all" />
-
-<!-- //for bootstrap working -->
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet"/>
-<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'/>
-</head>
-<body>
-    <form runat="server">
-<!--/single_page-->
-       <!-- /banner_bottom_agile_info -->
-<div class="page-head_agile_info_w3l">
-		<div class="container">
-			<h3>Single <span>Page </span></h3>
-			<!--/w3_short-->
-				 <div class="services-breadcrumb">
-						<div class="agile_inner_breadcrumb">
-
-						   <ul class="w3_short">
-								<li><a href="UserHome.aspx">Home</a><i>|</i></li>
-								<li>ProductS</li>
-							</ul>
-						 </div>
-				</div>
-	   <!--//w3_short-->
-	</div>
-</div>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
     
-  <!-- banner-bootom-w3-agileits -->
-    <asp:Repeater ID="d1" runat="server" >
-        <HeaderTemplate>
-            </HeaderTemplate>
-            <ItemTemplate>
-<div class="banner-bootom-w3-agileits">
-	<div class="container">
-	     <div class="col-md-4 single-right-left ">
-			<div class="grid images_3_of_2">
-				<div class="flexslider">
-					
-					<ul class="slides">
-						<li data-thumb="assets\img\product/6.jpg">
-							<div class="thumb-image"> <img src="<%#Eval("spimg") %>" data-imagezoom="true" class="img-responsive"> </div>
-						</li>
-						<li data-thumb="assets\img\product/3.jpg">
-							<div class="thumb-image"> <img src="<%#Eval("spimg2") %>" data-imagezoom="true" class="img-responsive"> </div>
-						</li>	
-						<li data-thumb="assets\img\product/4.jpg">
-							<div class="thumb-image"> <img src="<%#Eval("spimg3") %>" data-imagezoom="true" class="img-responsive"> </div>
-						</li>
-					</ul>
-					<div class="clearfix"></div>
-				</div>	
-			</div>
-		</div>
-		<div class="col-md-8 single-right-left simpleCart_shelfItem">
-					<h3><%#Eval("spname") %></h3>
-					<p><span class="item_price">Rs<%#Eval("spprice") %></span><del>- $900</del></p>
-					<div class="rating1">
-						<span class="starRating">
-							<input id="rating5" type="radio" name="rating" value="5">
-							<label for="rating5">5</label>
-							<input id="rating4" type="radio" name="rating" value="4">
-							<label for="rating4">4</label>
-							<input id="rating3" type="radio" name="rating" value="3" checked="">
-							<label for="rating3">3</label>
-							<input id="rating2" type="radio" name="rating" value="2">
-							<label for="rating2">2</label>
-							<input id="rating1" type="radio" name="rating" value="1">
-							<label for="rating1">1</label>
-						</span>
-					&nbsp;</div>
-					<div class="description">
-						<h5>Check delivery, payment options and charges at your location</h5>
-						 
-						<input type="text" value="Enter pincode" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter pincode';}" required="">
-						<input type="submit" value="Check">
-						
-					</div>
-					<div class="color-quality">
-						<div class="color-quality-right">
-							<h5>Quality :</h5>
-							  <asp:DropDownList ID="DropDownList1" runat="server" CssClass=>
-                                        <asp:ListItem Text="1" Value="1">1</asp:ListItem>
-                                        <asp:ListItem Text="2" Value="2">2</asp:ListItem>
-                                        <asp:ListItem Text="3" Value="3">3</asp:ListItem>
-                                        <asp:ListItem Text="4" Value="4">4</asp:ListItem>
-                                        <asp:ListItem Text="5" Value="5">5</asp:ListItem>
-                                        <asp:ListItem Text="6" Value="6">6</asp:ListItem>
-                                        <asp:ListItem Text="7" Value="7">7</asp:ListItem>
-            <asp:ListItem Text="8" Value="8">8</asp:ListItem>
-            <asp:ListItem Text="9" Value="9">9</asp:ListItem>
-            <asp:ListItem Text="10" Value="10">10</asp:ListItem>
-        </asp:DropDownList>
-						</div>
-					</div>
-					
-					<div class="occasion-cart">
-						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															
-																<fieldset>
-                                                                    
-                                                                    <asp:Button ID="Button1" runat="server" Text="Add to cart" CssClass="button" OnClick="Button1_Click"/>
-																   
-                                                                 </fieldset>
-															
-														</div>
-																			
-					</div>
-					<ul class="social-nav model-3d-0 footer-social w3_agile_social single_page_w3ls">
-						                                   <li class="share">Share On : </li>
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter"> 
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-					
-		      </div>
-	 			<div class="clearfix"> </div>
-				<!-- /new_arrivals --> 
-	<div class="responsive_tabs_agileits"> 
-				<div id="horizontalTab">
-						<ul class="resp-tabs-list">
-							<li>Description</li>
-							<li>Reviews</li>
-							<li>Information</li>
-						</ul>
-					<div class="resp-tabs-container">
-					<!--/tab_one-->
-					   <div class="tab1">
+<!-- Mirrored from codechant.com/envato/html/carparts/product-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Aug 2017 06:59:59 GMT -->
+<head>
+        <!-- Metas -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <meta name="description" content="CarParts - A Responsive eCommerce Template specially for car and electronic parts eCommerce site">
 
-							<div class="single_page_agile_its_w3ls">
-							  <h6>Lorem ipsum dolor sit amet</h6>
-							   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
-							   <p class="w3ls_para">Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
-							</div>
-						</div>
-						<!--//tab_one-->
-						<div class="tab2">
-							
-							<div class="single_page_agile_its_w3ls">
-								<div class="bootstrap-tab-text-grids">
-									<div class="bootstrap-tab-text-grid">
-										<div class="bootstrap-tab-text-grid-left">
-											<img src="images/t1.jpg" alt=" " class="img-responsive">
-										</div>
-										<div class="bootstrap-tab-text-grid-right">
-											<ul>
-												<li><a href="#">Admin</a></li>
-												<li><a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
-											</ul>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
-												suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
-												vel eum iure reprehenderit.</p>
-										</div>
-										<div class="clearfix"> </div>
-						             </div>
-									 <div class="add-review">
-										<h4>add a review</h4>
-										
-												<input type="text" name="Name" required="Name">
-												<input type="email" name="Email" required="Email"> 
-												<textarea name="Message" required=""></textarea>
-											<input type="submit" value="SEND">
-								
-									</div>
-								 </div>
-								 
-							 </div>
-						 </div>
-						   <div class="tab3">
-
-							<div class="single_page_agile_its_w3ls">
-							  <h6>Big Wing Sneakers (Navy)</h6>
-							   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
-							   <p class="w3ls_para">Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-	<!-- //new_arrivals --> 
-	  	<!--/slider_owl-->
-	
-			<div class="w3_agile_latest_arrivals">
-			<h3 class="wthree_text_info">Featured <span>Arrivals</span></h3>	
-					  <div class="col-md-3 product-men single">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/w2.jpg" alt="" class="pro-image-front">
-										<img src="images/w2.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="single.html">Sleeveless Solid Blue Top</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">$140.99</span>
-											<del>$189.71</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-																															<fieldset>
-																	<input type="hidden" name="cmd" value="_cart">
-																	<input type="hidden" name="add" value="1">
-																	<input type="hidden" name="business" value=" ">
-																	<input type="hidden" name="item_name" value="Sleeveless Solid Blue Top">
-																	<input type="hidden" name="amount" value="30.99">
-																	<input type="hidden" name="discount_amount" value="1.00">
-																	<input type="hidden" name="currency_code" value="USD">
-																	<input type="hidden" name="return" value=" ">
-																	<input type="hidden" name="cancel_return" value=" ">
-																	<input type="submit" name="submit" value="Add to cart" class="button">
-																</fieldset>
-															
-														</div>
-																			
-									</div>
-								</div>
-							</div>
-                       <div class="col-md-3 product-men single">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/w4.jpg" alt="" class="pro-image-front">
-										<img src="images/w4.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="single.html">Black Basic Shorts</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">$120.99</span>
-											<del>$189.71</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-													
-																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart">
-																	<input type="hidden" name="add" value="1">
-																	<input type="hidden" name="business" value=" ">
-																	<input type="hidden" name="item_name" value="Black Basic Shorts">
-																	<input type="hidden" name="amount" value="30.99">
-																	<input type="hidden" name="discount_amount" value="1.00">
-																	<input type="hidden" name="currency_code" value="USD">
-																	<input type="hidden" name="return" value=" ">
-																	<input type="hidden" name="cancel_return" value=" ">
-																	<input type="submit" name="submit" value="Add to cart" class="button">
-																</fieldset>
-												</div>
-																			
-									</div>
-								</div>
-							</div>
-						 <div class="col-md-3 product-men single">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/s6.jpg" alt="" class="pro-image-front">
-										<img src="images/s6.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="single.html">Aero Canvas Loafers  </a></h4>
-										<div class="info-product-price">
-											<span class="item_price">$120.99</span>
-											<del>$199.71</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-																													<fieldset>
-																	<input type="hidden" name="cmd" value="_cart">
-																	<input type="hidden" name="add" value="1">
-																	<input type="hidden" name="business" value=" ">
-																	<input type="hidden" name="item_name" value="Aero Canvas Loafers">
-																	<input type="hidden" name="amount" value="30.99">
-																	<input type="hidden" name="discount_amount" value="1.00">
-																	<input type="hidden" name="currency_code" value="USD">
-																	<input type="hidden" name="return" value=" ">
-																	<input type="hidden" name="cancel_return" value=" ">
-																	<input type="submit" name="submit" value="Add to cart" class="button">
-																</fieldset>
-													
-														</div>
-																			
-									</div>
-								</div>
-						</div>
-					   <div class="col-md-3 product-men single">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/w7.jpg" alt="" class="pro-image-front">
-										<img src="images/w7.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="single.html">Ankle Length Socks</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">$100.99</span>
-											<del>$159.71</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															
-																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart">
-																	<input type="hidden" name="add" value="1">
-																	<input type="hidden" name="business" value=" ">
-																	<input type="hidden" name="item_name" value="Ankle Length Socks">
-																	<input type="hidden" name="amount" value="30.99">
-																	<input type="hidden" name="discount_amount" value="1.00">
-																	<input type="hidden" name="currency_code" value="USD">
-																	<input type="hidden" name="return" value=" ">
-																	<input type="hidden" name="cancel_return" value=" ">
-																	<input type="submit" name="submit" value="Add to cart" class="button">
-																</fieldset>
-															
-														</div>
-																			
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-					<!--//slider_owl-->
-		         </div>
-	        </div>
- </div>
-
-    </ItemTemplate>
-        </asp:Repeater>
-
+        <!-- External CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
         
-<!--//single_page-->
-<!--/grids-->
-<div class="coupons">
-		<div class="coupons-grids text-center">
-			<div class="w3layouts_mail_grid">
-				<div class="col-md-3 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<i class="fa fa-truck" aria-hidden="true"></i>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>FREE SHIPPING
-						<p>Lorem ipsum dolor sit amet, consectetur</p>
-					</div>
-				</div>
-				<div class="col-md-3 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<i class="fa fa-headphones" aria-hidden="true"></i>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>24/7 SUPPORT</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur</p>
-					</div>
-				</div>
-				<div class="col-md-3 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>MONEY BACK GUARANTEE</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur</p>
-					</div>
-				</div>
-					<div class="col-md-3 w3layouts_mail_grid_left">
-					<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-						<i class="fa fa-gift" aria-hidden="true"></i>
-					</div>
-					<div class="w3layouts_mail_grid_left2">
-						<h3>FREE GIFT COUPONS</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur</p>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="assets/img/color-1/template/favicon.png">
+        <link rel="apple-touch-icon" href="assets/img/color-1/template/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png">
 
-		</div>
-</div>
-<!--grids-->
-<!-- footer -->
-        </form>
-<!-- //footer -->
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.min.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="page product-page product-single-page">
+       <form runat="server">
+        
+           <div class="header-area" data-spy="affix" data-offset-top="200">
+            <!--------------- Top Header --------------->
+            <header id="top-header-area" class="top-header-area">
+                <div class="container">
+                    <div class="top-header-inner">
+                        <div class="top-header-content">
+                            <div class="col-md-6 col-sm-12 col-xs-7">
 
-<!-- login -->
-			
-<!-- //login -->
-<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- js -->
-<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
-<!-- //js -->
-<script src="assets/js/modernizr.custom.js"></script>
-	<!-- Custom-JavaScript-File-Links --> 
-	<!-- cart-js -->
-	<script src="assets/js/minicart.min.js"></script>
-<script>
-	// Mini Cart
-	paypal.minicart.render({
-		action: '#'
-	});
+                      
+                            </div>
 
-	if (~window.location.search.indexOf('reset=true')) {
-		paypal.minicart.reset();
-	}
-</script>
+                            <!--------------- Top Navigation --------------->
+                            <div class="col-md-6 col-sm-12 col-xs-5">
+                                <div id="top-nav" class="top-nav">
+                                    <div class="selected"><i class="fa fa-user"></i>My Account</div>
+                                    <ul id="top-menu" class="menu top-menu right-menu">
+                                        
+                                        <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-group" />
+                                     
+                                    </ul>
+                                </div>
+                            </div>
 
-	<!-- //cart-js --> 
-	<!-- single -->
-<script src="assets/js/imagezoom.js"></script>
-<!-- single -->
-<!-- script for responsive tabs -->						
-<script src="assets/js/easy-responsive-tabs.js"></script>
-<script>
-	$(document).ready(function () {
-	$('#horizontalTab').easyResponsiveTabs({
-	type: 'default', //Types: default, vertical, accordion           
-	width: 'auto', //auto or any width like 600px
-	fit: true,   // 100% fit in a container
-	closed: 'accordion', // Start closed if in accordion view
-	activate: function(event) { // Callback function if tab is switched
-	var $tab = $(this);
-	var $info = $('#tabInfo');
-	var $name = $('span', $info);
-	$name.text($tab.text());
-	$info.show();
-	}
-	});
-	$('#verticalTab').easyResponsiveTabs({
-	type: 'vertical',
-	width: 'auto',
-	fit: true
-	});
-	});
-</script>
-<!-- FlexSlider -->
-<script src="assets/js/jquery.flexslider.js"></script>
-						<script>
-						// Can also be used with $(document).ready()
-							$(window).load(function() {
-								$('.flexslider').flexslider({
-								animation: "slide",
-								controlNav: "thumbnails"
-								});
-							});
-						</script>
-					<!-- //FlexSlider-->
-<!-- //script for responsive tabs -->		
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="assets/js/move-top.js"></script>
-<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
+                        </div>                    
+                    </div>
+                </div>
+            </header>
 
-<!-- for bootstrap working -->
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-</body>
-</html>
+            <!--------------- Main header --------------->
+            <header id="main-header" class="main-header">
+                <div class="container">
+                    <div class="main-header-inner">
+                        <div class="display-flex main-header-content">
+                            <!--------------- Searchform --------------->
+                            <div class="col-sm-4">
+                                <form id="searchform" class="searchform" action="#" method="post">
+                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
+                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+
+                            <!--------------- Log wrap --------------->
+                            <div class="col-sm-4 text-center">
+                                <a class="site-logo-link" href="#">
+                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                </a>
+                            </div>
+
+                            <!--------------- Mini Cart --------------->
+                         
+                        </div>
+                    </div>
+                    
+
+                    <!--------------- Main navigation --------------->
+                     <div class="main-navigation-wrap">
+                        <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="menu nav navbar-nav main-menu">
+                                    <li class="dropdown">
+                                        <a href="UserHome.aspx" class="dropdown-toggle"  >Home</a>
+                                        
+                                    </li>
+                                    <li class="dropdown mega-holder">
+                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars</a>
+                                        <ul class="dropdown-menu mega-menu col-lg-7 col-md-8 col-sm-10">
+                                            <li class="menu-column md-1-4">
+                                                <ul class="menu-row">
+                                                    <li class="menu-title">
+                                                        <a href="products.html">Popular</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Watch Fashion</a></li>
+                                                            <li class="menu-item"><a href="products.html">Bag Fashion</a></li>
+                                                            <li class="menu-item"><a href="products.html">Lingerie</a></li>
+                                                            <li class="menu-item"><a href="products.html">Shoes</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="menu-row">
+                                                    <li class="menu-title">
+                                                        <a href="products.html">New car</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Bootees Bags</a></li>
+                                                            <li class="menu-item"><a href="products.html">Blazers</a></li>
+                                                            <li class="menu-item"><a href="products.html">Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Jackets</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-column md-1-4">
+                                                <ul class="menu-row">
+                                                    <li class="menu-title">
+                                                        <a href="products.html">Old Car</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">New Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Top Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Special Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                
+                                            </li>
+                                            <li class="menu-column md-2-4">
+                                                <a class="menu-banner" href="products.html"><img src="assets/img/menu/wheel.png" alt="..."></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown mega-holder">
+                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Comapre Car</a>
+                                        
+                                    </li>
+                                   
+                                    <li class="dropdown mega-holder">
+                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spare Parts</a>
+                                        <ul class="dropdown-menu mega-menu mega-right col-lg-6 col-md-7 col-sm-10">
+                                            <li class="menu-row">
+                                                <ul class="menu-column md-1-3">
+                                                    <li class="menu-title">
+                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-1.png" alt="..."></a>
+                                                        <a href="products.html">Audio 1</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
+                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
+                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="menu-column md-1-3">
+                                                    <li class="menu-title">
+                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-2.png" alt="..."></a>
+                                                        <a href="products.html">Audio 2</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
+                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
+                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="menu-column md-1-3">
+                                                    <li class="menu-title">
+                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-3.png" alt="..."></a>
+                                                        <a href="products.html">Audio 3</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
+                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
+                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+									<li class="dropdown mega-holder">
+                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reviews & News</a>
+                                        <ul class="dropdown-menu mega-menu col-md-4 col-sm-6">
+                                            <li class="menu-row">
+                                                <ul class="menu-column md-2-4">
+                                                    <li class="menu-title">
+                                                        <a href="products.html">Lights 1</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
+                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Spring &amp; Autumn</a></li>
+                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="menu-column md-2-4">
+                                                    <li class="menu-title">
+                                                        <a href="products.html">Lights 2</a>
+                                                        <ul class="menu-items">
+                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
+                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
+                                                            <li class="menu-item"><a href="products.html">Spring &amp; Autumn</a></li>
+                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="blog.html">Blog Listing</a></li>
+                                            <li><a href="blog-single.html">Blog Single</a></li>
+                                        </ul>
+                                    </li>
+									
+									
+								</ul>								
+                            </div>
+                        </nav>
+                    
+                </div>
+                    </div>
+            </header>
+        </div>
    
+                  
+        <!--------------- Breadcrumbs Area --------------->
+        <div id="breadcrumbs-area" class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-wrap">
+                            <div class="breadcrumbs">
+                                <div class="breadcrumb-item"><a href="UserHome.aspx">Home</a></div><i class="fa fa-chevron-right"></i><div class="breadcrumb-item">Compare Car
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-wrap page-main product-page-main">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-single-wrap">
+                            
+                            <!--------------- Products --------------->
+                            <div class="row">
+                                <div id="product-wrap" class="list_mode">
+
+                                    <asp:Repeater ID="d1" runat="server" >
+       
+                                    <ItemTemplate>
+
+                                    <div class="product single-product col-lg-12 new featured">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="single-product-thumb">
+                                                    <ul class="nav nav-tabs" role="tablist">
+                                                        <li role="presentation" class="active"><a href="#thumb-1" aria-controls="thumb-1" role="tab" data-toggle="tab"><img src="assets/img/product/thumb-1.jpg" alt="..."></a></li>
+                                                        <li role="presentation"><a href="#thumb-2" aria-controls="thumb-2" role="tab" data-toggle="tab"><img src="assets/img/product/thumb-2.jpg" alt="..."></a></li>
+                                                        <li role="presentation"><a href="#thumb-3" aria-controls="thumb-3" role="tab" data-toggle="tab"><img src="assets/img/product/thumb-3.jpg" alt="..."></a></li>
+                                                        <li role="presentation"><a href="#thumb-4" aria-controls="thumb-4" role="tab" data-toggle="tab"><img src="assets/img/product/thumb-4.jpg" alt="..."></a></li>
+                                                    </ul>
+
+                                                    <div class="tab-content">
+                                                        <div role="tabpanel" class="tab-pane fade in active" id="thumb-1">
+                                                            <img src="assets/img/product/6.jpg" alt="...">
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="thumb-2">
+                                                            <img src="assets/img/product/6-hover.jpg" alt="...">
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="thumb-3">
+                                                            <img src="assets/img/product/4.jpg" alt="...">
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="thumb-4">
+                                                            <img src="assets/img/product/2-hover.jpg" alt="...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="product-info">
+                                                    <h5 class="product-name"><a href="#"><%#Eval("spname") %></a></h5>
+                                                    <div class="product-review-wrap">
+                                                        <div class="rating to-review-item" itemtype="http://schema.org/Offer" itemscope>
+                                                            <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
+                                                                <span class="star star_full"></span>
+                                                                <span class="star star_full"></span>
+                                                                <span class="star star_full"></span>
+                                                                <span class="star star_full"></span>
+                                                                <span class="star"></span>
+                                                                <meta itemprop="worstRating" content="0">
+                                                                <meta itemprop="ratingValue" content="4">
+                                                                <meta itemprop="bestRating" content="5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="to-review-item to-read-review">
+                                                            <a href="#"><i class="fa fa-comment"></i> Read reviews (1)</a>
+                                                        </div>
+                                                        <div class="to-review-item to-write-review">
+                                                            <a href="#"><i class="fa fa-pencil-square-o"></i> Write a review</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-attr-table">
+                                                        <div class="attr-item">
+                                                            <div class="attr-cell name-cell">Model</div>
+                                                            <div class="attr-cell value-cell">Demo</div>
+                                                        </div>
+                                                        <div class="attr-item">
+                                                            <div class="attr-cell name-cell">Condition</div>
+                                                            <div class="attr-cell value-cell">New</div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="price">Rs<%#Eval("spprice") %></p>
+                                                    <div class="product-description">
+                                                        <p><%#Eval("spdesc") %></p>
+                                                    </div>
+                                                    <form id="orderForm" class="order-form" action="#" method="post">
+                                                        <input type="hidden" name="price_order" value="27">
+                                                        <input type="hidden" name="currency_order" value="usd">
+                                                        <div class="order-variations">
+                                                            <div class="order-variation quantity-variation">
+                                                                <label>Quantity: </label>
+                                                                <input type="number" id="quantity_order" name="quantity_order" min="1" max="12" value="1" required>
+                                                            </div>
+                                                           
+                                                           
+                                                        </div>
+                                                        <br>
+                                                        <br>
+                                                        
+                                                        <div class="list_mode_btns">
+                                                            <asp:Button ID="Button1" runat="server" Text="Add to Cart" CssClass="btn" OnClick="Button1_Click"/>
+                                                           
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- More Product Information on Tab -->
+                                            <div class="product-information col-md-12">
+
+                                                <!-- Information tabs -->
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li role="presentation" class="active"><a href="#more-info" aria-controls="more-info" role="tab" data-toggle="tab">More Info</a></li>
+                                                    <li role="presentation"><a href="#data-sheet" aria-controls="data-sheet" role="tab" data-toggle="tab">Data Sheet</a></li>
+                                                    <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+                                                  </ul>
+
+                                                <!-- Content panes -->
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane fade in active" id="more-info">
+                                                        <p>Ut metus. Maecenas dapibus nibh eu est. Proin faucibus pharetra nibh. Integer aliquet tellus in felis. Quisque mi pede, imperdiet a, dapibus vel, bibendum rhoncus, nulla. Sed eu velit. Maecenas molestie, ipsum nec nonummy mattis, ipsum lectus imperdiet nibh, sit amet accumsan nunc nunc et lorem. Quisque at augue. Donec elit ligula, pellentesque id, feugiat sed, malesuada a, turpis. Donec nunc quam, commodo ut, venenatis ut, feugiat quis, tortor. Nunc id risus vestibulum turpis facilisis fringilla. Pellentesque turpis ipsum, ultrices at, consequat sit amet, sollicitudin at, pede. Suspendisse potenti. Fusce eu ante sit amet lacus cursus tempor. Donec bibendum, metus nec tristique mollis, metus felis pellentesque sapien, eu mattis turpis lorem quis quam.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque.</p>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane fade data-sheet" id="data-sheet">
+                                                        <table>
+                                                            <tr>
+                                                                <td class="data-attr">Compositions</td>
+                                                                <td class="data-value">Cotton</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="data-attr">Styles</td>
+                                                                <td class="data-value">Girly</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="data-attr">Properties</td>
+                                                                <td class="data-value">Colorful Dress</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane fade" id="reviews">
+                                                        <ul class="reviews">
+                                                            <li class="review">
+                                                                <div class="review-head">
+                                                                    <div class="grade">
+                                                                        <label>Grade </label>
+                                                                        <div class="rating" itemtype="http://schema.org/Offer" itemscope>
+                                                                            <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
+                                                                                <span class="star star_full"></span>
+                                                                                <span class="star star_full"></span>
+                                                                                <span class="star star_full"></span>
+                                                                                <span class="star star_full"></span>
+                                                                                <span class="star"></span>
+                                                                                <meta itemprop="worstRating" content="0">
+                                                                                <meta itemprop="ratingValue" content="4">
+                                                                                <meta itemprop="bestRating" content="5">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h5 class="reviwer">Code chant</h5>
+                                                                    <p class="review-date">3/20/2017</p>
+                                                                </div>
+                                                                <div class="review-body">
+                                                                    <h5 class="review-title">Test Review</h5>
+                                                                    <p class="review-content">This is a great product according to usability.</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <a href="#" class="btn"><i class="fa fa-pencil-square-o"></i> Write a review</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>     
+                                       </ItemTemplate> 
+                                        </asp:Repeater>
+                                                                       
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!--------------- Module / best seller --------------->
+                        <div class="shop-module related-module">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 text-center">
+                                        <div class="module-header">
+                                            <h3 class="module-title">Related Products</h3>
+                                            <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
+                                            <p class="module-subtitle">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="products-wrap">
+                                        <div class="product col-lg-3 col-sm-6">
+                                            <div class="product-thumb">
+                                                <a href="#" class="thumb-link">
+                                                    <img class="hover-img" src="assets/img/product/6-hover.jpg" alt="Product Hover">
+                                                    <img class="front-img" src="assets/img/product/6.jpg" alt="Product Front">
+                                                </a>
+                                                <div class="attr-group">
+                                                    <span class="new">New</span>
+                                                </div>
+                                                <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                                <div class="product-btn">
+                                                    <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
+                                                    <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
+                                                    <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h5 class="product-name"><a href="#">Funnky hight</a></h5>
+                                                <div class="rating" itemtype="http://schema.org/Offer" itemscope>
+                                                    <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star"></span>
+                                                        <meta itemprop="worstRating" content="0">
+                                                        <meta itemprop="ratingValue" content="4">
+                                                        <meta itemprop="bestRating" content="5">
+                                                    </div>
+                                                </div>
+                                                <p class="price">$12.00</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="product col-lg-3 col-sm-6">
+                                            <div class="product-thumb">
+                                                <a href="#" class="thumb-link">
+                                                    <img class="hover-img" src="assets/img/product/7-hover.jpg" alt="Product Hover">
+                                                    <img class="front-img" src="assets/img/product/7.jpg" alt="Product Front">
+                                                </a>
+                                                <div class="attr-group">
+                                                    <span class="new">New</span>
+                                                </div>
+                                                <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                                <div class="product-btn">
+                                                    <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
+                                                    <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
+                                                    <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h5 class="product-name"><a href="#">Funnky hight</a></h5>
+                                                <div class="rating" itemtype="http://schema.org/Offer" itemscope>
+                                                    <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star"></span>
+                                                        <meta itemprop="worstRating" content="0">
+                                                        <meta itemprop="ratingValue" content="4">
+                                                        <meta itemprop="bestRating" content="5">
+                                                    </div>
+                                                </div>
+                                                <p class="price">$12.00</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="product col-lg-3 col-sm-6">
+                                            <div class="product-thumb">
+                                                <a href="#" class="thumb-link">
+                                                    <img class="hover-img" src="assets/img/product/1-hover.jpg" alt="Product Hover">
+                                                    <img class="front-img" src="assets/img/product/1.jpg" alt="Product Front">
+                                                </a>
+                                                <div class="attr-group">
+                                                    <span class="new">New</span>
+                                                </div>
+                                                <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                                <div class="product-btn">
+                                                    <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
+                                                    <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
+                                                    <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h5 class="product-name"><a href="#">Funnky hight</a></h5>
+                                                <div class="rating" itemtype="http://schema.org/Offer" itemscope>
+                                                    <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star"></span>
+                                                        <meta itemprop="worstRating" content="0">
+                                                        <meta itemprop="ratingValue" content="4">
+                                                        <meta itemprop="bestRating" content="5">
+                                                    </div>
+                                                </div>
+                                                <p class="price">$12.00</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="product col-lg-3 col-sm-6">
+                                            <div class="product-thumb">
+                                                <a href="#" class="thumb-link">
+                                                    <img class="hover-img" src="assets/img/product/2-hover.jpg" alt="Product Hover">
+                                                    <img class="front-img" src="assets/img/product/2.jpg" alt="Product Front">
+                                                </a>
+                                                <div class="attr-group">
+                                                    <span class="new">New</span>
+                                                </div>
+                                                <a class="to-cart" href="#"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
+                                                <div class="product-btn">
+                                                    <a class="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i class="fa fa-eye"></i><span class="tooltip">Quick View</span></a>
+                                                    <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
+                                                    <a class="to-wish" href="#"><i class="fa fa-heart"></i><span class="tooltip">Add To Wishlist</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <h5 class="product-name"><a href="#">Funnky hight</a></h5>
+                                                <div class="rating" itemtype="http://schema.org/Offer" itemscope>
+                                                    <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star star_full"></span>
+                                                        <span class="star"></span>
+                                                        <meta itemprop="worstRating" content="0">
+                                                        <meta itemprop="ratingValue" content="4">
+                                                        <meta itemprop="bestRating" content="5">
+                                                    </div>
+                                                </div>
+                                                <p class="price">$12.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!--------------- Module / Top Brands --------------->
+            <div class="shop-module brand-module bg-module">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <div class="module-header">
+                                <h3 class="module-title">Top Brands</h3>
+                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
+                                <p class="module-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="brands display-flex">
+                            <div class="col-md-2 col-sm-4">
+                                <a class="brand" href="#"><img src="assets/img/brand/1.png" alt="..."></a>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <a class="brand" href="#"><img src="assets/img/brand/2.png" alt="..."></a>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <a class="brand" href="#"><img src="assets/img/brand/3.png" alt="..."></a>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <a class="brand" href="#"><img src="assets/img/brand/4.png" alt="..."></a>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <a class="brand" href="#"><img src="assets/img/brand/5.png" alt="..."></a>
+                            </div>
+                            <div class="col-md-2 col-sm-4">
+                                <a class="brand" href="#"><img src="assets/img/brand/6.png" alt="..."></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="newsletter-wrap">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <div class="module-header">
+                                <h3 class="module-title">News Letter</h3>
+                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
+                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
+                            </div>
+                            
+                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
+                                <button type="submit" name="emailsubmit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-head">
+                    <div class="display-flex">
+                        <div class="col-md-4 col-sm-5">
+                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
+                        </div>
+                        <div class="col-md-8 col-sm-7">
+                            <ul class="socials">
+                                <li class="social facebook-icon"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="social twitter-icon"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="social googleplus-icon"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="social rss-icon"><a href="#"><i class="fa fa-rss"></i></a></li>
+                                <li class="social pinterest-icon"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li class="social linkedin-icon"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="social youtube-icon"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="footer-widget-area">
+                    <div class="footer-widgets">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget contact-widget">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <div class="widget-content">
+                                    <div class="contact-infos">
+                                        <div class="contact-info">
+                                            <p><b>Add:</b>Lafayette has a great customer service</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Tel:</b>02 8000 11 800</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Email:</b><a href="#">Company@gmail.com</a></p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Hotline:</b><a href="#">999-507-1256</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-6">
+                            <div class="widget custom-menu-widget">
+                                <h3 class="widget-title">About Us</h3>
+                                <div class="widget-content">
+                                    <ul class="menu custom-menu about-menu">
+                                        <li><a href="#">Subscribe</a></li>
+                                        <li><a href="#">Unsubscribe</a></li>
+                                        <li><a href="#">Help</a></li>
+                                        <li><a href="#">How to Uninstall</a></li>
+                                        <li><a href="#">About Company</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-4">
+                            <div class="widget custom-menu-widget">
+                                <h3 class="widget-title">Help</h3>
+                                <div class="widget-content">
+                                    <ul class="menu custom-menu help-menu">
+                                        <li><a href="#">Tortor massa</a></li>
+                                        <li><a href="#">Proident et facilisi</a></li>
+                                        <li><a href="#">Per esse</a></li>
+                                        <li><a href="#">Magnis integer</a></li>
+                                        <li><a href="#">Aptent lacinia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-4">
+                            <div class="widget custom-menu-widget">
+                                <h3 class="widget-title">Our services</h3>
+                                <div class="widget-content">
+                                    <ul class="menu custom-menu service-menu">
+                                        <li><a href="#">Curo concerns</a></li>
+                                        <li><a href="#">Hare thery</a></li>
+                                        <li><a href="#">Phease incocal</a></li>
+                                        <li><a href="#">Scelerisque</a></li>
+                                        <li><a href="#">Natoque</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-4">
+                            <div class="widget recent-post-widget">
+                                <h3 class="widget-title">Recent post</h3>
+                                <div class="widget-content">
+                                    <div class="recent-posts">
+                                        <div class="recent-post">
+                                            <a class="recent-post-thumb" href="#"><img src="assets/img/blog/sthumb-1.jpg" alt="..."></a>
+                                            <div class="recent-post-cotent">
+                                                <h5 class="recent-post-title"><a href="#">Cartown Features List</a></h5>
+                                                <p class="recent-post-date">April 4th, 2017</p>
+                                            </div>
+                                        </div>
+                                        <div class="recent-post">
+                                            <a class="recent-post-thumb" href="#"><img src="assets/img/blog/sthumb-2.jpg" alt="..."></a>
+                                            <div class="recent-post-cotent">
+                                                <h5 class="recent-post-title"><a href="#">Cartown Features List</a></h5>
+                                                <p class="recent-post-date">April 4th, 2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!--------------- Lower footer for copyright --------------->
+                <div class="lower-footer-area">
+                    <div class="lower-footer-inner">
+                        <div class="row">
+                            <div class="display-flex">
+                                <div class="col-sm-6">
+                                    <p class="copyright">Copyright 2017 - CodeChant. All rights reserved</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="payments">
+                                        <a href="#" class="payment"><img src="assets/img/payment/1.png" alt="..."></a>
+                                        <a href="#" class="payment"><img src="assets/img/payment/2.png" alt="..."></a>
+                                        <a href="#" class="payment"><img src="assets/img/payment/3.png" alt="..."></a>
+                                        <a href="#" class="payment"><img src="assets/img/payment/4.png" alt="..."></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!--------------- Script --------------->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+           </form>
+    </body>
+
+<!-- Mirrored from codechant.com/envato/html/carparts/product-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Aug 2017 07:00:01 GMT -->
+</html>
