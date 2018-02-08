@@ -10,11 +10,17 @@
                 <br>
                 <br>
                 <div class="form-group">
+                  <asp:Label ID="Label7" runat="server" Text="Enter Description" CssClass="col-md-2 control-label"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
+                        </div>
+                    </div>
+
+                <div class="form-group">
                   <asp:Label ID="Label1" runat="server" Text="Upload Image1" CssClass="col-md-2 control-label"></asp:Label>
                     <div class="col-md-3">
                         <asp:FileUpload ID="img01" runat="server" CssClass="form" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="This Field is Required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-
                         </div>
                     </div>
              
@@ -22,8 +28,7 @@
                   <asp:Label ID="Label2" runat="server" Text="Upload Image2" CssClass="col-md-2 control-label"></asp:Label>
                     <div class="col-md-3">
                         <asp:FileUpload ID="img02" runat="server" CssClass="form" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="This Field is Required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-
+ 
                         </div>
                     </div>
 
@@ -31,8 +36,7 @@
                   <asp:Label ID="Label3" runat="server" Text="Upload Image3" CssClass="col-md-2 control-label"></asp:Label>
                     <div class="col-md-3">
                         <asp:FileUpload ID="img03" runat="server" CssClass="form" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="This Field is Required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-
+                        
                         </div>
                     </div>
 
@@ -40,8 +44,7 @@
                   <asp:Label ID="Label4" runat="server" Text="Upload Image4" CssClass="col-md-2 control-label"></asp:Label>
                     <div class="col-md-3">
                         <asp:FileUpload ID="img04" runat="server" CssClass="form" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="This Field is Required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-
+                       
                         </div>
                     </div>
 
@@ -49,17 +52,14 @@
                   <asp:Label ID="Label5" runat="server" Text="Upload Image5" CssClass="col-md-2 control-label"></asp:Label>
                     <div class="col-md-3">
                         <asp:FileUpload ID="img05" runat="server" CssClass="form" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="This Field is Required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-
-                        </div>
+                                                </div>
                     </div>
                 <div class="form-group">
                   <asp:Label ID="Label6" runat="server" Text="Upload Image6" CssClass="col-md-2 control-label"></asp:Label>
                     <div class="col-md-3">
                         <asp:FileUpload ID="img06" runat="server" CssClass="form" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="This Field is Required" ControlToValidate="img01" CssClass="text-danger"></asp:RequiredFieldValidator>
-
-                        </div>
+                        
+                          </div>
                     </div>
 
                 <div class="form-group">

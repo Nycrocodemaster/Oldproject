@@ -7,31 +7,35 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-public partial class product_desc : System.Web.UI.Page
+public partial class Default2 : System.Web.UI.Page
 {
+
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
+ 
     int id;
-    String spname,spprice,spimg;
+    String spname, spprice, spimg;
+
     protected void Page_Load(object sender, EventArgs e)
     {
+            id = Convert.ToInt32(Request.QueryString["id"].ToString());
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * from sp_details where id=" + id + "";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            d1.DataSource = dt;
+            d1.DataBind();
 
-        id = Convert.ToInt32(Request.QueryString["id"].ToString());
-        conn.Open();
-        SqlCommand cmd = conn.CreateCommand();
-        cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "Select * from sp_details where id=" + id + "";
-        cmd.ExecuteNonQuery();
-        DataTable dt = new DataTable();
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        da.Fill(dt);
-        d1.DataSource = dt;
-        d1.DataBind();
-        conn.Close();
-        
-    }
+            conn.Close();
+
+        }
 
 
-    protected void Button1_Click(object sender, EventArgs e)
+    
+    protected void button_ServerClick(object sender, EventArgs e)
     {
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();

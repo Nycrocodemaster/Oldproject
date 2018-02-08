@@ -21,7 +21,7 @@ public partial class Admin_sponser : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "insert into sponsortb values('" + b.ToString() + "')";
+        cmd.CommandText = "insert into sponsortb values('" +TextBox1.Text + "',"+b.ToString()+")";
         cmd.ExecuteNonQuery();
         conn.Close();
     }

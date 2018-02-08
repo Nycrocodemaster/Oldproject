@@ -170,7 +170,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="product_desc.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
+                                    <h5 class="product-name"><a href="Default2.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -283,7 +283,7 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center">
                             <div class="module-header">
-                                <h3 class="module-title">Top Brands</h3>
+                                <h3 class="module-title">Top Brand</h3>
                                 <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
                                 <p class="module-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
                             </div>
@@ -294,21 +294,7 @@
                             <div class="col-md-2 col-sm-4">
                                 <a class="brand" href="#"><img src="assets/img/brand/1.png" alt="..."></a>
                             </div>
-                            <div class="col-md-2 col-sm-4">
-                                <a class="brand" href="#"><img src="assets/img/brand/2.png" alt="..."></a>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <a class="brand" href="#"><img src="assets/img/brand/3.png" alt="..."></a>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <a class="brand" href="#"><img src="assets/img/brand/4.png" alt="..."></a>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <a class="brand" href="#"><img src="assets/img/brand/5.png" alt="..."></a>
-                            </div>
-                            <div class="col-md-2 col-sm-4">
-                                <a class="brand" href="#"><img src="assets/img/brand/6.png" alt="..."></a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
