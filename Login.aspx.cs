@@ -61,7 +61,7 @@ public partial class Login : System.Web.UI.Page
                 if (Utype == "A")
                 {
                     Session["USERNAME"] = TextBoxUsern.Text;
-                    Response.Redirect("../Admin/Admin.aspx");
+                    Response.Redirect("../Oldproject/Admin/Admin.aspx");
                 }
 
 

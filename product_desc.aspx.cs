@@ -14,7 +14,6 @@ public partial class product_desc : System.Web.UI.Page
     String spname,spprice,spimg;
     protected void Page_Load(object sender, EventArgs e)
     {
-
         id = Convert.ToInt32(Request.QueryString["id"].ToString());
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
@@ -26,12 +25,15 @@ public partial class product_desc : System.Web.UI.Page
         da.Fill(dt);
         d1.DataSource = dt;
         d1.DataBind();
+
         conn.Close();
-        
+       
     }
 
 
-    protected void Button1_Click(object sender, EventArgs e)
+
+
+    protected void button_ServerClick(object sender, EventArgs e)
     {
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();

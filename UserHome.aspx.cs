@@ -52,6 +52,18 @@ public partial class UserHome : System.Web.UI.Page
         rptrImages.DataBind();
         conn.Close();
 
+        conn.Open();
+        SqlCommand cmd2 = conn.CreateCommand();
+        cmd2.CommandType = CommandType.Text;
+        cmd2.CommandText = "select * from sponsortb";
+        cmd2.ExecuteNonQuery();
+        DataTable dt2 = new DataTable();
+        SqlDataAdapter sd2 = new SqlDataAdapter(cmd2);
+        sd2.Fill(dt2);
+        d3.DataSource = dt2;
+        d3.DataBind();
+        conn.Close();
+
     }
     protected string GetActiveClass(int ItemIndex)
     {

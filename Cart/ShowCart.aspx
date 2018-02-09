@@ -11,7 +11,7 @@
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href='//fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'/>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script>$(document).ready(function (c) {
     $('.alert-close').on('click', function (c) {

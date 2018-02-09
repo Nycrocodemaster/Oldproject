@@ -13,13 +13,13 @@
 					   <div class="agile_top_w3_grids">
 					          <ul class="ca-menu">
 									<li>
-										<a href="#">
+										<a href="../Admin/Buyer_Users.aspx">
 											
 											<i class="fa fa-building-o" aria-hidden="true"></i>
 											<div class="ca-content">
 												<h4 class="ca-main">
                                                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h4>
-												<h3 class="ca-sub">Customers</h3>
+												<h3 class="ca-sub">Users</h3>
 											</div>
 										</a>
 									</li>

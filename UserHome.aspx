@@ -153,12 +153,11 @@
                             </div>
                         </div>
                     </div>
-                 
+                  <asp:Repeater ID="d2" runat="server" >
+                             <ItemTemplate>
                     <div class="row">
                         <div class="products-wrap">
-                               <asp:Repeater ID="d2" runat="server" >
-                             <ItemTemplate>
-                            <div class="product col-lg-3 col-md-4 col-sm-6">
+                              <div class="product col-lg-3 col-md-4 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
                                         <img class="hover-img" src="<%#Eval("spimg2") %>" alt="Product Hover">
@@ -278,6 +277,9 @@
             </div>
             
             <!--------------- Module / Top Brands --------------->
+
+        <asp:Repeater ID="d3" runat="server">
+            <ItemTemplate>
             <div class="shop-module brand-module bg-module">
                 <div class="container">
                     <div class="row">
@@ -285,20 +287,22 @@
                             <div class="module-header">
                                 <h3 class="module-title">Top Brand</h3>
                                 <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                                <p class="module-subtitle"><%#Eval("spodesc") %></p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="brands display-flex">
                             <div class="col-md-2 col-sm-4">
-                                <a class="brand" href="#"><img src="assets/img/brand/1.png" alt="..."></a>
+                                <a class="brand" href="#"><img src="<%#Eval("img1") %>" alt="..."></a>
                             </div>
                             
                         </div>
                     </div>
                 </div>
             </div>
+                </ItemTemplate>
+            </asp:Repeater>
             
             <!--------------- blog --------------->
             <div class="shop-module blog-module">

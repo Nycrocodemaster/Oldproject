@@ -3,12 +3,10 @@
 
 <html>
 <head>
-<title>Elite Shoppy an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
+<title>Drive On</title>
 <!--/tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
  addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } 
@@ -115,19 +113,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </asp:DropDownList>
 						</div>
 					</div>
-					
-					<div class="occasion-cart">
-						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															
-																<fieldset>
-                                                                    
-                                                                    <asp:Button ID="Button1" runat="server" Text="Add to cart" CssClass="button" OnClick="Button1_Click"/>
-																   
-                                                                 </fieldset>
-															
-														</div>
-																			
-					</div>
+					<br>
+            <br>
+					                                     
+                    <button class="btn btn-info btn-lg" id="button" runat="server" onserverclick="button_ServerClick"> <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
+	
 					<ul class="social-nav model-3d-0 footer-social w3_agile_social single_page_w3ls">
 						                                   <li class="share">Share On : </li>
 															<li><a href="#" class="facebook">
