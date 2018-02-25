@@ -12,6 +12,52 @@
 <!-- //for-mobile-apps -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='//fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'/>
+
+  <style>
+        .vee {
+            display:none;
+        }
+        .preloader {
+            color:#d63b3b;  
+            margin:0;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-right:-50%;
+            transform:translate(-50%,-50%);
+        }
+        </style>
+    <script>
+        
+        function deleteRecord(id) {
+            var cookies = document.cookie.split(';');
+            var aa;
+            for (var cookie of cookies) {
+                var currentCookie = cookie.split('=');
+                if (currentCookie[0].trim() == 'a') {
+                  aa = currentCookie[1];
+                  break;
+            }
+        }
+        var splitaa = aa.split('|');
+        var newaa = [];
+        for (var i = 0; i < splitaa.length; i++) {
+            if (i != id) {
+                newaa.push(splitaa[i]);
+            }
+        }
+        var cookie;
+        if (newaa.length == 0) {
+            var date = new Date(0)
+            cookie = `a=;expires=${date.toUTCString()}`
+        } else {
+            cookie = `a=${newaa.join('|')}`;
+        }
+        document.cookie = cookie + ";path=/";
+        location.reload();
+    }
+
+        </script>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script>$(document).ready(function (c) {
     $('.alert-close').on('click', function (c) {
@@ -39,6 +85,13 @@
 </script>
 </head>
 <body>
+
+      <div class="preloader">  
+         <img src="../assets/img/loader.gif" />
+       </div>
+        
+        <div class="vee">
+
     <form id="form" runat="server">
 	<!-- main -->
 		<div class="main">
@@ -54,10 +107,11 @@
                 <ItemTemplate>
 				<div class="cart_box1">
 				  <div class="message">
-					 <a class="alert-close" href="../delete_cart.aspx?id=<%#Eval("id") %>"></a>
-					<div class="list_img"><img src="../<%#Eval("spimg") %>" class="img-responsive" alt=""></div>
-					<div class="list_desc"><h4><a href="#"><%#Eval("spname") %></a></h4><span class="actual">
-					 <%#Eval("spprice") %></span></div>
+					<a href="../deletecart.aspx?cartid=<%#Eval("cartid") %>" class="alert-close"></a>
+					<div class="list_img"><img src="../<%#Eval("cartimg") %>" class="img-responsive" alt=""></div>
+					<div class="list_desc"><h4><a href="#"><%#Eval("Name") %></a></h4><span class="actual">
+					 <%#Eval("price") %></span></div>
+                      <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
 					  <div class="clear"></div>
 				  </div>
 				</div>
@@ -69,13 +123,30 @@
 						<p>Total :<span><asp:Label ID="price" runat="server" /></span></p>
 					</div>
 					<div class="total-right">
-						<a href="#">Check Out</a>
+						<a href="../payment.aspx">Check Out</a>
 					</div>
+                
+						
+                   
 					<div class="clear"> </div>
+                    <br>
+                   <div class="total-right">
+						<a href="../UserHome.aspx">Home</a>
+					</div>
 				</div>
 			</div>
 			</div>
 	<!-- //main -->
     </form>
+            </div>
+     <!--------------- Script --------------->
+          <script src="assets/js/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $(".preloader").fadeOut(2000, function() {
+                    $(".vee").fadeIn(1000);
+                });
+            });
+            </script>
 </body>
 </html>

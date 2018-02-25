@@ -27,7 +27,8 @@
         </style>
 </head>
 <body>
-      <div class="container" style="margin-top:100px;">
+    <form id="form1" runat="server">
+       <div class="container" style="margin-top:100px;">
             <ol>
                 <li><a href="UserHome.aspx">Home</a><</li>
                 <li><a href="compar.aspx">Compare car</a><</li>
@@ -55,8 +56,6 @@
                                     </h4>
                                 </div> 
                             <div id="colapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="head1">
-                                <asp:FormView ID="formview1" runat="server" OnPageIndexChanging="formview1_PageIndexChanging">
-                                    <ItemTemplate>
                                 <div class="panel-body text-center">
                                     <table class="table-hover table-bordered table table-responsive">
                                         <tr>
@@ -71,9 +70,7 @@
                                          </tr>
                                         </table>
                                     </div>
-                                        </ItemTemplate>
-                                    </asp:FormView>
-                                
+
                                 </div>
                             </div>
 
@@ -84,5 +81,7 @@
                     </div>
                 </div>
           </div>
+
+        </form>
 </body>
 </html>

@@ -80,6 +80,7 @@
                                     </h4>
                                 </div> 
                             <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                                
                                 <div class="panel-body text-center">
                                     <table class="table-hover table-bordered table table-responsive">
                                         <tr>

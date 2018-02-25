@@ -14,6 +14,15 @@ public partial class UserHome : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        if (Request.Cookies["Login"] != null)
+        {
+            Label1.Text = Request.Cookies["Login"]["Username"].ToString();
+        }
+        else
+        {
+            Response.Redirect("Login.aspx"); 
+        }
  
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
@@ -55,15 +64,16 @@ public partial class UserHome : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd2 = conn.CreateCommand();
         cmd2.CommandType = CommandType.Text;
-        cmd2.CommandText = "select * from sponsortb";
+        cmd2.CommandText = "select * from blogtb";
         cmd2.ExecuteNonQuery();
         DataTable dt2 = new DataTable();
-        SqlDataAdapter sd2 = new SqlDataAdapter(cmd2);
-        sd2.Fill(dt2);
-        d3.DataSource = dt2;
-        d3.DataBind();
+        SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+        da2.Fill(dt2);
+        Repeater1.DataSource = dt2;
+        Repeater1.DataBind();
         conn.Close();
 
+  
     }
     protected string GetActiveClass(int ItemIndex)
     {
@@ -77,5 +87,12 @@ public partial class UserHome : System.Web.UI.Page
         }
     }
 
-   
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        HttpCookie mycookie = new HttpCookie("Login");
+        mycookie.Expires = DateTime.Now.AddDays(-1d);
+        Response.Cookies.Add(mycookie);
+        Response.Redirect("Login.aspx"); 
+    }
 }

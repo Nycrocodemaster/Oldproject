@@ -32,15 +32,17 @@ public partial class registration : System.Web.UI.Page
         try
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
+
             conn.Open();
-            string insertQuery = "insert into Registrationtb (Fullname,Username,Email,Password,Utype) values (@fullname,@uname,@email,@password,@utype)";
+            string insertQuery = "insert into Registrationtb (Fullname,Username,Email,Password,address,phone_no,Utype) values (@fullname,@uname,@email,@password,@address,@phone_no,@utype)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
             com.Parameters.AddWithValue("@fullname", TextBoxfname.Text);
             com.Parameters.AddWithValue("@uname", TextBoxUsern.Text);
             com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
             com.Parameters.AddWithValue("@password", TextBoxpassw.Text);
             com.Parameters.AddWithValue("@utype", 'U');
-
+            com.Parameters.AddWithValue("@address", TextBox1.Text);
+            com.Parameters.AddWithValue("@phone_no", TextBoxph.Text);
 
             com.ExecuteNonQuery();
             Response.Redirect("Login.aspx");

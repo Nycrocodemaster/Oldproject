@@ -27,8 +27,8 @@
 										<a href="#">
 										  <i class="fa fa-user" aria-hidden="true"></i>
 											<div class="ca-content">
-												<h4 class="ca-main one">26,808</h4>
-												<h3 class="ca-sub one">Products</h3>
+												<h4 class="ca-main one"><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></h4>
+												<h3 class="ca-sub one">Spare Parts</h3>
 											</div>
 										</a>
 									</li>
@@ -37,7 +37,7 @@
 											<i class="fa fa-database" aria-hidden="true"></i>
 											<div class="ca-content">
 											<h4 class="ca-main two">29,008</h4>
-												<h3 class="ca-sub two">Pending Product</h3>
+												<h3 class="ca-sub two">Visitors</h3>
 											</div>
 										</a>
 									</li>
@@ -46,7 +46,7 @@
 											<i class="fa fa-tasks" aria-hidden="true"></i>
 											<div class="ca-content">
 												<h4 class="ca-main three">49,436</h4>
-												<h3 class="ca-sub three">Auction</h3>
+												<h3 class="ca-sub three">Cars Info</h3>
 											</div>
 										</a>
 									</li>

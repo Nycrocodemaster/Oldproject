@@ -19,7 +19,7 @@ public partial class Admin_banUpload : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
             a = Class1.GetRandomPassword(10).ToString();
-            img01.SaveAs(Request.PhysicalApplicationPath + "./BanImg/" + a + img01.FileName.ToString());
+            img01.SaveAs(Request.PhysicalApplicationPath + "./banimg/" + a + img01.FileName.ToString());
             b = "ban images/" + a + img01.FileName.ToString();
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();

@@ -271,8 +271,7 @@
         </div>
 
     <form class="form" runat="server">
-        <br/>
-         <br/>
+         
 	<h2>Registration form </h2>  
         
         <table style="width: 474px">
@@ -309,6 +308,28 @@
          </td>
             
                     </tr>
+
+              <tr>
+                 <td class="auto-style2">
+                 </td>
+                 <td class="auto-style4">
+            <asp:TextBox ID="TextBox1" placeholder="Address" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
+                 </td>
+             </tr>
+            
+
+
+            <tr>
+                 <td class="auto-style2">
+                 </td>
+                 <td class="auto-style4">
+            <asp:TextBox ID="TextBoxph" placeholder="Phone Number" Width="303px" runat="server"></asp:TextBox>
+                 </td>
+                <td class="auto-style1">
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBoxph" ErrorMessage="Enter Valid Phone Number" ValidationExpression="[0-9]{10}" ForeColor="Red">*</asp:RegularExpressionValidator> 
+                 </td>
+            
+             </tr>
             
             <tr>
                 <td class="auto-style2">
@@ -317,6 +338,7 @@
             <asp:TextBox ID="TextBoxpassw" placeholder="password" Width="303px" runat="server" TextMode="Password"></asp:TextBox>
              </td>
                 <td>
+                    <asp:RegularExpressionValidator ID="RegExp1" runat="server" ErrorMessage="Password length must be between 7 to 10 characters" ControlToValidate="TextBoxpassw"  ValidationExpression="^[a-zA-Z0-9'@&#.\s]{7,10}$" Display="Dynamic" ForeColor="Red" >*</asp:RegularExpressionValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Password is Required" ControlToValidate="TextBoxpassw" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
                 </tr>
@@ -331,8 +353,15 @@
       <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Password do not match" ControlToValidate="TextBoxCpass" ControlToCompare="TextBoxpassw" ForeColor="Red" Display="Static" >*</asp:CompareValidator>
              </td>
                 </tr>
-           
-        
+
+             <tr>
+                <td class="auto-style2">
+                    </td>
+                <td class="auto-style3">
+                    <asp:FileUpload ID="f1" runat="server" />
+            </td>
+               
+                </tr>
             <tr>
                 <td class="auto-style2">
                     </td>

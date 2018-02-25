@@ -50,11 +50,16 @@ public partial class Login : System.Web.UI.Page
                     Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(-1);
                     Response.Cookies["PWD"].Expires = DateTime.Now.AddDays(-1);
                 }
+                
                 String Utype;
                 Utype = dt.Rows[0][5].ToString().Trim();
 
                 if (Utype == "U")
                 {
+                    HttpCookie mycookie = new HttpCookie("Login");
+                    mycookie["USERNAME"] = dt.Rows[0]["USERNAME"].ToString();
+                    mycookie.Expires = DateTime.Now.AddDays(1d);
+                    Response.Cookies.Add(mycookie);
                     Session["USERNAME"] = TextBoxUsern.Text;
                     Response.Redirect("UserHome.aspx");
                 }

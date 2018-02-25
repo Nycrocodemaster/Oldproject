@@ -13,19 +13,25 @@ public partial class Admin_Default : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
-        string query1=("Select count (Username) from registrationtb");
-        
 
+        string query1=("Select count (Username) from registrationtb");
         SqlCommand cmd = new SqlCommand(query1, conn);
-        
         conn.Open();
-        object count = cmd.ExecuteScalar();
-       
-      
+        object count = cmd.ExecuteScalar();  
         if (count != null)
         {
             Label1.Text = count.ToString();
        }
+        conn.Close();
+
+        string query2 = ("Select count (spname) from sp_details");
+        SqlCommand cmd2 = new SqlCommand(query2, conn);
+        conn.Open();
+        object count2 = cmd.ExecuteScalar();
+        if (count2 != null)
+        {
+            Label2.Text = count.ToString();
+        }
     }
     }
 

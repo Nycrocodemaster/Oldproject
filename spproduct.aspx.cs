@@ -52,18 +52,11 @@ public partial class Default2 : System.Web.UI.Page
             spimg = dr["spimg"].ToString();
         }
 
-
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "Insert into carttb(Name,price,uname,cartimg) Values('" + spname.ToString() + "','" + spprice.ToString() + "','" + Session["USERNAME"].ToString() + "','" + spimg.ToString() + "')";
+        cmd.ExecuteNonQuery();
         conn.Close();
 
-        if (Request.Cookies["a"] == null)
-        {
-            Response.Cookies["a"].Value = spname.ToString() + "," + spprice.ToString() + "," + spimg.ToString();
-            Response.Cookies["a"].Expires = DateTime.Now.AddDays(9999);
-        }
-        else
-        {
-            Response.Cookies["a"].Value = Request.Cookies["a"].Value + "|" + spname.ToString() + "," + spprice.ToString() + "," + spimg.ToString();
-            Response.Cookies["a"].Expires = DateTime.Now.AddDays(9999);
-        }
+       
     }
 }
