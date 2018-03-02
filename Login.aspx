@@ -40,9 +40,29 @@
 
     <link rel="stylesheet" type="text/css" href="css/login.css"/>
     <title>Login page</title>
+     <style>
+        .vee {
+            display:none;
+        }
+        .preloader {
+            margin:0;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-right:-50%;
+            transform:translate(-50%,-50%);
+        }
+        </style>
 </head>
 <body>
-     <div class="header-area" data-spy="affix" data-offset-top="200">
+           
+        <div class="preloader">  
+            <img src="assets/img/loader.gif" />
+         </div>
+        
+        <div class="vee">
+
+         <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
             <header id="top-header-area" class="top-header-area">
                 <div class="container">
@@ -57,11 +77,10 @@
                             <div class="col-md-6 col-sm-12 col-xs-5">
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
-                                    <ul id="top-menu" class="menu top-menu right-menu">
-                                        <li><a href="Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
+                                   <ul id="top-menu" class="menu top-menu right-menu">
+                                     <li><a href="Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
                                     <li><a href="Registration.aspx"><span><i class="fa fa-lock"></i>Sign Up</span></a></li>
-                             
-                                    </ul>
+                                   </ul>
                                 </div>
                             </div>
 
@@ -90,8 +109,17 @@
                                 </a>
                             </div>
 
-                            <!--------------- Mini Cart --------------->
-                         
+                          <!--------------- Mini Cart --------------->
+                            <div class="col-sm-4">
+                                <div class="block-minicart">
+                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
+                                    </a>
+                                   
+                                </div>
+                            </div>
+
+
+
                         </div>
                     </div>
                     
@@ -110,137 +138,26 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="menu nav navbar-nav main-menu">
                                     <li class="dropdown">
-                                        <a href="home.html" class="dropdown-toggle"  >Home</a>
+                                        <a href="Home2.aspx" class="dropdown-toggle"  >Home</a>
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars</a>
-                                        <ul class="dropdown-menu mega-menu col-lg-7 col-md-8 col-sm-10">
-                                            <li class="menu-column md-1-4">
-                                                <ul class="menu-row">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Popular</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Watch Fashion</a></li>
-                                                            <li class="menu-item"><a href="products.html">Bag Fashion</a></li>
-                                                            <li class="menu-item"><a href="products.html">Lingerie</a></li>
-                                                            <li class="menu-item"><a href="products.html">Shoes</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-row">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">New car</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Bootees Bags</a></li>
-                                                            <li class="menu-item"><a href="products.html">Blazers</a></li>
-                                                            <li class="menu-item"><a href="products.html">Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Jackets</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-column md-1-4">
-                                                <ul class="menu-row">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Old Car</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">New Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Top Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Special Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                
-                                            </li>
-                                            <li class="menu-column md-2-4">
-                                                <a class="menu-banner" href="products.html"><img src="assets/img/menu/wheel.png" alt="..."></a>
-                                            </li>
-                                        </ul>
+                                        <a href="Carsinfo.aspx" class="dropdown-toggle">Cars</a>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Comapre Car</a>
-                                        
-                                    </li>
-                                   
+                                        <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                    </li>             
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spare Parts</a>
-                                        <ul class="dropdown-menu mega-menu mega-right col-lg-6 col-md-7 col-sm-10">
-                                            <li class="menu-row">
-                                                <ul class="menu-column md-1-3">
-                                                    <li class="menu-title">
-                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-1.png" alt="..."></a>
-                                                        <a href="products.html">Audio 1</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-column md-1-3">
-                                                    <li class="menu-title">
-                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-2.png" alt="..."></a>
-                                                        <a href="products.html">Audio 2</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-column md-1-3">
-                                                    <li class="menu-title">
-                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-3.png" alt="..."></a>
-                                                        <a href="products.html">Audio 3</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
                                     </li>
 									<li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reviews & News</a>
-                                        <ul class="dropdown-menu mega-menu col-md-4 col-sm-6">
-                                            <li class="menu-row">
-                                                <ul class="menu-column md-2-4">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Lights 1</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Spring &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-column md-2-4">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Lights 2</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Spring &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="blog.html">Blog Listing</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
+                                            <li><a href="#">Contact US</a></li>
+                                            <li><a href="#">About US</a></li>
                                         </ul>
                                     </li>
 									
@@ -282,5 +199,110 @@
     </form>
   </div>
 </div>
+
+
+               	 <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="newsletter-wrap">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <div class="module-header">
+                                <h3 class="module-title">News Letter</h3>
+                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
+                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
+                            </div>
+                            
+                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
+                                <button type="submit" name="emailsubmit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>       
+                <div class="footer-head">
+                    <div class="display-flex">
+                        <div class="col-md-4 col-sm-5">
+                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
+                        </div>
+                      
+                    </div>
+                </div>                  
+                <div class="footer-widget-area">
+                    <div class="footer-widgets">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget contact-widget">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <div class="widget-content">
+                                    <div class="contact-infos">
+                                        <div class="contact-info">
+                                            <p><b>Add:</b>Lafayette has a great customer service</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Tel:</b>02 8000 11 800</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Email:</b><a href="#">Company@gmail.com</a></p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Hotline:</b><a href="#">999-507-1256</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-6">
+                            <div class="widget custom-menu-widget">
+                                <h3 class="widget-title">About Us</h3>
+                                <div class="widget-content">
+                                    <ul class="menu custom-menu about-menu">
+                                     
+                                        <li><a href="about_us.aspx">About Website</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      
+  
+                    </div>
+                </div>
+                
+                <!--------------- Lower footer for copyright --------------->
+                <div class="lower-footer-area">
+                    <div class="lower-footer-inner">
+                        <div class="row">
+                            <div class="display-flex">
+                                <div class="col-sm-6">
+                                    <p class="copyright">Copyright 2018- DriveOn. All rights reserved</p>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>	
+</div>
+        <!--------------- Script --------------->
+          <script src="assets/js/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $(".preloader").fadeOut(2000, function() {
+                $(".vee").fadeIn(1000);
+                });
+            });
+            </script>
+
+
+      
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+
+
+
 </body>
 </html>

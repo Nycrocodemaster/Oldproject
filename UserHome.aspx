@@ -188,39 +188,38 @@
             <br>
 
         <!--------------- Header slider --------------->
-        
-        <div class="container">
-        <div  id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-           <%-- Indicators--%>
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <asp:Repeater ID="rptrImages" runat="server">
-                    <ItemTemplate>
-                        <div class="item <%#GetActiveClass(Container.ItemIndex) %>">
-                            <img src="./<%#Eval("banimg") %>" alt="Banner img" />
+         <div id="main-slider-area" class="main-slider-area">
+            <div id="header-slider" class="owl-carousel header-slider">
+                <div class="slider-item item-1">
+                    <div class="slider-caption">
+                        <div class="container">
+                            <h1 class="display-inline">20%</h1>
+                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
+                            <a class="btn btn-big" href="#">Shop Now !</a>
                         </div>
-                    </ItemTemplate>
-                </asp:Repeater>
+                    </div>
+                </div>
+                <div class="slider-item item-2">
+                    <div class="slider-caption">
+                        <div class="container">
+                            <h1 class="display-inline">20%</h1>
+                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
+                            <a class="btn btn-big" href="#">Shop Now !</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item item-3">
+                    <div class="slider-caption">
+                        <div class="container">
+                            <h1 class="display-inline">20%</h1>
+                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
+                            <a class="btn btn-big" href="#">Shop Now !</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
         </div>
-    </div>
- 
+       
         <div class="main-wrap">
             
             <!--------------- Module / Featured / new product --------------->

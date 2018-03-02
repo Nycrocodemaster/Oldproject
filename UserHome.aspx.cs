@@ -49,17 +49,7 @@ public partial class UserHome : System.Web.UI.Page
         d2.DataBind();
         conn.Close();
 
-        conn.Open();
-        SqlCommand cmd1 = conn.CreateCommand();
-        cmd1.CommandType = CommandType.Text;
-        cmd1.CommandText = "select * from banner";
-        cmd1.ExecuteNonQuery();
-        DataTable dt1 = new DataTable();
-        SqlDataAdapter sda = new SqlDataAdapter(cmd1);
-        sda.Fill(dt1);
-        rptrImages.DataSource = dt1;
-        rptrImages.DataBind();
-        conn.Close();
+        
 
         conn.Open();
         SqlCommand cmd2 = conn.CreateCommand();
@@ -75,17 +65,7 @@ public partial class UserHome : System.Web.UI.Page
 
   
     }
-    protected string GetActiveClass(int ItemIndex)
-    {
-        if (ItemIndex == 0)
-        {
-            return "active";
-        }
-        else
-        {
-            return "";
-        }
-    }
+  
 
 
     protected void btnLogout_Click(object sender, EventArgs e)

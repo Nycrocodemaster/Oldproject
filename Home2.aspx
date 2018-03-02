@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Masterheadfoot.master" AutoEventWireup="true" CodeFile="UserHome.aspx.cs" Inherits="UserHome" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home2.aspx.cs" Inherits="Home2" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<!DOCTYPE html>
+
 <html lang="en"/>
-    
 <!-- Mirrored from codechant.com/envato/html/carparts/home-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Aug 2017 06:59:10 GMT -->
 <head>
         <!-- Metas -->
@@ -14,7 +14,6 @@
 
         <!-- External CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
         <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
         <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
@@ -36,50 +35,173 @@
             <script src="assets/js/html5shiv.min.js"></script>
             <script src="assets/js/respond.min.js"></script>
         <![endif]-->
+
+    <style>
+        .vee {
+            display:none;
+        }
+        .preloader {
+            margin:0;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-right:-50%;
+            transform:translate(-50%,-50%);
+        }
+        </style>
+
+
     </head>
     <body>
        
+        <div class="preloader">  
+            <img src="assets/img/loader.gif" />
+         </div>
+        
+        <div class="vee">
 
-        
-        <!--------------- Header slider --------------->
-        
-        <div class="container">
-        <div  id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-           <%-- Indicators--%>
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <asp:Repeater ID="rptrImages" runat="server">
-                    <ItemTemplate>
-                        <div class="item <%#GetActiveClass(Container.ItemIndex) %>">
-                            <img src="<%#Eval("banimg") %>" alt="Banner img" />
+         <div class="header-area" data-spy="affix" data-offset-top="200">
+            <!--------------- Top Header --------------->
+            <header id="top-header-area" class="top-header-area">
+                <div class="container">
+                    <div class="top-header-inner">
+                        <div class="top-header-content">
+                            <div class="col-md-6 col-sm-12 col-xs-7">
+
+                      
+                            </div>
+
+                            <!--------------- Top Navigation --------------->
+                            <div class="col-md-6 col-sm-12 col-xs-5">
+                                <div id="top-nav" class="top-nav">
+                                    <div class="selected"><i class="fa fa-user"></i>My Account</div>
+                                   <ul id="top-menu" class="menu top-menu right-menu">
+                                     <li><a href="Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
+                                    <li><a href="Registration.aspx"><span><i class="fa fa-lock"></i>Sign Up</span></a></li>
+                                   </ul>
+                                </div>
+                            </div>
+
+                        </div>                    
+                    </div>
+                </div>
+            </header>
+
+            <!--------------- Main header --------------->
+            <header id="main-header" class="main-header">
+                <div class="container">
+                    <div class="main-header-inner">
+                        <div class="display-flex main-header-content">
+                            <!--------------- Searchform --------------->
+                            <div class="col-sm-4">
+                                <form id="searchform" class="searchform" action="#" method="post">
+                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
+                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+
+                            <!--------------- Log wrap --------------->
+                            <div class="col-sm-4 text-center">
+                                <a class="site-logo-link" href="#">
+                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                </a>
+                            </div>
+
+                          <!--------------- Mini Cart --------------->
+                            <div class="col-sm-4">
+                                <div class="block-minicart">
+                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
+                                    </a>
+                                   
+                                </div>
+                            </div>
+
+
+
                         </div>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </div>
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+                    </div>
+                    
 
+                    <!--------------- Main navigation --------------->
+                     <div class="main-navigation-wrap">
+                        <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="menu nav navbar-nav main-menu">
+                                    <li class="dropdown">
+                                        <a href="Home2.aspx" class="dropdown-toggle"  >Home</a>
+                                        
+                                    </li>
+                                    <li class="dropdown mega-holder">
+                                        <a href="Carsinfo.aspx" class="dropdown-toggle">Cars</a>
+                                    </li>
+                                    <li class="dropdown mega-holder">
+                                        <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                    </li>             
+                                    <li class="dropdown mega-holder">
+                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
+                                    </li>
+									<li class="dropdown mega-holder">
+                                        <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Contact US</a></li>
+                                            <li><a href="#">About US</a></li>
+                                        </ul>
+                                    </li>
+									
+									
+								</ul>								
+                            </div>
+                        </nav>
+                    
+                </div>
+                    </div>
+            </header>
         </div>
-    </div>
 
-        
-      
-
-
-        
+        <!--------------- Header slider --------------->
+         <div id="main-slider-area" class="main-slider-area">
+            <div id="header-slider" class="owl-carousel header-slider">
+                <div class="slider-item item-1">
+                    <div class="slider-caption">
+                        <div class="container">
+                            <h1 class="display-inline">20%</h1>
+                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
+                            <a class="btn btn-big" href="#">Shop Now !</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item item-2">
+                    <div class="slider-caption">
+                        <div class="container">
+                            <h1 class="display-inline">20%</h1>
+                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
+                            <a class="btn btn-big" href="#">Shop Now !</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item item-3">
+                    <div class="slider-caption">
+                        <div class="container">
+                            <h1 class="display-inline">20%</h1>
+                            <h2 class="display-inline">Off <span>Everything</span></h2><br/>
+                            <a class="btn btn-big" href="#">Shop Now !</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
         <div class="main-wrap">
             
             <!--------------- Module / Featured / new product --------------->
@@ -107,15 +229,14 @@
                                         <img class="hover-img" src="<%#Eval("car_images") %>" alt="Product Hover">
                                         <img class="front-img" src="<%#Eval("car_img2") %>" alt="Product Front">
                                     </a>
-
-                                   
+                               
                                     <div class="product-btn">
                                         <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
           
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="#"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="carsproduct.aspx?id=<%#Eval("id") %>"><%#Eval("Company_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -138,10 +259,9 @@
                         </div>
                     </div>                         
                 </div>
-            </div>
-            
-            <!--------------- Module / best seller --------------->
-               
+            </div>          
+          
+              <!--------------- Module / best seller --------------->        
             <div class="shop-module bestseller-module">
                 <div class="container">
                     <div class="row">
@@ -170,7 +290,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="Default2.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
+                                    <h5 class="product-name"><a href="spproduct.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -239,7 +359,7 @@
             </asp:Repeater>
             
             <!--------------- blog --------------->
-            <div class="shop-module blog-module">
+              <div class="shop-module blog-module">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center">
@@ -247,66 +367,133 @@
                                 <h3 class="module-title">Blog</h3>
                                 <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
                                 <p class="module-subtitle">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                               
                             </div>
                         </div>
-                    </div>
+                    </div>               
                     <div class="row">
                         <div class="articles-wrap">
+                              <asp:Repeater ID="Repeater1" runat="server">
+                          <ItemTemplate>
                             <article class="col-md-4">
                                 <a class="post-thumb" href="#">
-                                    <img src="assets/img/blog/listing-1.jpg" alt="...">
+                                    <img src="<%#Eval("img1") %>" alt="...">
                                     <span class="post-date">12<span>March</span></span>
                                 </a>
                                 <div class="post-body">
-                                    <h4 class="post-title"><a href="#">Custom &amp; Factory Headlights</a></h4>
+                                    <h4 class="post-title"><a href="#"><%#Eval("title") %></a></h4>
                                     <span class="comment-number">0 Comment</span>
                                     <div class="post-content">
-                                        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                                        <a class="btn btn-readmore">Read more</a>
+                                        <p><%#Eval("para1")%></p>
+                                       <a href="Blogsingle.aspx?id=<%#Eval("id") %>" class="btn btn-readmore">Read more</a>
                                     </div>
                                 </div>
                             </article>
-                            <article class="col-md-4">
-                                <a class="post-thumb" href="#">
-                                    <img src="assets/img/blog/listing-2.jpg" alt="...">
-                                    <span class="post-date">12<span>March</span></span>
-                                </a>
-                                <div class="post-body">
-                                    <h4 class="post-title"><a href="#">Custom &amp; Factory Headlights</a></h4>
-                                    <span class="comment-number">0 Comment</span>
-                                    <div class="post-content">
-                                        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                                        <a class="btn btn-readmore">Read more</a>
+                                   </ItemTemplate>
+                        </asp:Repeater>
+                            </div>
+                        </div>
+                    </div>        
+              </div>
+                    
+        </div>
+        
+      
+        	 <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="newsletter-wrap">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <div class="module-header">
+                                <h3 class="module-title">News Letter</h3>
+                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
+                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
+                            </div>
+                            
+                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
+                                <button type="submit" name="emailsubmit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>       
+                <div class="footer-head">
+                    <div class="display-flex">
+                        <div class="col-md-4 col-sm-5">
+                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
+                        </div>
+                      
+                    </div>
+                </div>                  
+                <div class="footer-widget-area">
+                    <div class="footer-widgets">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget contact-widget">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <div class="widget-content">
+                                    <div class="contact-infos">
+                                        <div class="contact-info">
+                                            <p><b>Add:</b>Lafayette has a great customer service</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Tel:</b>02 8000 11 800</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Email:</b><a href="#">Company@gmail.com</a></p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Hotline:</b><a href="#">999-507-1256</a></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="col-md-4">
-                                <a class="post-thumb" href="#">
-                                    <img src="assets/img/blog/listing-3.jpg" alt="...">
-                                    <span class="post-date">12<span>March</span></span>
-                                </a>
-                                <div class="post-body">
-                                    <h4 class="post-title"><a href="#">Custom &amp; Factory Headlights</a></h4>
-                                    <span class="comment-number">0 Comment</span>
-                                    <div class="post-content">
-                                        <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                                        <a class="btn btn-readmore">Read more</a>
-                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-6">
+                            <div class="widget custom-menu-widget">
+                                <h3 class="widget-title">About Us</h3>
+                                <div class="widget-content">
+                                    <ul class="menu custom-menu about-menu">
+                                     
+                                        <li><a href="about_us.aspx">About Website</a></li>
+                                    </ul>
                                 </div>
-                            </article>
+                            </div>
+                        </div>
+                        
+                      
+  
+                    </div>
+                </div>
+                
+                <!--------------- Lower footer for copyright --------------->
+                <div class="lower-footer-area">
+                    <div class="lower-footer-inner">
+                        <div class="row">
+                            <div class="display-flex">
+                                <div class="col-sm-6">
+                                    <p class="copyright">Copyright 2018- DriveOn. All rights reserved</p>
+                                </div>
+                              
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-
-                        
-        </div>
-        
-        
-        
+        </footer>	
+</div>
         <!--------------- Script --------------->
-        <script src="assets/js/jquery.min.js"></script>
+          <script src="assets/js/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $(".preloader").fadeOut(2000, function() {
+                $(".vee").fadeIn(1000);
+                });
+            });
+            </script>
+
+
+      
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
@@ -315,4 +502,4 @@
 
 <!-- Mirrored from codechant.com/envato/html/carparts/home-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Aug 2017 06:59:10 GMT -->
 </html>
-    </asp:Content>
+    
