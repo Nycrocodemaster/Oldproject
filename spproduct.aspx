@@ -193,7 +193,28 @@
 		<div class="col-md-8 single-right-left simpleCart_shelfItem">
 					<h3><%#Eval("spname") %></h3>
             <p><span class="item_price">Rs<%#Eval("spprice") %></span></p>
-				
+            <br>
+              </ItemTemplate>  
+    </asp:Repeater>
+
+      
+              
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="60px" >
+                        <asp:ListItem>1</asp:ListItem>                        
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>6</asp:ListItem>
+                        <asp:ListItem>7</asp:ListItem>
+                        <asp:ListItem>8</asp:ListItem>
+                        <asp:ListItem>9</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>     
+                    </asp:DropDownList>
+		  <br>
+              <br>	
+                    <asp:Repeater ID="d2" runat="server">
+            <ItemTemplate>	
 					 <button class="btn btn-info btn-lg" id="button" runat="server" onserverclick="button_ServerClick"> <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
                    </br></br>
 					<ul class="social-nav model-3d-0 footer-social w3_agile_social single_page_w3ls">
@@ -262,12 +283,10 @@
 											<input type="submit" value="SEND">
 								
 									</div>
-								 </div>
-								 
+								 </div>						 
 							 </div>
 						 </div>
 						   <div class="tab3">
-
 							<div class="single_page_agile_its_w3ls">
 							  <h6>Big Wing Sneakers (Navy)</h6>
 							   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
@@ -278,12 +297,14 @@
 				</div>	
 			</div>
 	<!-- //new_arrivals --> 
-	  	<!--/slider_owl-->
-	
+	  	
+                
+                
+      <!--/slider_owl-->
         </div>
         </div>
-        </ItemTemplate>  
-    </asp:Repeater>
+        </ItemTemplate>
+           </asp:Repeater>
 
 	 <footer>
             <div class="container">

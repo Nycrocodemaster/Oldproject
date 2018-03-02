@@ -34,14 +34,18 @@ public partial class registration : System.Web.UI.Page
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
 
             conn.Open();
-            string insertQuery = "insert into Registrationtb (Fullname,Username,Email,Password,address,phone_no,Utype) values (@fullname,@uname,@email,@password,@address,@phone_no,@utype)";
+            string insertQuery = "insert into Registrationtb (First_name,Last_name,Username,Email,Password,address,city,state,pincode,phone_no,Utype) values (@fname,@lname,@uname,@email,@password,@address,@city,@state,@pincode,@phone_no,@utype)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
-            com.Parameters.AddWithValue("@fullname", TextBoxfname.Text);
+            com.Parameters.AddWithValue("@fname", TextBoxfname.Text);
+            com.Parameters.AddWithValue("@lname", TextBoxlname.Text);            
             com.Parameters.AddWithValue("@uname", TextBoxUsern.Text);
             com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
             com.Parameters.AddWithValue("@password", TextBoxpassw.Text);
             com.Parameters.AddWithValue("@utype", 'U');
             com.Parameters.AddWithValue("@address", TextBox1.Text);
+            com.Parameters.AddWithValue("@city", TextBoxcity.Text);
+            com.Parameters.AddWithValue("@state", TextBoxstate.Text);
+            com.Parameters.AddWithValue("@pincode", TextBoxpin.Text);
             com.Parameters.AddWithValue("@phone_no", TextBoxph.Text);
 
             com.ExecuteNonQuery();

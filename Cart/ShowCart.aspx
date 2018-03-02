@@ -106,12 +106,12 @@
 			<asp:DataList ID="d1" runat="server">
                 <ItemTemplate>
 				<div class="cart_box1">
-				  <div class="message">
-					<a href="../deletecart.aspx?cartid=<%#Eval("cartid") %>" class="alert-close"></a>
+				  <div class="message">      
+					<a href="../deletecart.aspx?cartid=<%#Eval("cartid") %>" class="alert-close"></a>&nbsp;
 					<div class="list_img"><img src="../<%#Eval("cartimg") %>" class="img-responsive" alt=""></div>
 					<div class="list_desc"><h4><a href="#"><%#Eval("Name") %></a></h4><span class="actual">
 					 <%#Eval("price") %></span></div>
-                      <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                      Qty:<%#Eval("qty") %>
 					  <div class="clear"></div>
 				  </div>
 				</div>
@@ -123,7 +123,7 @@
 						<p>Total :<span><asp:Label ID="price" runat="server" /></span></p>
 					</div>
 					<div class="total-right">
-						<a href="../payment.aspx">Check Out</a>
+                        <asp:Button ID="Button1" runat="server" Text="Check Out"  OnClick="Button1_Click"/>		
 					</div>
                 
 						
@@ -131,6 +131,7 @@
 					<div class="clear"> </div>
                     <br>
                    <div class="total-right">
+                       
 						<a href="../UserHome.aspx">Home</a>
 					</div>
 				</div>

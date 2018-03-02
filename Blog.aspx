@@ -14,20 +14,26 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
 
-            <style>
-                .wab {
-                   color:#af152e;
-                }
-                .vee {
-                display:none;
-                }
-            .preloader {
-              margin:0;
-             position:absolute;
-             top:50%;
-             left:50%;
-             margin-right:-50%;
-             transform:translate(-50%,-50%);
+            <style>               
+  .wab .a {
+       color: #282828;
+    border: 2px solid #f44337;
+    background-color: transparent;
+    font-family: "Arial","sans-serif";
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 7px 12px;
+          }
+  .vee {
+           display:none;
+       }
+  .preloader {
+         margin:0;
+         position:absolute;
+         top:50%;
+         left:50%;
+         margin-right:-50%;
+         transform:translate(-50%,-50%);
         }
         </style>
                
@@ -168,9 +174,9 @@
         </div>
 
 
-
-             <a href="Blogwrite.aspx" class="wab" ><h5><i>Write a Blog</i></h5></a>
-
+     <div class="wab">
+             <a href="Blogwrite.aspx"><h5><i>Write a Blog</i></h5></a>
+         </div>
     <div class="shop-module blog-module">
                 <div class="container">
                     <div class="row">
@@ -183,8 +189,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                  
+
                     <div class="row">
                         <div class="articles-wrap">
                               <asp:Repeater ID="d1" runat="server">
@@ -207,9 +212,8 @@
                         </asp:Repeater>
                             </div>
                         </div>
-
-                         
-
+                    <br>
+                    <br>
                     </div>
         </div>
     

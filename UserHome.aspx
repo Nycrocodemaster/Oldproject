@@ -220,12 +220,7 @@
 
         </div>
     </div>
-
-        
-      
-
-
-        
+ 
         <div class="main-wrap">
             
             <!--------------- Module / Featured / new product --------------->
@@ -283,10 +278,9 @@
                         </div>
                     </div>                         
                 </div>
-            </div>
-            
-            <!--------------- Module / best seller --------------->
-               
+            </div>          
+          
+              <!--------------- Module / best seller --------------->        
             <div class="shop-module bestseller-module">
                 <div class="container">
                     <div class="row">
@@ -395,9 +389,7 @@
                                
                             </div>
                         </div>
-                    </div>
-                    
-                  
+                    </div>               
                     <div class="row">
                         <div class="articles-wrap">
                               <asp:Repeater ID="Repeater1" runat="server">
@@ -420,14 +412,9 @@
                         </asp:Repeater>
                             </div>
                         </div>
-
-                         
-
-                    </div>
-        </div>>
-            
-
-                        
+                    </div>        
+              </div>
+                    
         </div>
         
       
@@ -448,8 +435,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                
+                </div>       
                 <div class="footer-head">
                     <div class="display-flex">
                         <div class="col-md-4 col-sm-5">
@@ -457,8 +443,7 @@
                         </div>
                       
                     </div>
-                </div>
-                    
+                </div>                  
                 <div class="footer-widget-area">
                     <div class="footer-widgets">
                         <div class="col-md-3 col-sm-6">

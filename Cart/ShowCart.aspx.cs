@@ -15,7 +15,7 @@ public partial class Cart_ShowCart : System.Web.UI.Page
     string t;
     string[] a = new string[3];
     int count = 0;
-
+    int tot = 0;
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
    
 
@@ -58,11 +58,19 @@ public partial class Cart_ShowCart : System.Web.UI.Page
         d1.DataBind();
         conn.Close();
 
+        tot = tot + (Convert.ToInt32(a[2]));
+        price.Text = tot.ToString();
     }
 
     protected void d1_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
 
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Session["checkoutbtn"] = "yes";
+        Response.Redirect("../checkout.aspx");
     }
 }
 

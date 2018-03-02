@@ -13,7 +13,7 @@ public partial class Default2 : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
  
     int id;
-    String spname, spprice, spimg;
+    String spname, spprice, spimg ,spquntity;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -28,12 +28,10 @@ public partial class Default2 : System.Web.UI.Page
             da.Fill(dt);
             d1.DataSource = dt;
             d1.DataBind();
-
+            d2.DataSource = dt;
+            d2.DataBind();
             conn.Close();
-
         }
-
-
     
     protected void button_ServerClick(object sender, EventArgs e)
     {
@@ -52,11 +50,11 @@ public partial class Default2 : System.Web.UI.Page
             spimg = dr["spimg"].ToString();
         }
 
-        cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "Insert into carttb(Name,price,uname,cartimg) Values('" + spname.ToString() + "','" + spprice.ToString() + "','" + Session["USERNAME"].ToString() + "','" + spimg.ToString() + "')";
-        cmd.ExecuteNonQuery();
-        conn.Close();
 
-       
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "Insert into carttb(Name,price,uname,cartimg,qty) Values('" + spname.ToString() + "','" + spprice.ToString() + "','" + Session["USERNAME"].ToString() + "','" + spimg.ToString() + "','"+DropDownList1.SelectedItem.Value+"')";
+        cmd.ExecuteNonQuery();
+        conn.Close();    
     }
+    
 }

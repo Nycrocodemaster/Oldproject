@@ -37,5 +37,23 @@ public partial class Blogwrite : System.Web.UI.Page
         cmd.CommandText = "insert into blogtb values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + b.ToString() + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + d.ToString() + "','"+m.ToString()+"')";
         cmd.ExecuteNonQuery();
         conn.Close();
+
+
+        string msgstring = "Your Blog is Sucessfully Uploaded";
+        string content = "windows.onload=function() { alert('";
+        content += msgstring;
+        content += "');";
+        content += "window.location='";
+        content += Request.Url.AbsoluteUri;
+        content += "');";
+        ClientScript.RegisterStartupScript(this.GetType(), "SucessMessage", content, true);
+
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        TextBox1.Text = string.Empty;
+        TextBox2.Text = string.Empty;
+        TextBox3.Text = string.Empty;
+        TextBox4.Text = string.Empty;      
     }
 }

@@ -27,7 +27,6 @@ public partial class Default3 : System.Web.UI.Page
         da.Fill(dt);
         d1.DataSource = dt;
         d1.DataBind();
-
         conn.Close();
     }
 }

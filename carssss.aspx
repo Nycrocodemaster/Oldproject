@@ -305,6 +305,8 @@ Sidebar
 	border: 1px solid #f5f5f5;
 	bottom:8px;
 	left: 0;
+
+
 	width: 100%;
 	height: 0;
 	z-index: -2;
@@ -436,66 +438,50 @@ h2.title:before{
         </style>
 </head>
 <body>
+
+    <br>
+    <br>
     <form id="form1" runat="server">
 
         <div class="container">
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-
-                        <div class="brands_products"><!--brands_products-->
+                        <div class="brands_products">
+                            <!--brands-->
 							<h2>Brands</h2>
 							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<li><asp:RadioButton ID="RadioButton1" runat="server" CssClass="radio" GroupName="fg"/> Lambo </li>
-									<li> <asp:RadioButton ID="RadioButton2" runat="server" CssClass="radio" GroupName="fg" /> Ferrari </li>
-									<li> <asp:RadioButton ID="RadioButton3" runat="server" CssClass="radio" GroupName="fg"/> Bugatti </li>
-									<li> <asp:RadioButton ID="RadioButton4" runat="server" CssClass="radio" GroupName="fg"/> Maruti Suzuki </li>
-									<li> <asp:RadioButton ID="RadioButton5" runat="server" CssClass="radio" GroupName="fg"/> Nissan </li>
-									<li> <asp:RadioButton ID="RadioButton6" runat="server" CssClass="radio" GroupName="fg"/> BMW </li>
-									<li> <asp:RadioButton ID="RadioButton7" runat="server" CssClass="radio" GroupName="fg"/> Mercedes </li>
-								</ul>
-							</div>
-                             <asp:Button ID="Button1" runat="server" Text="Search" CssClass="btn btn-default" />
-						</div>
-                        <br>
-                        <!--/brands_products-->
-
-						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							
-                                                 <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server">
+								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control">
                                                         <asp:ListItem Text="All" Value="" />
                                                         <asp:ListItem Text="Lambo" Value="Lambo" />
                                                         <asp:ListItem Text="Ferrari" Value="Ferrari" />
                                                          <asp:ListItem Text="Bugatti" Value="Bugatti" />
-                                                        <asp:ListItem Text="BME" Value="Canada" />
-                                                   </asp:DropDownList>
-                            <br />
-									
+                                                        <asp:ListItem Text="Maruti" Value="Maruti" />
+                                   </asp:DropDownList>
+							</div>                       
+						</div>
+                        <br/>
+                    
+
+						<h2>Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->							                                          
+                            <br/>									
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											Mens
+											Fuel Type
 										</a>
 									</h4>
 								</div>
 								<div id="mens" class="panel-collapse collapse">
 									<div class="panel-body">
-										<ul>
-											<li><a href="">Fendi</a></li>
-											<li><a href="">Guess</a></li>
-											<li><a href="">Valentino</a></li>
-											<li><a href="">Dior</a></li>
-											<li><a href="">Versace</a></li>
-											<li><a href="">Armani</a></li>
-											<li><a href="">Prada</a></li>
-											<li><a href="">Dolce and Gabbana</a></li>
-											<li><a href="">Chanel</a></li>
-											<li><a href="">Gucci</a></li>
-										</ul>
+										<asp:CheckBoxList ID="chklist1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="chklis1_SelectedIndexChanged">
+                                            <asp:ListItem Text="Petrol" Value="Petro"></asp:ListItem>
+                                            <asp:ListItem Text="Diesel" Value="Diesel"></asp:ListItem>
+                                            <asp:ListItem Text="CNG" Value="CNG"></asp:ListItem>   
+                                         </asp:CheckBoxList>
 									</div>
 								</div>
 							</div>
@@ -588,8 +574,8 @@ h2.title:before{
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="<%#Eval("car_images") %>" alt="Product Hover">
-                                        <img class="front-img" src="<%#Eval("car_img2") %>" alt="Product Front">
+                                        <img class="hover-img" src="" alt="Product Hover">
+                                        <img class="front-img" src="" alt="Product Front">
                                     </a>
 
                                    
@@ -613,7 +599,7 @@ h2.title:before{
                                         </div>
                                     </div>
                                     <p class="price">
-                                        <span class="discount-price"><%#Eval("price") %></span>     
+                                        <span class="discount-price"><%#Eval("Cprice") %></span>     
                                     </p>
                                 </div>
                             </div>
@@ -624,8 +610,12 @@ h2.title:before{
                     </div>
                         </div>
             </div>
-        
+        </div>
+            </div>
 
     </form>
+
+        <script src="assets/js/jquery-3.1.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

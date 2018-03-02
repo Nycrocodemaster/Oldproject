@@ -36,7 +36,6 @@ public partial class Login : System.Web.UI.Page
             if (dt.Rows.Count != 0)
             {
 
-
                 if (CheckBox1.Checked)
                 {
                     Response.Cookies["UNAME"].Value = TextBoxUsern.Text;
@@ -50,9 +49,8 @@ public partial class Login : System.Web.UI.Page
                     Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(-1);
                     Response.Cookies["PWD"].Expires = DateTime.Now.AddDays(-1);
                 }
-                
                 String Utype;
-                Utype = dt.Rows[0][5].ToString().Trim();
+                Utype = dt.Rows[0][6].ToString().Trim();
 
                 if (Utype == "U")
                 {
@@ -66,7 +64,7 @@ public partial class Login : System.Web.UI.Page
                 if (Utype == "A")
                 {
                     Session["USERNAME"] = TextBoxUsern.Text;
-                    Response.Redirect("../Oldproject/Admin/Admin.aspx");
+                    Response.Redirect("../Admin/Admin.aspx");
                 }
 
 

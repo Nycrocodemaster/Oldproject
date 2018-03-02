@@ -21,8 +21,7 @@ public partial class deletecart : System.Web.UI.Page
         cmd.CommandType = CommandType.Text;
         cmd.CommandText = "Delete from carttb where uname='" + Session["USERNAME"].ToString() + "' and cartid='"+id+"'";
         cmd.ExecuteNonQuery();
-        
-        Response.Redirect("http://localhost:22675/Oldproject/Cart/ShowCart.aspx");
+        Response.Redirect("http://localhost:1990/Cart/ShowCart.aspx");
        
     }
 }

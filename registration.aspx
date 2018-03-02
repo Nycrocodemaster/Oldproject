@@ -279,13 +279,24 @@
                 <td class="auto-style2">
                  </td>
                 <td class="auto-style3">
-            <asp:TextBox ID="TextBoxfname" placeholder="FUll Name" runat="server" Width="303px"></asp:TextBox>
+            <asp:TextBox ID="TextBoxfname" placeholder="First Name" runat="server" Width="303px"></asp:TextBox>
             </td>
                 <td>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Enter valid fullName " ControlToValidate="TextBoxfname" ValidationExpression="^[a-zA-Z'.\s]{1,50}" ForeColor="Red" Display="Dynamic" >*</asp:RegularExpressionValidator><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="fullname is Required" ControlToValidate="TextBoxfname" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
                 </tr>
             
+            <tr>
+                <td class="auto-style2">
+                 </td>
+                <td class="auto-style3">
+            <asp:TextBox ID="TextBoxlname" placeholder="Last Name" runat="server" Width="303px"></asp:TextBox>
+            </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Enter valid fullName " ControlToValidate="TextBoxfname" ValidationExpression="^[a-zA-Z'.\s]{1,50}" ForeColor="Red" Display="Dynamic" >*</asp:RegularExpressionValidator><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="fullname is Required" ControlToValidate="TextBoxfname" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+            </td>
+                </tr>
+
             <tr>
                 <td class="auto-style2">
                     </td>
@@ -316,8 +327,29 @@
             <asp:TextBox ID="TextBox1" placeholder="Address" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
                  </td>
              </tr>
-            
+            <tr>
+                 <td class="auto-style2">
+                 </td>
+                 <td class="auto-style4">
+            <asp:TextBox ID="TextBoxcity" placeholder="City" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
+                 </td>
+             </tr>
 
+            <tr>
+                 <td class="auto-style2">
+                 </td>
+                 <td class="auto-style4">
+            <asp:TextBox ID="TextBoxstate" placeholder="State" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
+                 </td>
+             </tr>
+
+            <tr>
+                 <td class="auto-style2">
+                 </td>
+                 <td class="auto-style4">
+            <asp:TextBox ID="TextBoxpin" placeholder="Pincode" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
+                 </td>
+             </tr>
 
             <tr>
                  <td class="auto-style2">
