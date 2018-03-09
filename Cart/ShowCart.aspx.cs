@@ -12,6 +12,7 @@ using System.Configuration;
 public partial class Cart_ShowCart : System.Web.UI.Page
 {
    string s;
+   int id;
     string t;
     string[] a = new string[3];
     int count = 0;
@@ -58,8 +59,18 @@ public partial class Cart_ShowCart : System.Web.UI.Page
         d1.DataBind();
         conn.Close();
 
-        tot = tot + (Convert.ToInt32(a[2]));
-        price.Text = tot.ToString();
+        id = Convert.ToInt32(Request.QueryString[id].ToString());
+        conn.Open();
+        SqlCommand cmd1 = conn.CreateCommand();
+        cmd1.CommandType = CommandType.Text;
+        cmd1.CommandText = "select * from carttb where id=" + Session[id].ToString() + "";
+        SqlDataReader dr = cmd1.ExecuteReader();
+        while(dr.Read())
+        {
+            count += Convert.ToInt32(dr["price"].ToString());
+            price.Text = count.ToString();
+        }
+        conn.Close();
     }
 
     protected void d1_ItemCommand(object source, RepeaterCommandEventArgs e)

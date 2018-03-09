@@ -184,9 +184,6 @@
                     </div>
             </header>
         </div>
-            <br>
-            <br>
-
         <!--------------- Header slider --------------->
          <div id="main-slider-area" class="main-slider-area">
             <div id="header-slider" class="owl-carousel header-slider">
@@ -491,8 +488,7 @@
                             <div class="display-flex">
                                 <div class="col-sm-6">
                                     <p class="copyright">Copyright 2018- DriveOn. All rights reserved</p>
-                                </div>
-                              
+                                </div>                              
                             </div>
                         </div>
                     </div>
