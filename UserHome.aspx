@@ -110,10 +110,7 @@
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
                             <div class="col-sm-4">
-                                <form id="searchform" class="searchform" action="#" method="post">
-                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
-                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
-                                </form>
+                                
                             </div>
 
                             <!--------------- Log wrap --------------->
@@ -127,13 +124,9 @@
                             <div class="col-sm-4">
                                 <div class="block-minicart">
                                     <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
-                                    </a>
-                                   
+                                    </a>                                  
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                     
@@ -414,21 +407,11 @@
         </div>
         
       
-        	 <footer>
+         <footer>
             <div class="container">
                 <div class="row">
                     <div class="newsletter-wrap">
-                        <div class="col-md-8 col-md-offset-2 text-center">
-                            <div class="module-header">
-                                <h3 class="module-title">News Letter</h3>
-                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
-                            </div>
-                            
-                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
-                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
-                                <button type="submit" name="emailsubmit">Subscribe</button>
-                            </form>
+                        <div class="col-md-8 col-md-offset-2 text-center">                          
                         </div>
                     </div>
                 </div>       
@@ -494,8 +477,7 @@
                     </div>
                 </div>
             </div>
-        </footer>	
-</div>
+        </footer>
         <!--------------- Script --------------->
           <script src="assets/js/jquery.min.js"></script>
         <script>

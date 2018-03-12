@@ -99,8 +99,8 @@ public partial class compar : System.Web.UI.Page
     }
 
     protected void Button1_Click(object sender, EventArgs e)
-    {   
-        conn.Open();
+    {          
+       conn.Open();
         //SqlDataAdapter sda = new SqlDataAdapter("select * from models where Mid="+ int.Parse((Modelname.Text).Trim()), conn);
         SqlDataAdapter sda = new SqlDataAdapter("SELECT A.Car_version AS CarVersion1, A.Cprice AS cprice1, B.Car_version AS CarVersion2, B.Cprice AS CPrice2 FROM models A, models B WHERE A.Mid=" + int.Parse((Modelname.Text).Trim()) + " And B.Mid=" + int.Parse((Modelname2.Text).Trim()), conn); 
         DataSet ds = new DataSet();

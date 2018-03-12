@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Carsinfo.aspx.cs" Inherits="Carsinfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="spinfo.aspx.cs" Inherits="spinfo" %>
 
 <!DOCTYPE html>
 
@@ -572,7 +572,7 @@ h2.title:before{
 					<div class="left-sidebar">
                         <div class="brands_products">
                             <!--brands-->
-							<h2>Brands</h2>
+							<h2>Spare Part Type</h2>
 							<div class="brands-name">
 								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control">
                                                         <asp:ListItem Text="All" Value="" />
@@ -601,8 +601,8 @@ h2.title:before{
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="" alt="Product Hover">
-                                        <img class="front-img" src="" alt="Product Front">
+                                        <img class="hover-img" src="<%#Eval("spimg") %>" alt="Product Hover">
+                                        <img class="front-img" src="<%#Eval("spimg2") %>" alt="Product Front">        
                                     </a>
 
                                    
@@ -612,7 +612,7 @@ h2.title:before{
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="car_info_product.aspx?id=<%#Eval("Mid") %>"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="car_info_product.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -626,7 +626,7 @@ h2.title:before{
                                         </div>
                                     </div>
                                     <p class="price">
-                                        <span class="discount-price"><%#Eval("Cprice") %></span>     
+                                        <span class="discount-price"><%#Eval("spprice") %></span>     
                                     </p>
                                 </div>
                             </div>

@@ -90,10 +90,7 @@
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
                             <div class="col-sm-4">
-                                <form id="searchform" class="searchform" action="#" method="post">
-                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
-                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
-                                </form>
+                               
                             </div>
 
                             <!--------------- Log wrap --------------->

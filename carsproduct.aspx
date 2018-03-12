@@ -247,6 +247,85 @@
         </ItemTemplate>  
     </asp:Repeater>
 
+	 <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="newsletter-wrap">
+                        <div class="col-md-8 col-md-offset-2 text-center">                          
+                        </div>
+                    </div>
+                </div>       
+                <div class="footer-head">
+                    <div class="display-flex">
+                        <div class="col-md-4 col-sm-5">
+                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
+                        </div>
+                      
+                    </div>
+                </div>                  
+                <div class="footer-widget-area">
+                    <div class="footer-widgets">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget contact-widget">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <div class="widget-content">
+                                    <div class="contact-infos">
+                                        <div class="contact-info">
+                                            <p><b>Add:</b>Lafayette has a great customer service</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Tel:</b>02 8000 11 800</p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Email:</b><a href="#">Company@gmail.com</a></p>
+                                        </div>
+                                        <div class="contact-info">
+                                            <p><b>Hotline:</b><a href="#">999-507-1256</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-2 col-sm-6">
+                            <div class="widget custom-menu-widget">
+                                <h3 class="widget-title">About Us</h3>
+                                <div class="widget-content">
+                                    <ul class="menu custom-menu about-menu">
+                                     
+                                        <li><a href="about_us.aspx">About Website</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      
+  
+                    </div>
+                </div>
+                
+                <!--------------- Lower footer for copyright --------------->
+                <div class="lower-footer-area">
+                    <div class="lower-footer-inner">
+                        <div class="row">
+                            <div class="display-flex">
+                                <div class="col-sm-6">
+                                    <p class="copyright">Copyright 2018- DriveOn. All rights reserved</p>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>	
+
+
+
+
+
+
+
+
 <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <script src="assets/js/modernizr.custom.js"></script>
