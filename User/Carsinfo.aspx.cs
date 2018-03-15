@@ -67,7 +67,7 @@ public partial class Carsinfo : System.Web.UI.Page
             }
         }
         string conString = ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString;
-        string query = "SELECT  * FROM models where Company_name in (" + q + ")";
+        string query = "SELECT  * FROM models where fuelType in (" + q + ")";
         SqlCommand cmd = new SqlCommand(query);
        
         using (SqlConnection con = new SqlConnection(conString))
@@ -100,17 +100,9 @@ public partial class Carsinfo : System.Web.UI.Page
                 sda.SelectCommand = cmd;
                 using (DataSet ds = new DataSet())
                 {
-                    sda.Fill(ds);
-
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        d1.DataSource = ds;
-                        d1.DataBind();
-                    }
-                    else
-                    {
-                        Label2.Text = "This car is not Currently Available";
-                    }
+                    sda.Fill(ds);            
+                    d1.DataSource = ds;
+                     d1.DataBind();       
                 }
             }
         }

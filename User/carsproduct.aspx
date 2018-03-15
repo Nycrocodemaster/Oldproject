@@ -192,8 +192,7 @@
 	<div class="responsive_tabs_agileits"> 
 				<div id="horizontalTab">
 						<ul class="resp-tabs-list">
-							<li>Description</li>
-							<li>Reviews</li>						
+							<li>Description</li>					
 						</ul>
 					<div class="resp-tabs-container">
 					<!--/tab_one-->
@@ -203,39 +202,7 @@
 							   <p> <%#Eval("Description") %></p>							   
 							</div>
 						</div>
-						<!--//tab_one-->
-						<div class="tab2">
-							
-							<div class="single_page_agile_its_w3ls">
-								<div class="bootstrap-tab-text-grids">
-									<div class="bootstrap-tab-text-grid">
-										<div class="bootstrap-tab-text-grid-left">
-											<img src="images/t1.jpg" alt=" " class="img-responsive">
-										</div>
-										<div class="bootstrap-tab-text-grid-right">
-											<ul>
-												<li><a href="#">Admin</a></li>
-												<li><a href="#"><i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
-											</ul>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
-												suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
-												vel eum iure reprehenderit.</p>
-										</div>
-										<div class="clearfix"> </div>
-						             </div>
-									 <div class="add-review">
-										<h4>add a review</h4>
-										
-												<input type="text" name="Name" required="Name">
-												<input type="email" name="Email" required="Email"> 
-												<textarea name="Message" required=""></textarea>
-											<input type="submit" value="SEND">
-								
-									</div>
-								 </div>
-								 
-							 </div>
-						 </div>		 
+						<!--//tab_one-->								 
 					</div>
 				</div>	
 			</div>
@@ -258,13 +225,8 @@
                 <div class="footer-head">
                     <div class="display-flex">
                         <div class="col-md-4 col-sm-5">
-<<<<<<< HEAD:User/carsproduct.aspx
                             <a class="site-logo footer-logo" href="#"><img src="../assets/img/color-1/template/logo-white.png" alt="..."></a>
-=======
-                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:carsproduct.aspx
-                        </div>
-                      
+                        </div>                    
                     </div>
                 </div>                  
                 <div class="footer-widget-area">
@@ -324,17 +286,8 @@
         </footer>	
 
 
-
-
-
-
-
-
-<<<<<<< HEAD:User/carsproduct.aspx
 <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
-=======
 <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:carsproduct.aspx
 <!-- //js -->
 <script src="../assets/js/modernizr.custom.js"></script>
 	<!-- Custom-JavaScript-File-Links -->  
@@ -403,9 +356,6 @@
 <!-- for bootstrap working -->
 <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
     </form>
-
-
-
 <script src="../assets/js/bootstrap.min.js"></script>
         <script src="../assets/js/owl.carousel.min.js"></script>
         <script src="../assets/js/jquery-ui.min.js"></script>

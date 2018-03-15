@@ -462,11 +462,7 @@ h2.title:before{
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 											<div class="profile_img">
-<<<<<<< HEAD:User/spinfo.aspx
                                                 Hi&nbsp<asp:Label ID="Label1" runat="server"></asp:Label>
-=======
-                                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:Carsinfo.aspx
 												<span class="prfil-img"><asp:Image ID="Image1" ImageUrl="~/assets/img/blog/sthumb-1.jpg" runat="server" /></span> 
 											</div>	
 										</a>
@@ -501,29 +497,17 @@ h2.title:before{
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-<<<<<<< HEAD:User/spinfo.aspx
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
-=======
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:Carsinfo.aspx
+                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">        
                                 </a>
                             </div>
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                                 <div class="block-minicart">
-<<<<<<< HEAD:User/spinfo.aspx
                                     <a href="../Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"></span>
-=======
-                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:Carsinfo.aspx
-                                    </a>
-                                   
+                                    </a>                                  
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                     
@@ -552,11 +536,7 @@ h2.title:before{
                                         <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
-<<<<<<< HEAD:User/spinfo.aspx
                                         <a href="spinfo.aspx" class="dropdown-toggle">Spare parts</a>
-=======
-                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:Carsinfo.aspx
                                     </li>
 									<li class="dropdown mega-holder">
                                         <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
@@ -567,13 +547,10 @@ h2.title:before{
                                             <li><a href="#">Contact US</a></li>
                                             <li><a href="#">About US</a></li>
                                         </ul>
-                                    </li>
-									
-									
+                                    </li>		
 								</ul>								
                             </div>
-                        </nav>
-                    
+                        </nav>        
                 </div>
                     </div>
             </header>
@@ -617,18 +594,18 @@ h2.title:before{
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="<%#Eval("spimg") %>" alt="Product Hover">
-                                        <img class="front-img" src="<%#Eval("spimg2") %>" alt="Product Front">        
+                                        <img class="hover-img" src="../<%#Eval("spimg") %>" alt="Product Hover">
+                                        <img class="front-img" src="../<%#Eval("spimg2") %>" alt="Product Front">        
                                     </a>
 
-                                   
+                                 
                                     <div class="product-btn">
                                         <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
           
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="car_info_product.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
+                                    <h5 class="product-name"><a href="spproduct.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -671,11 +648,7 @@ h2.title:before{
                 <div class="footer-head">
                     <div class="display-flex">
                         <div class="col-md-4 col-sm-5">
-<<<<<<< HEAD:User/spinfo.aspx
                             <a class="site-logo footer-logo" href="#"><img src="../assets/img/color-1/template/logo-white.png" alt="..."></a>
-=======
-                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:Carsinfo.aspx
                         </div>
                       
                     </div>
@@ -736,12 +709,9 @@ h2.title:before{
             </div>
         </footer>
 
-<<<<<<< HEAD:User/spinfo.aspx
         <script src="../assets/js/jquery-3.1.1.min.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
-=======
         <script src="assets/js/jquery-3.1.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:Carsinfo.aspx
 </body>
 </html>

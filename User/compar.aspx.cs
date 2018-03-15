@@ -107,7 +107,7 @@ public partial class compar : System.Web.UI.Page
     }
 
     protected void Button1_Click(object sender, EventArgs e)
-<<<<<<< HEAD:User/compar.aspx.cs
+
     {
         conn.Open();
         SqlDataAdapter sda8 = new SqlDataAdapter("SELECT A.cimage AS cimage1, B.cimage AS cimage2 FROM models A, models B WHERE A.Mid=" + int.Parse((Modelname.Text).Trim()) + " And B.Mid=" + int.Parse((Modelname2.Text).Trim()), conn);
@@ -116,11 +116,7 @@ public partial class compar : System.Web.UI.Page
         FormView1.DataSource = ds8;
         FormView1.DataBind();
         conn.Close();
-
- 
-=======
-    {          
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx.cs
+       
        conn.Open();
         //SqlDataAdapter sda = new SqlDataAdapter("select * from models where Mid="+ int.Parse((Modelname.Text).Trim()), conn);
         SqlDataAdapter sda = new SqlDataAdapter("SELECT A.Car_version AS CarVersion1, A.Cprice AS cprice1, B.Car_version AS CarVersion2, B.Cprice AS CPrice2 FROM models A, models B WHERE A.Mid=" + int.Parse((Modelname.Text).Trim()) + " And B.Mid=" + int.Parse((Modelname2.Text).Trim()), conn); 

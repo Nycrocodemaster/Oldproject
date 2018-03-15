@@ -122,11 +122,7 @@
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                                 <div class="block-minicart">
-<<<<<<< HEAD:User/UserHome.aspx
                                     <a href="../Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"></span>
-=======
-                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:UserHome.aspx
                                     </a>                                  
                                 </div>
                             </div>
@@ -148,7 +144,7 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="menu nav navbar-nav main-menu">
                                     <li class="dropdown">
-                                        <a href="UserHome.aspx" class="dropdown-toggle"  >Home</a>
+                                        <a href="UserHome.aspx" class="dropdown-toggle">Home</a>
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
@@ -166,7 +162,7 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
+                                            <li><a href="contact.aspx">Contact US</a></li>
                                             <li><a href="#">About US</a></li>
                                         </ul>
                                     </li>
@@ -483,8 +479,7 @@
         </footer>
 <<<<<<< HEAD:User/UserHome.aspx
      </div>
-=======
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:UserHome.aspx
+
         <!--------------- Script --------------->
           <script src="../assets/js/jquery.min.js"></script>
         <script>

@@ -19,14 +19,10 @@ public partial class register : System.Web.UI.Page
         }
     }
     protected void Button1_Click(object sender, EventArgs e)
-    {
-        if (this.f1.HasFile)
-        {
+    {      
             f1.SaveAs(Server.MapPath("~/Images/" + this.f1.FileName));
             string fileName = Path.GetFileName(this.f1.PostedFile.FileName);
             Session["ImagePath"] = "Images/" + fileName;
-
-
-        }
+  
     }
 }

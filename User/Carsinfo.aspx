@@ -582,18 +582,38 @@ h2.title:before{
                                                         <asp:ListItem Text="Maruti" Value="Maruti" />
                                    </asp:DropDownList>
 
-                                <asp:CheckBoxList ID="CheckBoxList1" AutoPostBack="true" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
-                                   <asp:ListItem Text="Lambo" Value="Lambo" />
-                                                        <asp:ListItem Text="Ferrari" Value="Ferrari" />
-                                                         <asp:ListItem Text="Bugatti" Value="Bugatti" />
-                                                        <asp:ListItem Text="Maruti" Value="Maruti" />
-                                </asp:CheckBoxList>
+                                
 							</div>                       
 						</div>
                         <br/>                   					
-					</div>
-				</div>
+				
 
+                <h2>Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->							                                          
+                            <br/>									
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Fuel Type
+										</a>
+									</h4>
+								</div>
+								<div id="mens" class="panel-collapse collapse">
+									<div class="panel-body">
+									<asp:CheckBoxList ID="CheckBoxList1" AutoPostBack="true" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
+                                                        <asp:ListItem Text="Petrol" Value="Ferrari" />
+                                                         <asp:ListItem Text="Diesel" Value="Bugatti" />
+                                                        <asp:ListItem Text="CNG" Value="Maruti" />
+                                </asp:CheckBoxList>
+									</div>
+								</div>
+							</div>
+
+	</div>
+				</div>
+                    </div>
 
         <div class="col-sm-9">
 					
@@ -609,7 +629,7 @@ h2.title:before{
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="" alt="Product Hover">
+                                        <img class="hover-img" src="<%#Eval("cimage") %>" alt="Product Hover">
                                         <img class="front-img" src="" alt="Product Front">
                                     </a>
 
@@ -638,8 +658,7 @@ h2.title:before{
                                     </p>
                                 </div>
                             </div>
-                              </ItemTemplate>
-                      
+                              </ItemTemplate>                     
                               </asp:Repeater>
                               <asp:Label ID="Label2" runat="server"></asp:Label>
 
@@ -650,10 +669,7 @@ h2.title:before{
             </div>
         </div>
             </div>
-
     </form>
-
-
 
      <footer>
             <div class="container">
