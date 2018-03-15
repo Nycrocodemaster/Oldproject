@@ -59,11 +59,11 @@ public partial class Cart_ShowCart : System.Web.UI.Page
         d1.DataBind();
         conn.Close();
 
-        id = Convert.ToInt32(Request.QueryString[id].ToString());
+        //id = Convert.ToInt32(Request.QueryString[id].ToString());
         conn.Open();
         SqlCommand cmd1 = conn.CreateCommand();
         cmd1.CommandType = CommandType.Text;
-        cmd1.CommandText = "select * from carttb where id=" + Session[id].ToString() + "";
+        cmd1.CommandText = "select price from carttb where uname='"+ Session["USERNAME"].ToString() + "'";
         SqlDataReader dr = cmd1.ExecuteReader();
         while(dr.Read())
         {
@@ -81,7 +81,7 @@ public partial class Cart_ShowCart : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         Session["checkoutbtn"] = "yes";
-        Response.Redirect("../checkout.aspx");
+        Response.Redirect("../User/checkout.aspx");
     }
 }
 

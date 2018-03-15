@@ -1,44 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="update_order.aspx.cs" Inherits="update_order" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="Default3" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <!-- Metas -->
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-     
-      
-
-        <!-- External CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
-        <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
-        
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="assets/css/style.css"/>
-        <link rel="stylesheet" href="assets/css/responsive.css"/>
-        
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"/>
-        
-        <!-- Favicon -->
-        <link rel="icon" href="assets/img/color-1/template/favicon.png"/>
-        <link rel="apple-touch-icon" href="assets/img/color-1/template/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/color-1/template/icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/color-1/template/icon-114x114.png"/>
-
-        <!--[if lt IE 9]>
-            <script src="assets/js/html5shiv.min.js"></script>
-            <script src="assets/js/respond.min.js"></script>
-        <![endif]-->
-
-
-    <link rel="stylesheet" type="text/css" href="css/registration.css"/>
-    <title>Registration</title>
+    <title></title>
+     <link rel="stylesheet" type="text/css" href="css/registration.css"/>
     <style type="text/css">
         .auto-style1 {
             height: 22px;
@@ -53,38 +20,45 @@
             height: 22px;
             width: 384px;
         }
-    </style>
+        .auto-style5 {
+            height:465px;
+            width:200px;
+            margin-top: 0px;
+        }
 
+        .auto-style6 {
+            height: 352px;
+            background-color: #FF9966;
+        }
+
+        .auto-style7 {
+            background-color: #FF9966;
+        }
+
+        .auto-style8 {
+            height: 560px;
+        }
+
+    </style>
 </head>
 <body>
-    <form id="Form1" class="form" runat="server">
-        
-	<h2>Update Information </h2>  
-        
-        <table style="width: 474px">
-            <tr>
-                <td class="auto-style2">
-                 </td>
-                <td class="auto-style3">
-            <asp:TextBox ID="TextBoxfname" placeholder="First Name" runat="server" Width="303px"></asp:TextBox>
-            </td>
-                <td>
+   <form class="form" runat="server">
+    
+    <table>
+        <tr>
+            <td class="auto-style8">
+                <table>
+                 <tr>
+                   <td class="auto-style2">
+                   </td>
+                   <td class="auto-style3">
+                    <asp:TextBox ID="TextBoxfname" placeholder="FUll Name" runat="server" Width="303px"></asp:TextBox>
+                    </td>
+                    <td>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Enter valid fullName " ControlToValidate="TextBoxfname" ValidationExpression="^[a-zA-Z'.\s]{1,50}" ForeColor="Red" Display="Dynamic" >*</asp:RegularExpressionValidator><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="fullname is Required" ControlToValidate="TextBoxfname" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
-            </td>
+                    </td>
                 </tr>
-            
-            <tr>
-                <td class="auto-style2">
-                 </td>
-                <td class="auto-style3">
-            <asp:TextBox ID="TextBoxlname" placeholder="Last Name" runat="server" Width="303px"></asp:TextBox>
-            </td>
-                <td>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Enter valid fullName " ControlToValidate="TextBoxfname" ValidationExpression="^[a-zA-Z'.\s]{1,50}" ForeColor="Red" Display="Dynamic" >*</asp:RegularExpressionValidator><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="fullname is Required" ControlToValidate="TextBoxfname" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
-            </td>
-                </tr>
-
-            <tr>
+                    <tr>
                 <td class="auto-style2">
                     </td>
                 <td class="auto-style3">
@@ -94,8 +68,8 @@
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Enter a Valid Username" ControlToValidate="TextBoxUsern" ValidationExpression="^[a-zA-Z'.\s]{1,50}" ForeColor="Red" Display="Dynamic"  >*</asp:RegularExpressionValidator><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="User name is Required" ControlToValidate="TextBoxUsern" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
                 </tr>
-            
-            <tr>
+
+                     <tr>
                 <td class="auto-style2">
                     </td>
                 <td class="auto-style4">
@@ -111,33 +85,10 @@
                  <td class="auto-style2">
                  </td>
                  <td class="auto-style4">
-            <asp:TextBox ID="TextBox1" placeholder="Address" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" placeholder="Address" Width="303px" Height="75px" runat="server" TextMode="MultiLine"></asp:TextBox>
                  </td>
              </tr>
-            <tr>
-                 <td class="auto-style2">
-                 </td>
-                 <td class="auto-style4">
-            <asp:TextBox ID="TextBoxcity" placeholder="City" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
-                 </td>
-             </tr>
-
-            <tr>
-                 <td class="auto-style2">
-                 </td>
-                 <td class="auto-style4">
-            <asp:TextBox ID="TextBoxstate" placeholder="State" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
-                 </td>
-             </tr>
-
-            <tr>
-                 <td class="auto-style2">
-                 </td>
-                 <td class="auto-style4">
-            <asp:TextBox ID="TextBoxpin" placeholder="Pincode" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
-                 </td>
-             </tr>
-
+                    
             <tr>
                  <td class="auto-style2">
                  </td>
@@ -145,12 +96,12 @@
             <asp:TextBox ID="TextBoxph" placeholder="Phone Number" Width="303px" runat="server"></asp:TextBox>
                  </td>
                 <td class="auto-style1">
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBoxph" ErrorMessage="Enter Valid Phone Number" ValidationExpression="[0-9]{10}" ForeColor="Red">*</asp:RegularExpressionValidator> 
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBoxph" ErrorMessage="Enter Valid Phone Number" ValidationExpression="[0-9]{10}">*</asp:RegularExpressionValidator> 
                  </td>
             
              </tr>
             
-            <tr>
+                    <tr>
                 <td class="auto-style2">
                     </td>
                 <td class="auto-style3">
@@ -161,8 +112,8 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Password is Required" ControlToValidate="TextBoxpassw" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
             </td>
                 </tr>
-            
-            <tr>
+
+                      <tr>
                 <td class="auto-style2">
                     </td>
                 <td class="auto-style3">
@@ -172,15 +123,39 @@
       <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Password do not match" ControlToValidate="TextBoxCpass" ControlToCompare="TextBoxpassw" ForeColor="Red" Display="Static" >*</asp:CompareValidator>
              </td>
                 </tr>
-
+                   
             <tr>
                 <td class="auto-style2">
                     </td>
                 <td class="auto-style3">
-            <asp:Button ID="Button1" runat="server" Text="Update" CssClass="button" OnClick="Button1_Click"/>
-  </td>  </tr>
-                    
-                      </table>
-        </form>
+            <asp:Button ID="Button1" runat="server" Text="Register" CssClass="button" OnClick="Button1_Click"  />
+                    </td>
+                </tr>
+
+                  
+                </table>
+            </td>
+            <td class="auto-style8">
+                <table class="auto-style5">
+                    <tr>
+                        <td class="auto-style6">
+                            <asp:Image ID="Image1" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style7">
+                            <asp:FileUpload ID="f1" runat="server"/>
+                            <br />
+                            Image should be JPEG 200x200 Max Size 50kb</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+       <asp:Label ID="Label3" runat="server"></asp:Label>
+        <p class="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Already registered? <a href="Login.aspx">Sign in</a></p>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+   </form>
+    
 </body>
 </html>

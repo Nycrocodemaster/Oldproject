@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="Default3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="register" %>
 
 <!DOCTYPE html>
 
@@ -144,7 +144,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style7">
-                            <asp:FileUpload ID="FileUpload1" runat="server"/>
+                            <asp:FileUpload ID="f1" runat="server"/>
                             <br />
                             Image should be JPEG 200x200 Max Size 50kb</td>
                     </tr>
@@ -154,8 +154,9 @@
     </table>
        <asp:Label ID="Label3" runat="server"></asp:Label>
         <p class="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Already registered? <a href="Login.aspx">Sign in</a></p>
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="true" ForeColor="Red" />
    </form>
     
 </body>
 </html>
+
