@@ -12,8 +12,13 @@
   <script src="../assets/js/bootstrap.min.js"></script>
 
          <!-- Custom CSS -->
+<<<<<<< HEAD:User/compar.aspx
         <link rel="stylesheet" href="../assets/css/style.css"/>
         <link rel="stylesheet" href="../assets/css/responsive.css"/>
+=======
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css"/>
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx
 
     <style>
 .boxi {
@@ -112,14 +117,22 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
+<<<<<<< HEAD:User/compar.aspx
                                     <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+=======
+                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx
                                 </a>
                             </div>
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                                 <div class="block-minicart">
+<<<<<<< HEAD:User/compar.aspx
                                     <a href="../Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"></span>
+=======
+                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx
                                     </a>
                                    
                                 </div>
@@ -155,7 +168,11 @@
                                         <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
+<<<<<<< HEAD:User/compar.aspx
                                         <a href="spinfo.aspx" class="dropdown-toggle">Spare parts</a>
+=======
+                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx
                                     </li>
 									<li class="dropdown mega-holder">
                                         <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
@@ -229,6 +246,15 @@
         </asp:DropDownList>
                 </div>
             </div>
+<<<<<<< HEAD:User/compar.aspx
+        <br />
+        <br />
+        <br />
+        <br />
+    <br />
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=======
         <br />
         <br />
         <br />
@@ -240,9 +266,17 @@
     <br />
     <br />
     <br />
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx
+        <br />
+    <br />
+    <br />
+    <br />
         <br />
         <br />
+<<<<<<< HEAD:User/compar.aspx
         <br />
+=======
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:compar.aspx
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" Text="Button" CssClass="btncomp" OnClick="Button1_Click" Height="38px" Width="244px" />
         <br />

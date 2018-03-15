@@ -122,7 +122,11 @@
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                                 <div class="block-minicart">
+<<<<<<< HEAD:User/UserHome.aspx
                                     <a href="../Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"></span>
+=======
+                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:UserHome.aspx
                                     </a>                                  
                                 </div>
                             </div>
@@ -477,7 +481,10 @@
                 </div>
             </div>
         </footer>
+<<<<<<< HEAD:User/UserHome.aspx
      </div>
+=======
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:UserHome.aspx
         <!--------------- Script --------------->
           <script src="../assets/js/jquery.min.js"></script>
         <script>

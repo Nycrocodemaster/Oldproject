@@ -258,7 +258,11 @@
                 <div class="footer-head">
                     <div class="display-flex">
                         <div class="col-md-4 col-sm-5">
+<<<<<<< HEAD:User/carsproduct.aspx
                             <a class="site-logo footer-logo" href="#"><img src="../assets/img/color-1/template/logo-white.png" alt="..."></a>
+=======
+                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:carsproduct.aspx
                         </div>
                       
                     </div>
@@ -326,7 +330,11 @@
 
 
 
+<<<<<<< HEAD:User/carsproduct.aspx
 <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+=======
+<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+>>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2:carsproduct.aspx
 <!-- //js -->
 <script src="../assets/js/modernizr.custom.js"></script>
 	<!-- Custom-JavaScript-File-Links -->  
