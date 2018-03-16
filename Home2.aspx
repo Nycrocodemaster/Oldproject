@@ -36,29 +36,12 @@
             <script src="assets/js/respond.min.js"></script>
         <![endif]-->
 
-    <style>
-        .vee {
-            display:none;
-        }
-        .preloader {
-            margin:0;
-            position:absolute;
-            top:50%;
-            left:50%;
-            margin-right:-50%;
-            transform:translate(-50%,-50%);
-        }
-        </style>
+
 
 
     </head>
     <body>
-       
-        <div class="preloader">  
-            <img src="assets/img/loader.gif" />
-         </div>
-        
-        <div class="vee">
+ 
 
          <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
@@ -93,11 +76,7 @@
                     <div class="main-header-inner">
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
-                            <div class="col-sm-4">
-                                <form id="searchform" class="searchform" action="#" method="post">
-                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
-                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
-                                </form>
+                            <div class="col-sm-4">                              
                             </div>
 
                             <!--------------- Log wrap --------------->
@@ -109,11 +88,6 @@
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
-                                <div class="block-minicart">
-                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
-                                    </a>
-                                   
-                                </div>
                             </div>
 
 
@@ -140,16 +114,16 @@
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="Carsinfo.aspx" class="dropdown-toggle">Cars</a>
+                                        <a href="carsinfog.aspx" class="dropdown-toggle">Cars</a>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                        <a href="compareg.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
-                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
+                                        <a href="spinfog.aspx" class="dropdown-toggle">Spare parts</a>
                                     </li>
 									<li class="dropdown mega-holder">
-                                        <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
+                                        <a href="Blogguest.aspx" class="dropdown-toggle">Blogs</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
@@ -157,9 +131,7 @@
                                             <li><a href="#">Contact US</a></li>
                                             <li><a href="#">About US</a></li>
                                         </ul>
-                                    </li>
-									
-									
+                                    </li>															
 								</ul>								
                             </div>
                         </nav>
@@ -290,7 +262,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="spproduct.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
+                                    <h5 class="product-name"><a href="spproductg.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -403,17 +375,7 @@
             <div class="container">
                 <div class="row">
                     <div class="newsletter-wrap">
-                        <div class="col-md-8 col-md-offset-2 text-center">
-                            <div class="module-header">
-                                <h3 class="module-title">News Letter</h3>
-                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
-                            </div>
-                            
-                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
-                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
-                                <button type="submit" name="emailsubmit">Subscribe</button>
-                            </form>
+                        <div class="col-md-8 col-md-offset-2 text-center">                         
                         </div>
                     </div>
                 </div>       
@@ -481,19 +443,9 @@
                 </div>
             </div>
         </footer>	
-</div>
+
         <!--------------- Script --------------->
           <script src="assets/js/jquery.min.js"></script>
-        <script>
-            $(function() {
-                $(".preloader").fadeOut(2000, function() {
-                $(".vee").fadeIn(1000);
-                });
-            });
-            </script>
-
-
-      
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
