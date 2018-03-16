@@ -52,10 +52,8 @@
                     <div class="top-header-inner">
                         <div class="top-header-content">
                             <div class="col-md-6 col-sm-12 col-xs-7">
-
-                      
+                                                                                                                                                    
                             </div>
-
                             <!--------------- Top Navigation --------------->
                             <div class="col-md-6 col-sm-12 col-xs-5">
                                 <div id="top-nav" class="top-nav">
@@ -69,13 +67,12 @@
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 											<div class="profile_img">
                                                Hi&nbsp <asp:Label ID="Label1" runat="server"></asp:Label>
-												<span class="prfil-img"><asp:Image ID="Image1" ImageUrl="~/assets/img/blog/sthumb-1.jpg" runat="server" /></span> 
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
 											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
 											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default" Text="Log out"   /> </li>
+											<li> <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default" Text="Log out" OnClick="btnLogout_Click"  /> </li>
 										</ul>
 									</li>
 									

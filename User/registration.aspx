@@ -93,10 +93,7 @@
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
                             <div class="col-sm-4">
-                                <form id="searchform" class="searchform" action="#" method="post">
-                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
-                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
-                                </form>
+
                             </div>
 
                             <!--------------- Log wrap --------------->
@@ -270,10 +267,8 @@
             </header>
         </div>
 
-    <form class="form" runat="server">
-         
-	<h2>Registration form </h2>  
-        
+    <form class="form" runat="server">        
+	<h2>Registration form </h2>        
         <table style="width: 474px">
             <tr>
                 <td class="auto-style2">

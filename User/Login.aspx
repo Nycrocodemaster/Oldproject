@@ -91,14 +91,9 @@
                     <div class="main-header-inner">
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
-                            <div class="col-sm-4">
-                                <form id="searchform" class="searchform" action="#" method="post">
-                                    <input type="search" name="keyword" placeholder="Search entire store here..." required>
-                                    <button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button>
-                                </form>
+                            <div class="col-sm-4">                         
                             </div>
-
-                            <!--------------- Log wrap --------------->
+                         <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
                                     <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
@@ -107,15 +102,7 @@
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
-                                <div class="block-minicart">
-                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
-                                    </a>
-                                   
-                                </div>
                             </div>
-
-
-
                         </div>
                     </div>
                     
@@ -202,16 +189,6 @@
                 <div class="row">
                     <div class="newsletter-wrap">
                         <div class="col-md-8 col-md-offset-2 text-center">
-                            <div class="module-header">
-                                <h3 class="module-title">News Letter</h3>
-                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
-                            </div>
-                            
-                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
-                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
-                                <button type="submit" name="emailsubmit">Subscribe</button>
-                            </form>
                         </div>
                     </div>
                 </div>       
@@ -220,8 +197,7 @@
                         <div class="col-md-4 col-sm-5">
                             <a class="site-logo footer-logo" href="#"><img src="../assets/img/color-1/template/logo-white.png" alt="..."></a>
                         </div>
-                      
-                    </div>
+                     </div>
                 </div>                  
                 <div class="footer-widget-area">
                     <div class="footer-widgets">
@@ -253,7 +229,7 @@
                                 <div class="widget-content">
                                     <ul class="menu custom-menu about-menu">
                                      
-                                        <li><a href="about_us.aspx">About Website</a></li>
+                                        <li><a href="aboutus.aspx">About Website</a></li>
                                     </ul>
                                 </div>
                             </div>

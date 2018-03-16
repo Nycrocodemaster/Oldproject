@@ -66,5 +66,12 @@ public partial class Default2 : System.Web.UI.Page
         cmd.ExecuteNonQuery();
         conn.Close();    
     }
-    
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        HttpCookie mycookie = new HttpCookie("Login");
+        mycookie.Expires = DateTime.Now.AddDays(-1d);
+        Response.Cookies.Add(mycookie);
+        Response.Redirect("Login.aspx"); 
+    }
 }

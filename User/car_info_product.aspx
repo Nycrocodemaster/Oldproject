@@ -47,13 +47,13 @@
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 											<div class="profile_img">
                                                Hi&nbsp <asp:Label ID="Label1" runat="server"></asp:Label>
-												<span class="prfil-img"><asp:Image ID="Image1" ImageUrl="~/assets/img/blog/sthumb-1.jpg" runat="server" /></span> 
+												
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
 											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
 											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default" Text="Log out"   /> </li>
+											<li> <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default" Text="Log out" OnClick="btnLogout_Click"  /> </li>
 										</ul>
 									</li>								
 						            </ul>
@@ -155,7 +155,7 @@
 				<div class="flexslider">				
 					<ul class="slides">
 						<li data-thumb="assets\img\product/6.jpg">
-							<div class="thumb-image"> <img src="<%#Eval("cimage") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="../<%#Eval("cimage") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						<li data-thumb="assets\img\product/3.jpg">
 							<div class="thumb-image"> <img src="" data-imagezoom="true" class="img-responsive"></div>
@@ -279,7 +279,7 @@
 <!-- //here ends scrolling icon -->
 
 <!-- for bootstrap working -->
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
     </form>
 </body>
 </html>

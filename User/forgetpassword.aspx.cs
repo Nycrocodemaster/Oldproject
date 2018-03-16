@@ -46,8 +46,7 @@ public partial class Forgotpass : System.Web.UI.Page
             //here a i am passing parameter named email from the txt_email.Text's value
             adp.SelectCommand.Parameters.AddWithValue("@Email", txt_email.Text);
             //here a i am passing parameter named uname from the txt_uname.Text's value
-            adp.SelectCommand.Parameters.AddWithValue("@Username", txt_uname.Text);
-         
+            adp.SelectCommand.Parameters.AddWithValue("@Username", txt_uname.Text);        
             dt = new DataTable();
             adp.Fill(dt);
             if (dt.Rows.Count == 0)
@@ -74,7 +73,7 @@ public partial class Forgotpass : System.Web.UI.Page
                
                 // here i am sending a link to the user's mail address with the three values email,code,uname
                 // these three values i am sending  this link with the values using querystring method.
-                sbody.Append("<a href=http://localhost:22675/Oldproject/User/CreatePassword.aspx?Email=" + txt_email.Text);
+                sbody.Append("<a href=http://localhost:1990/Oldproject/User/CreatePassword.aspx?Email=" + txt_email.Text);
                 sbody.Append("&code=" + code + "&Username=" + txt_uname.Text + ">Click here to change your password</a>");
                 //in the below line i am sending mail with the link to the user.
                 //in this line i am passing four parameters 1st sender's mail address ,2nd receiever mail address, 3rd Subject,4th sbody.ToString() there will be complete link
@@ -96,8 +95,6 @@ public partial class Forgotpass : System.Web.UI.Page
                 lbl_msg.Text = "Link has been sent to your email address";
                 txt_email.Text = "";
                 txt_uname.Text = "";
-               
-
             }
         }
         catch(Exception ex)

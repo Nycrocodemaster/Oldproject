@@ -252,6 +252,8 @@ input:focus, textarea:focus, select:focus{
 }
 input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button{
     padding: 0;
+    height: 31px;
+    width: 112px;
 }
 .input-style {
     position: absolute;

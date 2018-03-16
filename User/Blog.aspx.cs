@@ -35,4 +35,11 @@ public partial class Blog : System.Web.UI.Page
         d1.DataBind();
         conn.Close();
     }
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        HttpCookie mycookie = new HttpCookie("Login");
+        mycookie.Expires = DateTime.Now.AddDays(-1d);
+        Response.Cookies.Add(mycookie);
+        Response.Redirect("Login.aspx"); 
+    }
 }

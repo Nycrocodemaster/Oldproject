@@ -80,8 +80,7 @@
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 											<div class="profile_img">
-                                                Hi&nbsp<asp:Label ID="Label1" runat="server"></asp:Label>
-												<span class="prfil-img"><asp:Image ID="Image1" ImageUrl="~/assets/img/blog/sthumb-1.jpg" runat="server" /></span> 
+                                                Hi&nbsp<asp:Label ID="Label1" runat="server"></asp:Label>									
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
@@ -129,7 +128,6 @@
                         </div>
                     </div>
                     
-
                     <!--------------- Main navigation --------------->
                      <div class="main-navigation-wrap">
                         <nav class="navbar navbar-default">
@@ -457,9 +455,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                      
-  
                     </div>
                 </div>
                 
@@ -477,7 +472,7 @@
                 </div>
             </div>
         </footer>
-<<<<<<< HEAD:User/UserHome.aspx
+
      </div>
 
         <!--------------- Script --------------->
