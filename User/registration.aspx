@@ -344,6 +344,9 @@
                  <td class="auto-style4">
             <asp:TextBox ID="TextBoxpin" placeholder="Pincode" Width="303px" runat="server" TextMode="MultiLine"></asp:TextBox>
                  </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="regularExp" runat="server" ControlToValidate="TextBoxpin"  ValidationExpression="[0-9]{6}" ErrorMessage="Invalid ZipCode." ForeColor="Red">*</asp:RegularExpressionValidator>
+                    </td>
              </tr>
 
             <tr>
@@ -381,14 +384,6 @@
              </td>
                 </tr>
 
-             <tr>
-                <td class="auto-style2">
-                    </td>
-                <td class="auto-style3">
-                    <asp:FileUpload ID="f1" runat="server" />
-            </td>
-               
-                </tr>
             <tr>
                 <td class="auto-style2">
                     </td>

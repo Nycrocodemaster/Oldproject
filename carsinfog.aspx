@@ -1,17 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="spinfo.aspx.cs" Inherits="spinfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="carsinfog.aspx.cs" Inherits="carsinfog" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>CarsInfo</title>
-     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/price-range.css" rel="stylesheet" />
-    <link href="assets/css/animate.css" rel="stylesheet" />
+     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/price-range.css" rel="stylesheet" />
+    <link href="../assets/css/animate.css" rel="stylesheet" />
    
      <!-- Custom CSS -->
-        <link rel="stylesheet" href="assets/css/style.css"/>
-        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="../assets/css/style.css"/>
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
     <style>
 
 /*----------------------------------------
@@ -462,8 +462,8 @@ h2.title:before{
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 											<div class="profile_img">
-                                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-												<span class="prfil-img"><asp:Image ID="Image1" ImageUrl="~/assets/img/blog/sthumb-1.jpg" runat="server" /></span> 
+                                               Hi&nbsp <asp:Label ID="Label1" runat="server" ></asp:Label>
+										
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
@@ -497,14 +497,14 @@ h2.title:before{
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
                                 </a>
                             </div>
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                                 <div class="block-minicart">
-                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
+                                    <a href="../Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"></span>
                                     </a>
                                    
                                 </div>
@@ -540,7 +540,7 @@ h2.title:before{
                                         <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
-                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
+                                        <a href="spinfo.aspx" class="dropdown-toggle">Spare parts</a>
                                     </li>
 									<li class="dropdown mega-holder">
                                         <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
@@ -572,21 +572,48 @@ h2.title:before{
 					<div class="left-sidebar">
                         <div class="brands_products">
                             <!--brands-->
-							<h2>Spare Part Type</h2>
+							<h2>Brands</h2>
 							<div class="brands-name">
-								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control">
+								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged">
                                                         <asp:ListItem Text="All" Value="" />
                                                         <asp:ListItem Text="Lambo" Value="Lambo" />
                                                         <asp:ListItem Text="Ferrari" Value="Ferrari" />
                                                          <asp:ListItem Text="Bugatti" Value="Bugatti" />
                                                         <asp:ListItem Text="Maruti" Value="Maruti" />
                                    </asp:DropDownList>
+
+                                
 							</div>                       
 						</div>
                         <br/>                   					
-					</div>
-				</div>
+				
 
+                <h2>Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->							                                          
+                            <br/>									
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Fuel Type
+										</a>
+									</h4>
+								</div>
+								<div id="mens" class="panel-collapse collapse">
+									<div class="panel-body">
+									<asp:CheckBoxList ID="CheckBoxList1" AutoPostBack="true" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
+                                                        <asp:ListItem Text="Petrol" Value="Ferrari" />
+                                                         <asp:ListItem Text="Diesel" Value="Bugatti" />
+                                                        <asp:ListItem Text="CNG" Value="Maruti" />
+                                </asp:CheckBoxList>
+									</div>
+								</div>
+							</div>
+
+	</div>
+				</div>
+                    </div>
 
         <div class="col-sm-9">
 					
@@ -597,22 +624,23 @@ h2.title:before{
                         <div class="products-wrap">  
 
                   <asp:Repeater ID="d1" runat="server">
+                     
                           <ItemTemplate>
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="<%#Eval("spimg") %>" alt="Product Hover">
-                                        <img class="front-img" src="<%#Eval("spimg2") %>" alt="Product Front">        
+                                        <img class="hover-img" src="" alt="Product Hover">
+                                        <img class="front-img" src="<%#Eval("cimage") %>" alt="Product Front">
                                     </a>
 
                                    
-                                    <div class="product-btn">
+                                    &nbsp;<div class="product-btn">
                                         <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
           
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="car_info_product.aspx?id=<%#Eval("id") %>"><%#Eval("spname") %></a></h5>
+                                    <h5 class="product-name"><a href="cars_info_productg.aspx?id=<%#Eval("Mid") %>"><%#Eval("Company_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -626,12 +654,14 @@ h2.title:before{
                                         </div>
                                     </div>
                                     <p class="price">
-                                        <span class="discount-price"><%#Eval("spprice") %></span>     
+                                        <span class="discount-price"><%#Eval("Cprice") %></span>     
                                     </p>
                                 </div>
                             </div>
-                              </ItemTemplate>
+                              </ItemTemplate>                     
                               </asp:Repeater>
+                              <asp:Label ID="Label2" runat="server"></asp:Label>
+
                             </div>
                         </div>
                     </div>
@@ -639,10 +669,7 @@ h2.title:before{
             </div>
         </div>
             </div>
-
     </form>
-
-
 
      <footer>
             <div class="container">
@@ -664,7 +691,7 @@ h2.title:before{
                     <div class="footer-widgets">
                         <div class="col-md-3 col-sm-6">
                             <div class="widget contact-widget">
-                                <h3 class="widget-title">Contact Us</h3>
+                                <h3 class="widget-title">Contact Us
                                 <div class="widget-content">
                                     <div class="contact-infos">
                                         <div class="contact-info">
@@ -715,8 +742,10 @@ h2.title:before{
                 </div>
             </div>
         </footer>
-
-        <script src="assets/js/jquery-3.1.1.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
+          
+    <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery-3.1.1.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
+

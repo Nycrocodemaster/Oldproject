@@ -18,7 +18,6 @@ public partial class Admin_Cars_info_Form : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-<<<<<<< HEAD
         //DropDownList ddl = new DropDownList();
         //ddl.SelectedValue;
         //ddl.DataSource = null;
@@ -34,13 +33,7 @@ public partial class Admin_Cars_info_Form : System.Web.UI.Page
         string insertQuery = "insert into models(Company_name,Model_name,Car_version,Cprice,Body_type,segment,engine,displacement,fuelType,transmission,noofgears,Peak_Power,Peak_Torque,Milleage_City,Length,Width,Height,Ground_Clearance,Wheelbase,Kerb_Weight,Boot_Space,Turning_Radius,AC,Climate_control,Central_Locking,Cd_Player,Power_streering,Power_Windows,Steering_Adjustment,Electricity_Adjustment,Steerin_Mounted,ABS,Airbag,Parking_Sensors,Traction_Control,Fuel_Capacity,Seating_Capacity,Specs_Front,Specs_Rear,Vehicle_type,cimage) values (@Company_name,@Model_name,@Car_version,@Cprice,@Body_type,@segment,@engine,@displacement,@fuelType,@transmission,@noofgears,@Peak_Power,@Peak_Torque,@Millege_City,@Length,@Width,@Height,@Ground_Clearance,@Wheelbase,@Kerb_Weight,@Boot_Space,@Turning_Radius,@AC,@Climate_control,@Central_Locking,@Cd_Player,@Power_streering,@Power_Windows,@Steering_Adjustment,@Electricity_Adjustment,@Steerin_Mounted,@ABS,@Airbag,@Parking_Sensors,@Traction_Control,@Fuel_Capacity,@Seating_Capacity,@Specs_Front,@Specs_Rear,@Vehicle_type, @cimage)";
         SqlCommand com = new SqlCommand(insertQuery, conn);
         com.Parameters.AddWithValue("@Company_name", TextBox1.Text);
-=======
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
-        conn.Open();
-        string insertQuery = "insert into models(Company_name,Model_name,Car_version,Cprice,Body_type,segment,engine,displacement,fuelType,transmission,noofgears,Peak_Power,Peak_Torque,Millege_City,Length,Width,Height,Ground_Clearance,Wheelbase,Kerb_Weight,Boot_Space,Turning_Radius,AC,Climate_control,Central_Locking,Cd_Player,Power_streering,Power_Windows,Steering_Adjustment,Electricity_Adjustment,Steerin_Mounted,ABS,Airbag,Parking_Sensors,Traction_Control,Fuel_Capacity,Seating_Capacity,Specs_Front,Specs_Rear,Vehicle_type) values (@Company_name,@Model_name,@Car_version,@Cprice,@Body_type,@segment,@engine,@displacement,@fuelType,@transmission,@noofgears,@Peak_Power,@Peak_Torque,@Millege_City,@Length,@Width,@Height,@Ground_Clearance,@Wheelbase,@Kerb_Weight,@Boot_Space,@Turning_Radius,@AC,@Climate_control,@Central_Locking,@Cd_Player,@Power_streering,@Power_Windows,@Steering_Adjustment,@Electricity_Adjustment,@Steerin_Mounted,@ABS,@Airbag,@Parking_Sensors,@Traction_Control,@Fuel_Capacity,@Seating_Capacity,@Specs_Front,@Specs_Rear,@Vehicle_type)";
-        SqlCommand com = new SqlCommand(insertQuery, conn);
         com.Parameters.AddWithValue("@Compamy_name", TextBox1.Text);
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2
         com.Parameters.AddWithValue("@Model_name", TextBox2.Text);
         com.Parameters.AddWithValue("@Car_version", TextBox3.Text);
         com.Parameters.AddWithValue("@Cprice", TextBox4.Text);
@@ -80,9 +73,7 @@ public partial class Admin_Cars_info_Form : System.Web.UI.Page
         com.Parameters.AddWithValue("@Specs_Front", TextBox37.Text);
         com.Parameters.AddWithValue("@Specs_Rear", TextBox38.Text);
         com.Parameters.AddWithValue("@Vehicle_type", TextBox40.Text);
-<<<<<<< HEAD
         com.Parameters.AddWithValue("@cimage", b.ToString());
-
         com.ExecuteNonQuery();
 
 
@@ -127,8 +118,6 @@ public partial class Admin_Cars_info_Form : System.Web.UI.Page
         TextBox39.Text = "";
         TextBox40.Text = "";
         
-        
-=======
->>>>>>> 47bf3730ff84fdd87c5b66daacf05b6f9733dbd2
+
     }
 }

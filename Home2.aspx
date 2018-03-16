@@ -236,7 +236,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="carsproduct.aspx?id=<%#Eval("id") %>"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="carproductg.aspx?id=<%#Eval("id") %>"><%#Eval("Company_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
