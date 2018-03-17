@@ -12,14 +12,24 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Request.Cookies["Login"] != null)
+        {
+            Label1.Text = Request.Cookies["Login"]["Username"].ToString();
+        }
+        else
+        {
+            Response.Redirect("../User/Login.aspx");
+        }
+ 
     }
 
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-        Session["USERNAME"] = null;
-        Response.Redirect("../home.aspx");
+        HttpCookie mycookie = new HttpCookie("Login");
+        mycookie.Expires = DateTime.Now.AddDays(-1d);
+        Response.Cookies.Add(mycookie);
+        Response.Redirect("Login.aspx");
     }
 }
 

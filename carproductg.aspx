@@ -24,7 +24,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <div class="header-area" data-spy="affix" data-offset-top="200">
+         <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
             <header id="top-header-area" class="top-header-area">
                 <div class="container">
@@ -39,25 +39,10 @@
                             <div class="col-md-6 col-sm-12 col-xs-5">
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
-                                    <ul id="top-menu" class="menu top-menu right-menu">                                        
-                                        <li class="second admin-pic">
-				                        <ul class="top_dp_agile">
-									<li class="dropdown profile_details_drop">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-											<div class="profile_img">
-                                                Hi&nbsp<asp:Label ID="Label1" runat="server"></asp:Label>
-												<span class="prfil-img"><asp:Image ID="Image1" ImageUrl="~/assets/img/blog/sthumb-1.jpg" runat="server" /></span> 
-											</div>	
-										</a>
-										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default" Text="Log out" /> </li>
-										</ul>
-									</li>
-						            </ul>
-				                </li>
-                                    </ul>
+                                   <ul id="top-menu" class="menu top-menu right-menu">
+                                     <li><a href="User/Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
+                                    <li><a href="User/Registration.aspx"><span><i class="fa fa-lock"></i>Sign Up</span></a></li>
+                                   </ul>
                                 </div>
                             </div>
 
@@ -84,11 +69,6 @@
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
-                                <div class="block-minicart">
-                                    <a href="./Cart/ShowCart.aspx" class="cartlink"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span class="cart-subtotal"> (2) Items -</span>
-                                    </a>
-                                   
-                                </div>
                             </div>
 
 
@@ -111,20 +91,20 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="menu nav navbar-nav main-menu">
                                     <li class="dropdown">
-                                        <a href="UserHome.aspx" class="dropdown-toggle"  >Home</a>
+                                        <a href="Home2.aspx" class="dropdown-toggle"  >Home</a>
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="Carsinfo.aspx" class="dropdown-toggle">Cars</a>
+                                        <a href="carsinfog.aspx" class="dropdown-toggle">Cars</a>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                        <a href="compareg.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
-                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
+                                        <a href="spinfog.aspx" class="dropdown-toggle">Spare parts</a>
                                     </li>
 									<li class="dropdown mega-holder">
-                                        <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
+                                        <a href="Blogguest.aspx" class="dropdown-toggle">Blogs</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
@@ -132,9 +112,7 @@
                                             <li><a href="#">Contact US</a></li>
                                             <li><a href="#">About US</a></li>
                                         </ul>
-                                    </li>
-									
-									
+                                    </li>															
 								</ul>								
                             </div>
                         </nav>

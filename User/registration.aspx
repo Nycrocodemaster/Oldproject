@@ -58,7 +58,7 @@
 </head>
 <body>
     
-    <div class="header-area" data-spy="affix" data-offset-top="200">
+     <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
             <header id="top-header-area" class="top-header-area">
                 <div class="container">
@@ -73,11 +73,10 @@
                             <div class="col-md-6 col-sm-12 col-xs-5">
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
-                                    <ul id="top-menu" class="menu top-menu right-menu">
-                                        <li><a href="Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
+                                   <ul id="top-menu" class="menu top-menu right-menu">
+                                     <li><a href="Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
                                     <li><a href="Registration.aspx"><span><i class="fa fa-lock"></i>Sign Up</span></a></li>
-                             
-                                    </ul>
+                                   </ul>
                                 </div>
                             </div>
 
@@ -92,8 +91,7 @@
                     <div class="main-header-inner">
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
-                            <div class="col-sm-4">
-
+                            <div class="col-sm-4">                              
                             </div>
 
                             <!--------------- Log wrap --------------->
@@ -103,8 +101,9 @@
                                 </a>
                             </div>
 
-                            <!--------------- Mini Cart --------------->
-                         
+                          <!--------------- Mini Cart --------------->
+                            <div class="col-sm-4">
+                            </div>
                         </div>
                     </div>
                     
@@ -123,141 +122,28 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="menu nav navbar-nav main-menu">
                                     <li class="dropdown">
-                                        <a href="home.html" class="dropdown-toggle"  >Home</a>
+                                        <a href="../Home2.aspx" class="dropdown-toggle"  >Home</a>
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars</a>
-                                        <ul class="dropdown-menu mega-menu col-lg-7 col-md-8 col-sm-10">
-                                            <li class="menu-column md-1-4">
-                                                <ul class="menu-row">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Popular</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Watch Fashion</a></li>
-                                                            <li class="menu-item"><a href="products.html">Bag Fashion</a></li>
-                                                            <li class="menu-item"><a href="products.html">Lingerie</a></li>
-                                                            <li class="menu-item"><a href="products.html">Shoes</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-row">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">New car</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Bootees Bags</a></li>
-                                                            <li class="menu-item"><a href="products.html">Blazers</a></li>
-                                                            <li class="menu-item"><a href="products.html">Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Jackets</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-column md-1-4">
-                                                <ul class="menu-row">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Old Car</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">New Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Top Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Special Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                
-                                            </li>
-                                            <li class="menu-column md-2-4">
-                                                <a class="menu-banner" href="products.html"><img src="assets/img/menu/wheel.png" alt="..."></a>
-                                            </li>
-                                        </ul>
+                                        <a href="../carsinfog.aspx" class="dropdown-toggle">Cars</a>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Comapre Car</a>
-                                        
-                                    </li>
-                                   
+                                        <a href="../compareg.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                    </li>             
                                     <li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spare Parts</a>
-                                        <ul class="dropdown-menu mega-menu mega-right col-lg-6 col-md-7 col-sm-10">
-                                            <li class="menu-row">
-                                                <ul class="menu-column md-1-3">
-                                                    <li class="menu-title">
-                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-1.png" alt="..."></a>
-                                                        <a href="products.html">Audio 1</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-column md-1-3">
-                                                    <li class="menu-title">
-                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-2.png" alt="..."></a>
-                                                        <a href="products.html">Audio 2</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-column md-1-3">
-                                                    <li class="menu-title">
-                                                        <a class="menu-banner" href="products.html"><img src="assets/img/menu/audio-3.png" alt="..."></a>
-                                                        <a href="products.html">Audio 3</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Springs &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="../spinfog.aspx" class="dropdown-toggle">Spare parts</a>
                                     </li>
 									<li class="dropdown mega-holder">
-                                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reviews & News</a>
-                                        <ul class="dropdown-menu mega-menu col-md-4 col-sm-6">
-                                            <li class="menu-row">
-                                                <ul class="menu-column md-2-4">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Lights 1</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Spring &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul class="menu-column md-2-4">
-                                                    <li class="menu-title">
-                                                        <a href="products.html">Lights 2</a>
-                                                        <ul class="menu-items">
-                                                            <li class="menu-item"><a href="products.html">Shop</a></li>
-                                                            <li class="menu-item"><a href="products.html">Casual Shoes</a></li>
-                                                            <li class="menu-item"><a href="products.html">Spring &amp; Autumn</a></li>
-                                                            <li class="menu-item"><a href="products.html">Winter Sneakers</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="../Blogguest.aspx" class="dropdown-toggle">Blogs</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="blog.html">Blog Listing</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
+                                            <li><a href="#">Contact US</a></li>
+                                            <li><a href="#">About US</a></li>
                                         </ul>
-                                    </li>
-									
-									
+                                    </li>															
 								</ul>								
                             </div>
                         </nav>
@@ -266,7 +152,6 @@
                     </div>
             </header>
         </div>
-
     <form class="form" runat="server">        
 	<h2>Registration form </h2>        
         <table style="width: 474px">

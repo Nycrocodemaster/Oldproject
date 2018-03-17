@@ -57,8 +57,7 @@
 <body>
            
         
-
-         <div class="header-area" data-spy="affix" data-offset-top="200">
+     <div class="header-area" data-spy="affix" data-offset-top="200">
             <!--------------- Top Header --------------->
             <header id="top-header-area" class="top-header-area">
                 <div class="container">
@@ -91,18 +90,22 @@
                     <div class="main-header-inner">
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
-                            <div class="col-sm-4">                         
+                            <div class="col-sm-4">                              
                             </div>
-                         <!--------------- Log wrap --------------->
+
+                            <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
                                 </a>
                             </div>
 
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                             </div>
+
+
+
                         </div>
                     </div>
                     
@@ -121,20 +124,20 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="menu nav navbar-nav main-menu">
                                     <li class="dropdown">
-                                        <a href="Home2.aspx" class="dropdown-toggle"  >Home</a>
+                                        <a href="../Home2.aspx" class="dropdown-toggle"  >Home</a>
                                         
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="Carsinfo.aspx" class="dropdown-toggle">Cars</a>
+                                        <a href="../carsinfog.aspx" class="dropdown-toggle">Cars</a>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="compar.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                        <a href="../compareg.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
-                                        <a href="UserHome.aspx" class="dropdown-toggle">Spare parts</a>
+                                        <a href="../spinfog.aspx" class="dropdown-toggle">Spare parts</a>
                                     </li>
 									<li class="dropdown mega-holder">
-                                        <a href="Blog.aspx" class="dropdown-toggle">Blogs</a>
+                                        <a href="../Blogguest.aspx" class="dropdown-toggle">Blogs</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
@@ -142,9 +145,7 @@
                                             <li><a href="#">Contact US</a></li>
                                             <li><a href="#">About US</a></li>
                                         </ul>
-                                    </li>
-									
-									
+                                    </li>															
 								</ul>								
                             </div>
                         </nav>
