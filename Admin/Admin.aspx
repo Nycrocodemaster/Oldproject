@@ -45,7 +45,7 @@
 										<a href="#">
 											<i class="fa fa-tasks" aria-hidden="true"></i>
 											<div class="ca-content">
-												<h4 class="ca-main three">49,436</h4>
+												<h4 class="ca-main one"><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></h4>												
 												<h3 class="ca-sub three">Cars Info</h3>
 											</div>
 										</a>

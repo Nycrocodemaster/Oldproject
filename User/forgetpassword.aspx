@@ -122,12 +122,10 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedbacku.aspx">Contact US</a></li>
+                                            <li><a href="Aboutusu.aspx">About US</a></li>
                                         </ul>
-                                    </li>
-									
-									
+                                    </li>				
 								</ul>								
                             </div>
                         </nav>

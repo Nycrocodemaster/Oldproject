@@ -64,8 +64,7 @@
                     <div class="top-header-inner">
                         <div class="top-header-content">
                             <div class="col-md-6 col-sm-12 col-xs-7">
-
-                      
+                  
                             </div>
 
                             <!--------------- Top Navigation --------------->
@@ -114,7 +113,7 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -218,7 +217,8 @@
                             <div class="module-header">
                                 <h3 class="module-title">New Arrivals</h3>
                                 <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                <p class="module-subtitle">Explore new cars and compare them.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -231,8 +231,8 @@
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="../<%#Eval("car_images") %>" alt="Product Hover">
-                                        <img class="front-img" src="../<%#Eval("car_img2") %>" alt="Product Front">
+                                        <img class="hover-img" src="" alt="Product Hover">
+                                        <img class="front-img" src="../<%#Eval("cimage") %>" alt="Product Front">
                                     </a>
                                
                                     <div class="product-btn">
@@ -241,7 +241,7 @@
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="carsproduct.aspx?id=<%#Eval("id") %>"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="carsproduct.aspx?id=<%#Eval("Mid") %>"><%#Eval("Model_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -255,7 +255,7 @@
                                         </div>
                                     </div>
                                     <p class="price">
-                                        <span class="discount-price"><%#Eval("price") %></span>     
+                                        <span class="discount-price"><%#Eval("Cprice") %></span>     
                                     </p>
                                 </div>
                             </div>
@@ -274,7 +274,7 @@
                             <div class="module-header">
                                 <h3 class="module-title">SPARE PART</h3>
                                 <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                <p class="module-subtitle">Buy Spare Parts of varoius cars .</p>
                             </div>
                         </div>
                     </div>
@@ -371,7 +371,7 @@
                             <div class="module-header">
                                 <h3 class="module-title">Blog</h3>
                                 <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                                <p class="module-subtitle">Explore new cars and compare for the best experience.</p>
                                
                             </div>
                         </div>
@@ -382,7 +382,7 @@
                           <ItemTemplate>
                             <article class="col-md-4">
                                 <a class="post-thumb" href="#">
-                                    <img src="<%#Eval("img1") %>" alt="...">
+                                    <img src="../<%#Eval("img1") %>" alt="...">
                                     <span class="post-date">12<span>March</span></span>
                                 </a>
                                 <div class="post-body">

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Configuration;
 using System.Data;
 using System.Linq;
@@ -73,7 +72,7 @@ public partial class Forgotpass : System.Web.UI.Page
                
                 // here i am sending a link to the user's mail address with the three values email,code,uname
                 // these three values i am sending  this link with the values using querystring method.
-                sbody.Append("<a href=http://localhost:1990/Oldproject/User/CreatePassword.aspx?Email=" + txt_email.Text);
+                sbody.Append("<a href=http://localhost:52711/Oldproject/User/CreatePassword.aspx?Email=" + txt_email.Text);
                 sbody.Append("&code=" + code + "&Username=" + txt_uname.Text + ">Click here to change your password</a>");
                 //in the below line i am sending mail with the link to the user.
                 //in this line i am passing four parameters 1st sender's mail address ,2nd receiever mail address, 3rd Subject,4th sbody.ToString() there will be complete link

@@ -1,19 +1,18 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="spproductg.aspx.cs" Inherits="spproductg" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
     
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="../assets/css/flexslider.css" type="text/css" media="screen" />
-<link href="../assets/css/font-awesome.min.css" rel="stylesheet"/> 
-<link href="../assets/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
-<link href="../assets/css/style1.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/> 
+<link href="assets/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
+<link href="assets/css/style1.css" rel="stylesheet" type="text/css" media="all" />
       <!-- Custom CSS -->
-        <link rel="stylesheet" href="../assets/css/style.css"/>
-        <link rel="stylesheet" href="../assets/css/responsive.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css"/>
 
 <!-- //for bootstrap working -->
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet"/>
@@ -33,10 +32,7 @@
         </style>
 </head>
 <body>
-          <div class="preloader">  
-            <img src="../assets/img/loader.gif" />
-         </div>    
-        <div class="vee">
+         
 
     <form id="form1" runat="server">
 
@@ -55,10 +51,26 @@
                             <div class="col-md-6 col-sm-12 col-xs-5">
                                 <div id="top-nav" class="top-nav">
                                     <div class="selected"><i class="fa fa-user"></i>My Account</div>
-                                   <ul id="top-menu" class="menu top-menu right-menu">
-                                     <li><a href="User/Login.aspx"><span><i class="fa fa-lock"></i>Sign In</span></a></li>
-                                    <li><a href="User/Registration.aspx"><span><i class="fa fa-lock"></i>Sign Up</span></a></li>
-                                   </ul>
+                                    <ul id="top-menu" class="menu top-menu right-menu">
+                                        <li class="second admin-pic">
+				                        <ul class="top_dp_agile">
+									<li class="dropdown profile_details_drop">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<div class="profile_img">
+                                                Hi&nbsp<asp:Label ID="Label1" runat="server"></asp:Label>
+												
+											</div>	
+										</a>
+										<ul class="dropdown-menu drp-mnu">
+											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
+											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
+											<li> <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-default" Text="Log out"/> </li>
+										</ul>
+									</li>
+									
+						            </ul>
+				                </li>
+                                    </ul>
                                 </div>
                             </div>
 
@@ -73,21 +85,19 @@
                     <div class="main-header-inner">
                         <div class="display-flex main-header-content">
                             <!--------------- Searchform --------------->
-                            <div class="col-sm-4">                              
+                            <div class="col-sm-4">
+                               
                             </div>
 
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
-
                           <!--------------- Mini Cart --------------->
                             <div class="col-sm-4">
                             </div>
-
-
 
                         </div>
                     </div>
@@ -114,7 +124,7 @@
                                         <a href="carsinfog.aspx" class="dropdown-toggle">Cars</a>
                                     </li>
                                     <li class="dropdown mega-holder">
-                                        <a href="compareg.aspx" class="dropdown-toggle"  >Compare Car</a>                                       
+                                        <a href="compareg.aspx" class="dropdown-toggle">Compare Car</a>                                       
                                     </li>             
                                     <li class="dropdown mega-holder">
                                         <a href="spinfog.aspx" class="dropdown-toggle">Spare parts</a>
@@ -125,10 +135,12 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedback.aspx">Contact US</a></li>
+                                            <li><a href="Aboutus.aspx">About US</a></li>
                                         </ul>
-                                    </li>															
+                                    </li>
+									
+									
 								</ul>								
                             </div>
                         </nav>
@@ -137,6 +149,7 @@
                     </div>
             </header>
         </div>
+
 
      <asp:Repeater ID="d1" runat="server">
         
@@ -149,13 +162,13 @@
 					
 					<ul class="slides">
 						<li data-thumb="assets\img\product/6.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("spimg") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="<%#Eval("spimg") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 						<li data-thumb="assets\img\product/3.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("spimg2") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="<%#Eval("spimg2") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>	
 						<li data-thumb="assets\img\product/4.jpg">
-							<div class="thumb-image"> <img src="../<%#Eval("spimg3") %>" data-imagezoom="true" class="img-responsive"> </div>
+							<div class="thumb-image"> <img src="<%#Eval("spimg3") %>" data-imagezoom="true" class="img-responsive"> </div>
 						</li>
 					</ul>
 					
@@ -234,7 +247,6 @@
         </div>
         </ItemTemplate>
            </asp:Repeater>
-        </form>
 
 	 <footer>
             <div class="container">
@@ -248,7 +260,7 @@
                 <div class="footer-head">
                     <div class="display-flex">
                         <div class="col-md-4 col-sm-5">
-                            <a class="site-logo footer-logo" href="#"><img src="../assets/img/color-1/template/logo-white.png" alt="..."></a>
+                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
                         </div>
                       
                     </div>
@@ -289,9 +301,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                      
-  
                     </div>
                 </div>
                 
@@ -310,9 +319,8 @@
                 </div>
             </div>
         </footer>	
-</div>
         <!--------------- Script --------------->
-          <script src="../assets/js/jquery.min.js"></script>
+          <script src="assets/js/jquery.min.js"></script>
         <script>
             $(function () {
                 $(".preloader").fadeOut(2000, function () {
@@ -323,64 +331,64 @@
 
 
       
-        <script src="../assets/js/bootstrap.min.js"></script>
-        <script src="../assets/js/owl.carousel.min.js"></script>
-        <script src="../assets/js/jquery-ui.min.js"></script>
-        <script src="../assets/js/custom.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/custom.js"></script>
 
 
-<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
-<script src="../assets/js/modernizr.custom.js"></script>
+<script src="assets/js/modernizr.custom.js"></script>
 	<!-- Custom-JavaScript-File-Links -->  
 	<!-- single -->
-<script src="../assets/js/imagezoom.js"></script>
+<script src="assets/js/imagezoom.js"></script>
 <!-- single -->
 <!-- script for responsive tabs -->						
-<script src="../assets/js/easy-responsive-tabs.js"></script>
+<script src="assets/js/easy-responsive-tabs.js"></script>
 <script>
-	$(document).ready(function () {
-	$('#horizontalTab').easyResponsiveTabs({
-	type: 'default', //Types: default, vertical, accordion           
-	width: 'auto', //auto or any width like 600px
-	fit: true,   // 100% fit in a container
-	closed: 'accordion', // Start closed if in accordion view
-	activate: function(event) { // Callback function if tab is switched
-	var $tab = $(this);
-	var $info = $('#tabInfo');
-	var $name = $('span', $info);
-	$name.text($tab.text());
-	$info.show();
-	}
-	});
-	$('#verticalTab').easyResponsiveTabs({
-	type: 'vertical',
-	width: 'auto',
-	fit: true
-	});
-	});
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function (event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+        $('#verticalTab').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true
+        });
+    });
 </script>
 <!-- FlexSlider -->
-<script src="../assets/js/jquery.flexslider.js"></script>
+<script src="assets/js/jquery.flexslider.js"></script>
 						<script>
-						// Can also be used with $(document).ready()
-							$(window).load(function() {
-								$('.flexslider').flexslider({
-								animation: "slide",
-								controlNav: "thumbnails"
-								});
-							});
+						    // Can also be used with $(document).ready()
+						    $(window).load(function () {
+						        $('.flexslider').flexslider({
+						            animation: "slide",
+						            controlNav: "thumbnails"
+						        });
+						    });
 						</script>
 					<!-- //FlexSlider-->
 <!-- //script for responsive tabs -->		
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="../assets/js/move-top.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="assets/js/move-top.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
 
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
+	    $(document).ready(function () {
+	        /*
 				var defaults = {
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
@@ -388,15 +396,15 @@
 				easingType: 'linear' 
 				};
 			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
+
+	        $().UItoTop({ easingType: 'easeOutQuart' });
+
+	    });
 	</script>
 <!-- //here ends scrolling icon -->
 
 <!-- for bootstrap working -->
-<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
     </form>
 </body>
 </html>

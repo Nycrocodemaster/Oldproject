@@ -29,7 +29,7 @@ public partial class Admin_MasterPage : System.Web.UI.MasterPage
         HttpCookie mycookie = new HttpCookie("Login");
         mycookie.Expires = DateTime.Now.AddDays(-1d);
         Response.Cookies.Add(mycookie);
-        Response.Redirect("Login.aspx");
+        Response.Redirect("../User/Login.aspx");
     }
 }
 

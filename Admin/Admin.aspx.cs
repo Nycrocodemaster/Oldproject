@@ -32,6 +32,16 @@ public partial class Admin_Default : System.Web.UI.Page
         {
             Label2.Text = count.ToString();
         }
+        conn.Close();
+
+        string query3 = ("Select count (Company_name) from models");
+        SqlCommand cmd3 = new SqlCommand(query3, conn);
+        conn.Open();
+        object count3 = cmd.ExecuteScalar();
+        if (count3 != null)
+        {
+            Label3.Text = count.ToString();
+        }
     }
     }
 

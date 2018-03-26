@@ -4,18 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
-    
-        <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
-     <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- Metas -->
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Drive On</title>
+        
 
-         <!-- Custom CSS -->
-        <link rel="stylesheet" href="../assets/css/style.css"/>
-        <link rel="stylesheet" href="../assets/css/responsive.css"/>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
+        
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link rel="stylesheet" href="assets/css/responsive.css"/>
+        
 
     <style>
 .boxi {
@@ -55,6 +60,37 @@
         .panel-heading {
         text-align:center;
         }
+
+.btncomp {
+  text-align: center;
+    border: 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+	 max-width: auto;
+    padding: 10px 50px;
+    background-color: rgba(0, 0, 0, 0.34);
+    border: 3px solid rgba(255, 255, 255, 0.43);
+    -webkit-box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.71);
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.71);
+    outline: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+
+}
+.btncomp:hover {
+color: #ffffff;
+    border-color: #00c6d7;
+}
+
+
         </style>
 </head>
 <body>
@@ -99,7 +135,7 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -145,8 +181,8 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedback.aspx">Contact US</a></li>
+                                            <li><a href="Aboutus.aspx">About US</a></li>
                                         </ul>
                                     </li>															
 								</ul>								
@@ -240,7 +276,7 @@
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Button" CssClass="btncomp" OnClick="Button1_Click" Height="38px" Width="244px" />
+        <asp:Button ID="Button1" runat="server" Text="Compare" CssClass="btncomp" OnClick="Button1_Click" Height="50px" Width="190px" />
         <br />
         <asp:Label ID="Label1" runat="server"></asp:Label>
         <br />
@@ -255,13 +291,13 @@
                 <div class="col-sm-12 jumbotron" style="background-color:whitesmoke">
 
         <div class="col-sm-5">
-    <img src="../<%#Eval("cimage1") %>" class="img-responsive img-thumbnail"/>
+    <img src="<%#Eval("cimage1") %>" class="img-responsive img-thumbnail"/>
             </div>
                     <div class="col-sm-2" style="margin-top:80px;">
-    <img src="../assets/img/VS.png" class="img-circle" height="100" width="100"/>
+    <img src="assets/img/VS.png" class="img-circle" height="100" width="100"/>
             </div>
                     <div class="col-sm-5">
-    <img src="../<%#Eval("cimage2") %>" class="img-responsive img-thumbnail"/>
+    <img src="<%#Eval("cimage2") %>" class="img-responsive img-thumbnail"/>
             </div>
                 </div>
                                 </ItemTemplate>
@@ -691,6 +727,14 @@
                 </div>
             </div>
         </footer>	
+
+      <!--------------- Script --------------->
+          <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
 </body>
 </html>
 

@@ -33,6 +33,6 @@ public partial class spproductg : System.Web.UI.Page
     }
     protected void button_ServerClick(object sender, EventArgs e)
     {
-        Response.Redirect("/User/Login.aspx");
+        Response.Redirect("User/Login.aspx");
     }
 }

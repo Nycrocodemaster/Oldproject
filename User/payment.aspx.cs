@@ -51,8 +51,6 @@ public partial class payment : System.Web.UI.Page
         Response.Write("</script>");
 
 
-
-
     }
 }
 

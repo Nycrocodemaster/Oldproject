@@ -96,7 +96,7 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -147,8 +147,8 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedbacku.aspx">Contact US</a></li>
+                                            <li><a href="Aboutusu.aspx">About US</a></li>
                                         </ul>
                                     </li>
 									
@@ -192,10 +192,7 @@
             <p><span class="item_price">Rs<%#Eval("spprice") %></span></p>
             <br>
               </ItemTemplate>  
-    </asp:Repeater>
-
-      
-              
+    </asp:Repeater> 
                     <asp:DropDownList ID="DropDownList1" runat="server" Width="60px" >
                         <asp:ListItem>1</asp:ListItem>                        
                         <asp:ListItem>2</asp:ListItem>
@@ -212,7 +209,7 @@
               <br>	
                     <asp:Repeater ID="d2" runat="server">
             <ItemTemplate>	
-					 <button class="btn btn-info btn-lg" id="button" runat="server" onserverclick="button_ServerClick"> <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
+					 <button class="btn btn-info btn-lg" id="button" runat="server" onserverclick="button_ServerClick" > <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
                    </br></br>
 					<ul class="social-nav model-3d-0 footer-social w3_agile_social single_page_w3ls">
 						                                   <li class="share">Share On : </li>

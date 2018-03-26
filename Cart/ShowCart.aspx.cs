@@ -67,7 +67,7 @@ public partial class Cart_ShowCart : System.Web.UI.Page
         SqlDataReader dr = cmd1.ExecuteReader();
         while(dr.Read())
         {
-            count += Convert.ToInt32(dr["price"].ToString());
+            count = Convert.ToInt32(dr["price"].ToString());
             price.Text = count.ToString();
         }
         conn.Close();

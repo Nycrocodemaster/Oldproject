@@ -18,7 +18,7 @@ public partial class Home2 : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "select * from car_detail";
+        cmd.CommandText = "select Top 8 * from models";
         cmd.ExecuteNonQuery();
         DataTable dt = new DataTable();
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -31,7 +31,7 @@ public partial class Home2 : System.Web.UI.Page
         conn.Open();
         SqlCommand cmdd = conn.CreateCommand();
         cmdd.CommandType = CommandType.Text;
-        cmdd.CommandText = "select * from sp_details";
+        cmdd.CommandText = "select Top 8 * from sp_details";
         cmdd.ExecuteNonQuery();
         DataTable dtt = new DataTable();
         SqlDataAdapter da1 = new SqlDataAdapter(cmdd);
@@ -45,7 +45,7 @@ public partial class Home2 : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd2 = conn.CreateCommand();
         cmd2.CommandType = CommandType.Text;
-        cmd2.CommandText = "select * from blogtb";
+        cmd2.CommandText = "select Top 8 * from blogtb";
         cmd2.ExecuteNonQuery();
         DataTable dt2 = new DataTable();
         SqlDataAdapter da2 = new SqlDataAdapter(cmd2);

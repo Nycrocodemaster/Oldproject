@@ -4,14 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>CarsInfo</title>
-     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/price-range.css" rel="stylesheet" />
-    <link href="../assets/css/animate.css" rel="stylesheet" />
-   
-     <!-- Custom CSS -->
-        <link rel="stylesheet" href="../assets/css/style.css"/>
-        <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <!-- Metas -->
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Drive On</title>
+        
+
+        <!-- External CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css"/>
+        
     <style>
 
 /*----------------------------------------
@@ -479,7 +488,7 @@ h2.title:before{
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -521,8 +530,8 @@ h2.title:before{
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedback.aspx">Contact US</a></li>
+                                            <li><a href="Aboutus.aspx">About US</a></li>
                                         </ul>
                                     </li>															
 								</ul>								
@@ -611,7 +620,7 @@ h2.title:before{
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="cars_info_productg.aspx?id=<%#Eval("Mid") %>"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="cars_info_productg.aspx?id=<%#Eval("Mid") %>"><%#Eval("Model_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>

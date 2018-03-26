@@ -48,6 +48,12 @@ public partial class Blogwrite : System.Web.UI.Page
         content += "');";
         ClientScript.RegisterStartupScript(this.GetType(), "SucessMessage", content, true);
 
+        TextBox1.Text = "";
+        TextBox2.Text = "";
+        TextBox3.Text = "";
+        TextBox4.Text = "";      
+
+
     }
     protected void Button2_Click(object sender, EventArgs e)
     {

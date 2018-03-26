@@ -83,16 +83,21 @@ body {
       <asp:Label ID="Label1" runat="server" Text="Title"></asp:Label>
       <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Width="420px" Height="50px"></asp:TextBox>
     <small id="emailHelp" class="form-text text-muted">Enter Title Here for your Blog.</small>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Title is Required" ControlToValidate="TextBox1" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
   </div>
 
   <div class="form-group">
       <asp:Label ID="Label2" runat="server" Text="Paragraph"></asp:Label>
     <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Width="420px" Height="100px" TextMode="MultiLine"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Paragraph is Required" ControlToValidate="TextBox2" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+  
   </div>
  
      <div class="form-group">
         <asp:Label ID="Label7" runat="server" Text="Upload Image"></asp:Label>
         <asp:FileUpload ID="f1" runat="server" CssClass="form-control" Width="420px"/>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="image is Required" ControlToValidate="TextBox1" Display="Dynamic" ForeColor="Red">*</asp:RequiredFieldValidator>
+
       </div>
 
     <div class="form-group">

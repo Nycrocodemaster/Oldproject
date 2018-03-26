@@ -497,7 +497,7 @@ h2.title:before{
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -548,8 +548,8 @@ h2.title:before{
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedbacku.aspx">Contact US</a></li>
+                                            <li><a href="Aboutusu.aspx">About US</a></li>
                                         </ul>
                                     </li>
 									
@@ -576,7 +576,7 @@ h2.title:before{
 							<div class="brands-name">
 								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged">
                                                         <asp:ListItem Text="All" Value="" />
-                                                        <asp:ListItem Text="Lambo" Value="Lambo" />
+                                                        <asp:ListItem Text="Lamborghini" Value="Lamborghini" />
                                                         <asp:ListItem Text="Ferrari" Value="Ferrari" />
                                                          <asp:ListItem Text="Bugatti" Value="Bugatti" />
                                                         <asp:ListItem Text="Maruti" Value="Maruti" />
@@ -622,25 +622,23 @@ h2.title:before{
 
                     <div class="row">
                         <div class="products-wrap">  
-
+                           
                   <asp:Repeater ID="d1" runat="server">
                      
                           <ItemTemplate>
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="<%#Eval("cimage") %>" alt="Product Hover">
-                                        <img class="front-img" src="" alt="Product Front">
-                                    </a>
-
-                                   
+                                        <img class="hover-img" src="" alt="Product Hover">
+                                        <img class="front-img" src="../<%#Eval("cimage") %>" alt="Product Front">
+                                    </a>                               
                                     &nbsp;<div class="product-btn">
                                         <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
           
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h5 class="product-name"><a href="car_info_product.aspx?id=<%#Eval("Mid") %>"><%#Eval("Company_name") %></a></h5>
+                                    <h5 class="product-name"><a href="car_info_product.aspx?id=<%#Eval("Mid") %>"><%#Eval("Model_name") %></a></h5>
                                     <div class="rating" itemtype="http://schema.org/Offer" itemscope>
                                         <div class="star_rating" itemtype="http://schema.org/AggregateRating" itemscope itemprop="aggregateRating">
                                             <span class="star star_full"></span>
@@ -682,7 +680,7 @@ h2.title:before{
                 <div class="footer-head">
                     <div class="display-flex">
                         <div class="col-md-4 col-sm-5">
-                            <a class="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="..."></a>
+                            <a class="site-logo footer-logo" href="#"><img src="../assets/img/color-1/template/logo-white.png" alt="..."></a>
                         </div>
                       
                     </div>

@@ -12,6 +12,12 @@
     <br >
     <br >
     <body>
+
+          <center>
+            <h><b>Spare Part Details Form</b></h>
+        </center>
+        <br/>
+        <br/>
     <table align="center" >
         <tr>
             <td style="height: 29px">

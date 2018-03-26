@@ -4,14 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>CarsInfo</title>
-     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/price-range.css" rel="stylesheet" />
-    <link href="../assets/css/animate.css" rel="stylesheet" />
-   
-     <!-- Custom CSS -->
-        <link rel="stylesheet" href="../assets/css/style.css"/>
-        <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <!-- Metas -->
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Drive On</title>
+        
+
+        <!-- External CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css"/>
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/responsive.css"/>
+        
     <style>
 
 /*----------------------------------------
@@ -480,7 +489,7 @@ h2.title:before{
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -526,8 +535,8 @@ h2.title:before{
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedback.aspx">Contact US</a></li>
+                                            <li><a href="Aboutus.aspx">About US</a></li>
                                         </ul>
                                     </li>															
 								</ul>								
@@ -549,13 +558,8 @@ h2.title:before{
                             <!--brands-->
 							<h2>Spare Part Type</h2>
 							<div class="brands-name">
-								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control">
-                                                        <asp:ListItem Text="All" Value="" />
-                                                        <asp:ListItem Text="Lambo" Value="Lambo" />
-                                                        <asp:ListItem Text="Ferrari" Value="Ferrari" />
-                                                         <asp:ListItem Text="Bugatti" Value="Bugatti" />
-                                                        <asp:ListItem Text="Maruti" Value="Maruti" />
-                                   </asp:DropDownList>
+								  Car's Spare Parts are available explore for varoius and desired products 
+                                Happy shopping and enjoy!!!!!
 							</div>                       
 						</div>
                         <br/>                   					
@@ -576,8 +580,8 @@ h2.title:before{
                             <div class="product col-md-3 col-sm-6">
                                 <div class="product-thumb">
                                     <a href="#" class="thumb-link">
-                                        <img class="hover-img" src="../<%#Eval("spimg") %>" alt="Product Hover">
-                                        <img class="front-img" src="../<%#Eval("spimg2") %>" alt="Product Front">        
+                                        <img class="hover-img" src="<%#Eval("spimg") %>" alt="Product Hover">
+                                        <img class="front-img" src="<%#Eval("spimg2") %>" alt="Product Front">        
                                     </a>
 
                                  

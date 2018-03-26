@@ -27,7 +27,7 @@ public partial class UserHome : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "select Top 8 * from car_detail";
+        cmd.CommandText = "select Top 8 * from models";
         cmd.ExecuteNonQuery();
         DataTable dt = new DataTable();
         SqlDataAdapter da = new SqlDataAdapter(cmd);

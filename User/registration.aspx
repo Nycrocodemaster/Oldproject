@@ -97,7 +97,7 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -140,8 +140,8 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedback.aspx">Contact US</a></li>
+                                            <li><a href="Aboutus.aspx">About US</a></li>
                                         </ul>
                                     </li>															
 								</ul>								
@@ -273,7 +273,7 @@
                 <td class="auto-style2">
                     </td>
                 <td class="auto-style3">
-            <asp:Button ID="Button1" runat="server" Text="Register" CssClass="button" OnClick="Button1_Click1" />
+            <asp:Button ID="Button1" runat="server" Text="Register" CssClass="button" OnClick="Button1_Click1" Height="50px" Width="190px"/>
                     </td>
                 </tr>
             

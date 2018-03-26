@@ -9,8 +9,7 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-     
-      
+
 
         <!-- External CSS -->
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
@@ -96,7 +95,7 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -142,8 +141,8 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedback.aspx">Contact US</a></li>
+                                            <li><a href="Aboutus.aspx">About US</a></li>
                                         </ul>
                                     </li>															
 								</ul>								
@@ -171,7 +170,7 @@
             <asp:CheckBox ID="CheckBox1" runat="server" />
             <asp:Label ID="Label1" runat="server" Text="Remember me?" ForeColor="Aqua"></asp:Label>
              </div>
-            <asp:Button ID="Button1" runat="server" Text="Login"  OnClick="Button1_Click"/>
+            <asp:Button ID="Button1" runat="server" Text="Login"  OnClick="Button1_Click" Height="50px" Width="190px"/>
         <br/>
         <asp:Label ID="lblError" runat="server" CssClass="text-danger" ForeColor="Red"></asp:Label>
 

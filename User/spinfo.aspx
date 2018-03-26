@@ -497,7 +497,7 @@ h2.title:before{
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">        
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">        
                                 </a>
                             </div>
 
@@ -544,8 +544,8 @@ h2.title:before{
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedbacku.aspx">Contact US</a></li>
+                                            <li><a href="Aboutusu.aspx">About US</a></li>
                                         </ul>
                                     </li>		
 								</ul>								
@@ -567,13 +567,8 @@ h2.title:before{
                             <!--brands-->
 							<h2>Spare Part Type</h2>
 							<div class="brands-name">
-								  <asp:DropDownList ID="ddlCountry" AutoPostBack="true" runat="server" CssClass="form-control">
-                                                        <asp:ListItem Text="All" Value="" />
-                                                        <asp:ListItem Text="Lambo" Value="Lambo" />
-                                                        <asp:ListItem Text="Ferrari" Value="Ferrari" />
-                                                         <asp:ListItem Text="Bugatti" Value="Bugatti" />
-                                                        <asp:ListItem Text="Maruti" Value="Maruti" />
-                                   </asp:DropDownList>
+								 Car's Spare Parts are available explore for varoius and desired products 
+                                Happy shopping and enjoy!!!!!
 							</div>                       
 						</div>
                         <br/>                   					
@@ -596,9 +591,7 @@ h2.title:before{
                                     <a href="#" class="thumb-link">
                                         <img class="hover-img" src="../<%#Eval("spimg") %>" alt="Product Hover">
                                         <img class="front-img" src="../<%#Eval("spimg2") %>" alt="Product Front">        
-                                    </a>
-
-                                 
+                                    </a>               
                                     <div class="product-btn">
                                         <a class="to-compare" href="#"><i class="fa fa-plus"></i><span class="tooltip">Add To Compare</span></a>
           

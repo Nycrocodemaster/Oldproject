@@ -101,7 +101,7 @@
                             <!--------------- Log wrap --------------->
                             <div class="col-sm-4 text-center">
                                 <a class="site-logo-link" href="#">
-                                    <img src="../assets/img/color-1/template/logo.png" alt="Site logo">
+                                    <img src="../assets/img/color-1/template/logo.jpeg" alt="Site logo">
                                 </a>
                             </div>
 
@@ -152,8 +152,8 @@
                                     <li class="dropdown">
                                         <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="contact.aspx">Contact US</a></li>
-                                            <li><a href="#">About US</a></li>
+                                            <li><a href="feedbacku.aspx">Contact US</a></li>
+                                            <li><a href="Aboutusu.aspx">About US</a></li>
                                         </ul>
                                     </li>
 									
@@ -190,7 +190,7 @@
                           <ItemTemplate>
                             <article class="col-md-4">
                                 <a class="post-thumb" href="#">
-                                    <img src="<%#Eval("img1") %>" alt="...">
+                                    <img src="../<%#Eval("img1") %>" alt="...">
                                     <span class="post-date">12<span>March</span></span>
                                 </a>
                                 <div class="post-body">
@@ -222,17 +222,7 @@
             <div class="container">
                 <div class="row">
                     <div class="newsletter-wrap">
-                        <div class="col-md-8 col-md-offset-2 text-center">
-                            <div class="module-header">
-                                <h3 class="module-title">News Letter</h3>
-                                <div class="module-sep"><div class="decorative-icons"></div><div class="decorative-bars"></div></div>
-                                <p class="module-subtitle">Get 15% off your next order. Be the first to learn about promotions special events, new arrivals and more</p>
-                            </div>
-                            
-                            <form id="subscribeForm" class="subscribe-form" action="#" method="post">
-                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
-                                <button type="submit" name="emailsubmit">Subscribe</button>
-                            </form>
+                        <div class="col-md-8 col-md-offset-2 text-center">                           
                         </div>
                     </div>
                 </div>

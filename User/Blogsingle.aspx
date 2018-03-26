@@ -64,15 +64,15 @@
 
 							<p class="para"><%#Eval("para1") %></p>
 
-							<div class="post-image"><img src="<%#Eval("img1") %>" alt="Blog Image"></div>
+							<div class="post-image"><img src="../<%#Eval("img1") %>" alt="Blog Image"></div>
 
 							<p class="para"><%#Eval("para2") %></p>
 
-                              <div class="post-image"><img src="<%#Eval("img2") %>" alt="Blog Image"></div>
+                              <div class="post-image"><img src="../<%#Eval("img2") %>" alt="Blog Image"></div>
 
                               <p class="para"><%#Eval("para3") %></p>
                        
-                              <div class="post-image"><img src="<%#Eval("img3") %>" alt="Blog Image"></div>
+                              <div class="post-image"><img src="../<%#Eval("img3") %>" alt="Blog Image"></div>
                             </ItemTemplate>
                               </asp:Repeater>
 
